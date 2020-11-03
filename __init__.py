@@ -2,8 +2,6 @@ import csv
 from collections import defaultdict
 from pathlib import Path
 
-from discord.ext import commands
-
 from . import models
 
 
