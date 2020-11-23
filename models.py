@@ -14,6 +14,12 @@ def deaccent(text):
     return unicodedata.normalize("NFC", result)
 
 
+def capitalize(text):
+    if len(text) == 0:
+        return text
+    return text[0].upper() + text[1:]
+
+
 class UnregisteredError(Exception):
     pass
 
@@ -474,9 +480,7 @@ class EvolutionList:
 
     @cached_property
     def text(self):
-        txt = " and ".join(e.text for e in self.items)
-        txt = txt.replace(" and ", ", ", txt.count(" and ") - 1)
-        return txt
+        return [e.text for e in self.items]
 
 
 # Stats
@@ -585,21 +589,24 @@ class Species:
 
     @cached_property
     def evolution_text(self):
+        lines = []
+
         if self.is_form and self.form_item is not None:
             species = self.instance.pokemon[self.dex_number]
             item = self.instance.items[self.form_item]
-            return f"{self.name} transforms from {species} when given a {item.name}."
+            lines.append(f"transforms from {species} when given a {item.name}")
 
-        if self.evolution_from is not None and self.evolution_to is not None:
-            return (
-                f"{self.name} {self.evolution_from.text} and {self.evolution_to.text}."
-            )
-        elif self.evolution_from is not None:
-            return f"{self.name} {self.evolution_from.text}."
-        elif self.evolution_to is not None:
-            return f"{self.name} {self.evolution_to.text}."
-        else:
+        if self.evolution_from is not None:
+            lines.extend(self.evolution_from.text)
+        if self.evolution_to is not None:
+            lines.extend(self.evolution_to.text)
+
+        if len(lines) == 0:
             return None
+        elif len(lines) == 1:
+            return lines[0]
+        else:
+            return "\n".join(f"• {capitalize(x)}" for x in lines)
 
 
 @dataclass
