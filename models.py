@@ -573,15 +573,17 @@ class Species:
         return extra + [deaccent(x.lower()) for _, x in self.names] + [self.slug]
 
     @cached_property
-    def trade_evolution(self):
+    def trade_evolutions(self):
         if self.evolution_to is None:
-            return None
+            return []
+        
+        evos = []
 
         for e in self.evolution_to.items:
             if isinstance(e.trigger, TradeTrigger):
-                return e
+                evos.append(e)
 
-        return None
+        return evos
 
     @cached_property
     def evolution_text(self):
