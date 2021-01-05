@@ -2497,16 +2497,16 @@ its sharp claws.",1,1,12,ゼラオラ,Zeraora,Zeraora,Zeraora,Zeraora,Zeraora,El
 10155,800,necrozma-dusk,,,,,たそがれのたてがみ,Tasogarenotategami,,Dusk Necrozma,Abendmähne,Crinière du Couchant,Psychic,Steel,,,,38,4600,,,97,157,127,113,109,77,,,,,,-1
 10156,800,necrozma-dawn,,,,,あかつきのつばさ,Akatsukinotsubasa,,Dawn Necrozma,Morgenschwingen,Ailes de l'Aurore,Psychic,Ghost,,,,42,3500,,,97,113,109,157,127,77,,,,,,-1
 10157,800,necrozma-ultra,,,,,ウルトラネクロズマ,Urutoranekurozuma,,Ultra Necrozma,Ultra-Necrozma,Ultra-Necrozma,Psychic,Dragon,,,,75,2300,,,97,167,97,167,97,129,,,,,,-1
-50001,249,lugia-shadow,,1,,,ダークルギア,Dākurugia,Dark Lugia,Shadow Lugia,Crypto-Lugia,Lugia Obscur,Shadow,Flying,,1,,52,2160,,,106,90,130,90,154,110,,,,,,
-50002,185,sudowoodo-festive,,,,,クリスマスウソッキー,Kurisumasu'usokkī,Christmas Usokkie,Festive Sudowoodo,Weihnachten Mogelbaum,Simularbre Festif,Rock,,,,,12,380,,438,70,100,115,30,65,30,,,,,,
-50003,519,pidove-festive,,,,,クリスマスマメパト,Kurisumasumamepato,Christmas Mamepato,Festive Pidove,Weihnachten Dusselgurr,Poichigeon Festif,Normal,Flying,,,,3,21,520,,50,55,50,36,30,43,,,,,,
-50004,255,torchic-festive,,,,,クリスマスアチャモ,Kurisumasu'achamo,Christmas Achamo,Festive Torchic,Weihnachten Flemmli,Poussifeu Festif,Fire,,,,,4,25,256,,45,60,40,70,50,45,,,,,,
-50005,198,murkrow-festive,,,,,クリスマスヤミカラス,Kurisumasuyamikarasu,Christmas Yamikarasu,Festive Murkrow,Weihnachten Kramurx,Cornèbre Festif,Dark,Flying,,,,5,21,430,,60,85,42,85,42,91,,,,,,
-50006,720,hoopa-festive,,,,,クリスマスフーパ,Kurisumasufūpa,Christmas Hoopa,Festive Hoopa,Weihnachten Hoopa,Hoopa Festif,Psychic,Ghost,1,,,5,90,,,80,110,60,150,130,70,,,,,,
-50007,83,farfetchd-festive,,,,,クリスマスカモネギ,Kurisumasukamonegi,Christmas Kamonegi,Festive Farfetch'd,Weihnachten Porenta,Canarticho Festif,Normal,Flying,,,,8,150,,,52,90,55,58,62,60,,,,,,
-50008,581,swanna-festive,,,,,クリスマススワンナ,Kurisumasusuwanna,Christmas Swanna,Festive Swanna,Weihnachten Swaroness,Lakmécygne Festif,Water,Flying,,,,13,242,,580,75,87,63,87,63,98,,,,,,
-50009,241,miltank-festive,,,,,クリスマスミルタンク,Kurisumasumirutanku,Christmas Miltank,Festive Miltank,Weihnachten Miltank,Écrémeuh Festif,Normal,,,,,12,755,,,95,80,105,40,70,100,,,,,,
-50010,282,gardevoir-festive,,,,,クリスマスサーナイト,Kurisumasusānaito,Christmas Sirnight,Festive Gardevoir,Weihnachten Guardevoir,Gardevoir Festif,Psychic,Fairy,,,,16,484,,281,68,65,65,125,115,80,10051,,,,,
-50011,475,gallade-festive,,,,,クリスマスエルレイド,Kurisumasu'erureido,Christmas Erureido,Festive Gallade,Weihnachten Galagladi,Gallame Festif,Psychic,Fighting,,,,16,520,,281,68,125,65,65,115,80,10068,,,,,
-50012,174,igglybuff-festive,,,,,クリスマスププリン,Kurisumasupupurin,Christmas Pupurin,Festive Igglybuff,Weihnachten Fluffeluff,Toudoudou Festif,Normal,Fairy,,,,3,10,39,,90,30,15,40,20,15,,,,,,
-50013,104,cubone-festive,,,,,クリスマスカラカラ,Kurisumasukarakara,Christmas Karakara,Festive Cubone,Weihnachten Tragosso,Osselait Festif,Ground,,,,,4,65,105,,50,50,95,40,50,35,,,,,,
+50001,249,lugia-shadow,,1,,,ダークルギア,Dākurugia,Dark Lugia,Shadow Lugia,Crypto-Lugia,Lugia Obscur,Shadow,Flying,,1,,52,2160,,,106,90,130,90,154,110,,,,,,-1
+50002,185,sudowoodo-festive,,,,,クリスマスウソッキー,Kurisumasu'usokkī,Christmas Usokkie,Festive Sudowoodo,Weihnachten Mogelbaum,Simularbre Festif,Rock,,,,,12,380,,438,70,100,115,30,65,30,,,,,,50
+50003,519,pidove-festive,,,,,クリスマスマメパト,Kurisumasumamepato,Christmas Mamepato,Festive Pidove,Weihnachten Dusselgurr,Poichigeon Festif,Normal,Flying,,,,3,21,520,,50,55,50,36,30,43,,,,,,50
+50004,255,torchic-festive,,,,,クリスマスアチャモ,Kurisumasu'achamo,Christmas Achamo,Festive Torchic,Weihnachten Flemmli,Poussifeu Festif,Fire,,,,,4,25,256,,45,60,40,70,50,45,,,,,,12.5
+50005,198,murkrow-festive,,,,,クリスマスヤミカラス,Kurisumasuyamikarasu,Christmas Yamikarasu,Festive Murkrow,Weihnachten Kramurx,Cornèbre Festif,Dark,Flying,,,,5,21,430,,60,85,42,85,42,91,,,,,,50
+50006,720,hoopa-festive,,,,,クリスマスフーパ,Kurisumasufūpa,Christmas Hoopa,Festive Hoopa,Weihnachten Hoopa,Hoopa Festif,Psychic,Ghost,1,,,5,90,,,80,110,60,150,130,70,,,,,,-1
+50007,83,farfetchd-festive,,,,,クリスマスカモネギ,Kurisumasukamonegi,Christmas Kamonegi,Festive Farfetch'd,Weihnachten Porenta,Canarticho Festif,Normal,Flying,,,,8,150,,,52,90,55,58,62,60,,,,,,50
+50008,581,swanna-festive,,,,,クリスマススワンナ,Kurisumasusuwanna,Christmas Swanna,Festive Swanna,Weihnachten Swaroness,Lakmécygne Festif,Water,Flying,,,,13,242,,580,75,87,63,87,63,98,,,,,,50
+50009,241,miltank-festive,,,,,クリスマスミルタンク,Kurisumasumirutanku,Christmas Miltank,Festive Miltank,Weihnachten Miltank,Écrémeuh Festif,Normal,,,,,12,755,,,95,80,105,40,70,100,,,,,,100
+50010,282,gardevoir-festive,,,,,クリスマスサーナイト,Kurisumasusānaito,Christmas Sirnight,Festive Gardevoir,Weihnachten Guardevoir,Gardevoir Festif,Psychic,Fairy,,,,16,484,,281,68,65,65,125,115,80,10051,,,,,50
+50011,475,gallade-festive,,,,,クリスマスエルレイド,Kurisumasu'erureido,Christmas Erureido,Festive Gallade,Weihnachten Galagladi,Gallame Festif,Psychic,Fighting,,,,16,520,,281,68,125,65,65,115,80,10068,,,,,0
+50012,174,igglybuff-festive,,,,,クリスマスププリン,Kurisumasupupurin,Christmas Pupurin,Festive Igglybuff,Weihnachten Fluffeluff,Toudoudou Festif,Normal,Fairy,,,,3,10,39,,90,30,15,40,20,15,,,,,,75
+50013,104,cubone-festive,,,,,クリスマスカラカラ,Kurisumasukarakara,Christmas Karakara,Festive Cubone,Weihnachten Tragosso,Osselait Festif,Ground,,,,,4,65,105,,50,50,95,40,50,35,,,,,,50
