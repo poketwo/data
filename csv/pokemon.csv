@@ -1960,7 +1960,7 @@ everything within 300 feet of itself,
 but it has no control over its power.",1,1,384,ニャスパー,Nyasupā,Nyasper,Espurr,Psiau,Psystigri,Psychic,,,,,3,35,678,,62,48,54,63,60,68,,,,,,50
 678,678,meowstic,"The eyeball patterns on the interior of its ears
 emit psychic energy. It keeps the patterns tightly
-covered because that power is too immense.",1,1,96,ニャオニクス,Nyaonikusu,Nyaonix,Meowstic,Psiaugon,Mistigrix,Psychic,,,,,6,85,,677,74,48,76,83,81,104,,,,,,50
+covered because that power is too immense.",1,1,96,ニャオニクス,Nyaonikusu,Nyaonix,Meowstic,Psiaugon,Mistigrix,Psychic,,,,,6,85,,677,74,48,76,83,81,104,,,,,,0
 679,679,honedge,"If anyone dares to grab its hilt, it wraps
 a blue cloth around that person’s arm and
 drains that person’s life energy completely.",1,2,1536,ヒトツキ,Hitotsuki,Hitotsuki,Honedge,Gramokles,Monorpale,Steel,Ghost,,,,8,20,680,,45,80,100,35,37,28,,,,,,50
@@ -2364,7 +2364,7 @@ its sharp claws.",1,1,12,ゼラオラ,Zeraora,Zeraora,Zeraora,Zeraora,Zeraora,El
 10022,646,kyurem-black,,1,,,ブラックキュレム,Burakkukyuremu,,Black Kyurem,Schwarzes Kyurem,Kyurem Noir,Dragon,Ice,,1,,33,3250,,,125,170,100,120,90,95,,,,1,,-1
 10023,646,kyurem-white,,1,,,ホワイトキュレム,Howaitokyuremu,,White Kyurem,Weißes Kyurem,Kyurem Blanc,Dragon,Ice,,1,,36,3250,,,125,120,90,170,100,95,,,,1,,-1
 10024,647,keldeo-resolute,,1,,,かくごのすがた,Kakugonosugata,,Resolute Keldeo,Resolutform,Aspect Décidé,Water,Fighting,1,,,14,485,,,91,72,90,129,90,108,,,,1,,-1
-10025,678,meowstic-female,,,,,メスのすがた,Mesunosugata,,Female Meowstic,Weiblich,Femelle,Psychic,,,,,6,85,,,74,48,76,83,81,104,,,,,,50
+10025,678,meowstic-female,,,,,メスのすがた,Mesunosugata,,Female Meowstic,Weiblich,Femelle,Psychic,,,,,6,85,,,74,48,76,83,81,104,,,,,,100
 10026,681,aegislash-blade,,1,,,ブレードフォルム,Buredoforumu,,Blade Aegislash,Klingenform,Forme Assaut,Steel,Ghost,,,,17,530,,,60,150,50,150,50,60,,,,1,,50
 10027,710,pumpkaboo-small,,1,,,ちいさいサイズ,Chiisaisaizu,,Small Pumpkaboo,Größe S,Taille Mini,Ghost,Grass,,,,3,35,,,44,66,70,44,55,56,,,,,,50
 10028,710,pumpkaboo-large,,1,,,おおきいサイズ,Ookiisaizu,,Large Pumpkaboo,Größe L,Taille Maxi,Ghost,Grass,,,,5,75,,,54,66,70,44,55,46,,,,,,50
