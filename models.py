@@ -557,11 +557,11 @@ class Species:
 
     @cached_property
     def image_url(self):
-        return f"https://assets.poketwo.net/images/{self.id}.png?v=25"
+        return f"https://assets.poketwo.net/images/{self.id}.png?v=26"
 
     @cached_property
     def shiny_image_url(self):
-        return f"https://assets.poketwo.net/shiny/{self.id}.png?v=25"
+        return f"https://assets.poketwo.net/shiny/{self.id}.png?v=26"
 
     @cached_property
     def correct_guesses(self):
@@ -576,7 +576,7 @@ class Species:
     def trade_evolutions(self):
         if self.evolution_to is None:
             return []
-        
+
         evos = []
 
         for e in self.evolution_to.items:
