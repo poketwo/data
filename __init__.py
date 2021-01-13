@@ -149,6 +149,7 @@ def get_pokemon(instance):
             mythical="mythical" in row,
             legendary="legendary" in row,
             ultra_beast="ultra_beast" in row,
+            event="event" in row,
             is_form="is_form" in row,
             form_item=row["form_item"] if "form_item" in row else None,
             instance=instance,

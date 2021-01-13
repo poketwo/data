@@ -516,6 +516,7 @@ class Species:
     mythical: bool = False
     legendary: bool = False
     ultra_beast: bool = False
+    event: bool = False
     is_form: bool = False
     form_item: int = None
     moves: typing.List[PokemonMove] = None
@@ -651,6 +652,10 @@ class DataManagerBase:
         return [v.id for v in self.pokemon.values() if v.ultra_beast]
 
     @cached_property
+    def list_event(self):
+        return [v.id for v in self.pokemon.values() if v.event]
+
+    @cached_property
     def list_mega(self):
         return (
             [v.mega_id for v in self.pokemon.values() if v.mega_id is not None]
@@ -736,7 +741,6 @@ class DataManagerBase:
             return None
 
     def random_spawn(self, rarity="normal"):
-
         if rarity == "mythical":
             pool = [x for x in self.all_pokemon() if x.catchable and x.mythical]
         elif rarity == "legendary":
