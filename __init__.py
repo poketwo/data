@@ -122,6 +122,12 @@ def get_pokemon(instance):
         if "name.fr" in row:
             names.append(("🇫🇷", row["name.fr"]))
 
+        if "name.kr" in row:
+            names.append(("🇰🇷", row["name.kr"]))
+
+        if "name.kr_r" in row:
+            names.append(("🇰🇷", row["name.kr_r"]))
+
         pokemon[row["id"]] = models.Species(
             id=row["id"],
             names=names,
