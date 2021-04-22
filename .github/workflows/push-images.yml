@@ -11,7 +11,7 @@ jobs:
         with:
           args: --acl public-read --follow-symlinks
         env:
-          AWS_S3_ENDPOINT: s3.object1.us-east-1.tswcloud.com
+          AWS_S3_ENDPOINT: https://s3.object1.us-east-1.tswcloud.com/
           AWS_S3_BUCKET: poketwo
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
