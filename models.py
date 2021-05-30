@@ -520,6 +520,7 @@ class Species:
     is_form: bool = False
     form_item: int = None
     moves: typing.List[PokemonMove] = None
+    region: str = None
 
     instance: typing.Any = UnregisteredDataManager()
 

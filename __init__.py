@@ -152,6 +152,7 @@ def get_pokemon(instance):
             event="event" in row,
             is_form="is_form" in row,
             form_item=row["form_item"] if "form_item" in row else None,
+            region=row["region"],
             instance=instance,
         )
 
