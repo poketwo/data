@@ -670,6 +670,9 @@ class DataManagerBase:
     def list_type(self, type: str):
         return [v.id for v in self.pokemon.values() if type.title() in v.types]
 
+    def list_region(self, region: str):
+        return [v.id for v in self.pokemon.values() if v.region == region.lower()]
+
     def all_items(self):
         return self.items.values()
 
