@@ -385,7 +385,7 @@ in the sea and that it flies. However, these are
 only rumors.",1,2,64,カイリュー,Kairyū,Kairyu,Dragonite,Dragoran,Dracolosse,Dragon,Flying,,,,,22,2100,,148,91,134,95,100,100,80,,,,,
 150,150,kanto,mewtwo,"Psychic power has augmented its muscles.
 It has a grip strength of one ton and can sprint
-a hundred meters in two seconds flat!",1,2,6,ミュウツー,Myūtsū,Mewtwo,Mewtwo,Mewtu,Mewtwo,Psychic,,,1,,,20,1220,,,106,110,90,154,90,130,,10043,10044,,
+a hundred meters in two seconds flat!",1,1,0,ミュウツー,Myūtsū,Mewtwo,Mewtwo,Mewtu,Mewtwo,Psychic,,,1,,,20,1220,,,106,110,90,154,90,130,,10043,10044,,
 151,151,kanto,mew,"When viewed through a microscope, this
 Pokémon’s short, fine, delicate hair can be seen.",1,1,12,ミュウ,Myū,Mew,Mew,Mew,Mew,Psychic,,1,,,,4,40,,,100,100,100,100,100,100,,,,,
 152,152,johto,chikorita,"In battle, Chikorita waves its leaf around to keep the foe at
@@ -2740,3 +2740,5 @@ Pokémon has raised since the child’s infancy.",1,1,12,ザルード,Zarūdo,,Z
 50011,475,sinnoh,gallade-festive,,1,,,クリスマスエルレイド,Kurisumasuerureido,Christmas Erureido,Festive Gallade,Weihnachten Galagladi,Gallame Festif,Psychic,Fighting,,,,1,16,520,,,68,125,65,65,115,80,,,,,
 50012,174,johto,igglybuff-festive,,1,,,クリスマスププリン,Kurisumasupupurin,Christmas Pupurin,Festive Igglybuff,Weihnachten Fluffeluff,Toudoudou Festif,Normal,Fairy,,,,1,3,10,,,90,30,15,40,20,15,,,,,
 50013,104,kanto,cubone-festive,,1,,,クリスマスカラカラ,Kurisumasukarakara,Christmas Karakara,Festive Cubone,Weihnachten Tragosso,Osselait Festif,Ground,,,,,1,4,65,,,50,50,95,40,50,35,,,,,
+50014,150,kanto,mewtwo-shadow,,1,1,36,ダークミュウツー,Dākurmyūtsū,Dark Mewtwo,Shadow Mewtwo,Crypto-Mewtwo,Mewtwo Obscur,Shadow,Psychic,,1,,1,20,1220,,,106,110,90,154,90,130,,,,1,
+50015,831,galar,wooloo-1st-anniversary,,1,1,1536,記念日ウールー,Kinenbiūrū,Kinenbi Wooloo,Anniversary Wooloo,Jahrestag Wooloo,Anniversaire Moumouton,Normal,,,,,1,6,60,832,,42,40,55,40,45,48,,,,1,
