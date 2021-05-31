@@ -385,7 +385,7 @@ in the sea and that it flies. However, these are
 only rumors.",1,2,64,カイリュー,Kairyū,Kairyu,Dragonite,Dragoran,Dracolosse,Dragon,Flying,,,,,22,2100,,148,91,134,95,100,100,80,,,,,
 150,150,kanto,mewtwo,"Psychic power has augmented its muscles.
 It has a grip strength of one ton and can sprint
-a hundred meters in two seconds flat!",1,,,ミュウツー,Myūtsū,Mewtwo,Mewtwo,Mewtu,Mewtwo,Psychic,,,1,,,20,1220,,,106,110,90,154,90,130,,10043,10044,,
+a hundred meters in two seconds flat!",1,1,0,ミュウツー,Myūtsū,Mewtwo,Mewtwo,Mewtu,Mewtwo,Psychic,,,1,,,20,1220,,,106,110,90,154,90,130,,10043,10044,,
 151,151,kanto,mew,"When viewed through a microscope, this
 Pokémon’s short, fine, delicate hair can be seen.",1,1,12,ミュウ,Myū,Mew,Mew,Mew,Mew,Psychic,,1,,,,4,40,,,100,100,100,100,100,100,,,,,
 152,152,johto,chikorita,"In battle, Chikorita waves its leaf around to keep the foe at
@@ -2320,7 +2320,7 @@ spun into a glossy, gorgeous yarn—a Galar
 regional specialty.",1,1,96,ワタシラガ,Watashiraga,,Eldegoss,Cottomi,Blancoton,Grass,,,,,,5,25,,829,60,50,90,80,120,60,,,,,
 831,831,galar,wooloo,"If its fleece grows too long, Wooloo won’t be
 able to move. Cloth made with the wool of this
-Pokémon is surprisingly strong.",1,,,ウールー,Ūrū,,Wooloo,Wolly,Moumouton,Normal,,,,,,6,60,832,,42,40,55,40,45,48,,,,,
+Pokémon is surprisingly strong.",1,1,0,ウールー,Ūrū,,Wooloo,Wolly,Moumouton,Normal,,,,,,6,60,832,,42,40,55,40,45,48,,,,,
 832,832,galar,dubwool,"Its majestic horns are meant only to impress the
 opposite gender. They never see use in battle.",1,1,96,バイウールー,Baiūrū,,Dubwool,Zwollock,Moumouflon,Normal,,,,,,13,430,,831,72,80,100,60,90,88,,,,,
 833,833,galar,chewtle,"It starts off battles by attacking with its rock-hard
