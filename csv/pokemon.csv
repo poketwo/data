@@ -2496,9 +2496,9 @@ this Pokémon and the Dynamax phenomenon.",1,1,6,ムゲンダイナ,Mugendaina,,
 891,891,galar,kubfu,"If Kubfu pulls the long white hair on its head,
 its fighting spirit heightens and power wells up
 from the depths of its belly.",1,1,6,ダクマ,Dakuma,,Kubfu,Dakuma,Wushours,Fighting,,,1,,,6,120,892,,60,90,60,53,50,72,,,,,
-892,892,galar,urshifu-single-strike,"This form of Urshifu is a strong believer in
-defeating foes by raining many blows down on
-them. Its strikes are nonstop, flowing like a river.",1,1,6,ウーラオス,Ūraosu,,Urshifu,Wulaosu,Shifours,Fighting,Dark,,1,,,19,1050,,891,100,130,100,63,60,97,,,,,
+892,892,galar,urshifu-single-strike,"This form of Urshifu is a strong believer in the
+one-hit KO. Its strategy is to leap in close to foes
+and land a devastating blow with a hardened fist.",1,1,6,ウーラオス,Ūraosu,,Urshifu,Wulaosu,Shifours,Fighting,Dark,,1,,,19,1050,,891,100,130,100,63,60,97,,,,,
 893,893,galar,zarude,"This Zarude’s special strength stems from its love
 and care for an orphaned human child that the
 Pokémon has raised since the child’s infancy.",1,1,12,ザルード,Zarūdo,,Zarude,Zarude,Zarude,Dark,Grass,1,,,,18,700,,,105,120,105,70,95,105,,,,,
@@ -2689,7 +2689,9 @@ Pokémon has raised since the child’s infancy.",1,1,12,ザルード,Zarūdo,,Z
 10180,876,galar,indeedee-female,,,,,,,,Female Indeedee,,,Psychic,Normal,,,,,9,28,,,70,55,65,95,105,85,,,,,
 10181,888,galar,zacian-crowned,,,,,,,,Crowned Zacian,,,Fairy,Steel,,1,,,28,3550,,,92,170,115,80,115,148,,,,,
 10182,889,galar,zamazenta-crowned,,,,,,,,Crowned Zamazenta,,,Fighting,Steel,,1,,,29,7850,,,92,130,145,80,145,128,,,,,
-10183,892,galar,urshifu-rapid-strike,,,,,,,,Rapid Strike Urshifu,,,Fighting,Water,,1,,,19,1050,,,100,130,100,63,60,97,,,,,
+10183,892,galar,urshifu-rapid-strike,"This form of Urshifu is a strong believer in
+defeating foes by raining many blows down on
+them. Its strikes are nonstop, flowing like a river.",1,1,6,れんげきウーラオス,Rengekiūraosu,,Rapid Strike Urshifu,,,Fighting,Water,,1,,,19,1050,,891,100,130,100,63,60,97,,,,,
 10184,898,galar,calyrex-ice-rider,,,,,,,,Ice Rider Calyrex,,,Psychic,Ice,,1,,,24,8091,,,100,165,150,85,130,50,,,,,
 10185,898,galar,calyrex-shadow-rider,,,,,,,,Shadow Rider Calyrex,,,Psychic,Ghost,,1,,,24,536,,,100,85,80,165,100,150,,,,,
 10186,3,kanto,venusaur-gmax,,1,,,,,,Gigantamax Venusaur,,,Grass,Poison,,,,,240,10000,,,80,82,83,100,100,80,,,,,
