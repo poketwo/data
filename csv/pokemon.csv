@@ -172,17 +172,13 @@ tentacles, delivering venomous stings to its catch.",1,1,96,ドククラゲ,Doku
 74,74,kanto,geodude,"Commonly found near mountain trails and the like. If you step on one by accident, it gets angry.",1,2,1536,イシツブテ,Ishitsubute,Isitsubute,Geodude,Kleinstein,Racaillou,Rock,Ground,,,,,4,200,75,,40,80,100,30,30,20,,,,,
 75,75,kanto,graveler,"Often seen rolling down mountain trails. Obstacles are just things to roll straight over, not avoid.",1,2,384,ゴローン,Gorōn,Golone,Graveler,Georok,Gravalanch,Rock,Ground,,,,,10,1050,76,74,55,95,115,45,45,35,,,,,
 76,76,kanto,golem,"Once it sheds its skin, its body turns tender and whitish. Its hide hardens when it’s exposed to air.",1,2,96,ゴローニャ,Gorōnya,Golonya,Golem,Geowaz,Grolem,Rock,Ground,,,,,14,3000,,75,80,120,130,55,65,45,,,,,
-77,77,kanto,ponyta,"This Pokémon will look into your eyes and read
-the contents of your heart. If it finds evil there,
-it promptly hides away.",1,1,384,ポニータ,Ponīta,Ponyta,Ponyta,Ponita,Ponyta,Fire,,,,,,10,300,78,,50,85,55,65,65,90,,,,,
+77,77,kanto,ponyta,"If you’ve been accepted by Ponyta, its burning mane is mysteriously no longer hot to the touch.",1,1,384,ポニータ,Ponīta,Ponyta,Ponyta,Ponita,Ponyta,Fire,,,,,,10,300,78,,50,85,55,65,65,90,,,,,
 78,78,kanto,rapidash,"The fastest runner becomes the leader, and it
 decides the herd’s pace and direction of travel.",1,1,96,ギャロップ,Gyaroppu,Gallop,Rapidash,Gallopa,Galopa,Fire,,,,,,17,950,,77,65,100,70,80,80,105,,,,,
 79,79,kanto,slowpoke,"When this Pokémon’s tail is soaked in water,
 sweetness seeps from it. Slowpoke uses this trait
 to lure in and fish up other Pokémon.",1,1,384,ヤドン,Yadon,Yadon,Slowpoke,Flegmon,Ramoloss,Water,Psychic,,,,,12,360,80 199,,90,65,65,40,40,15,,,,,
-80,80,kanto,slowbro,"If this Pokémon squeezes the tongue of the
-Shellder biting it, the Shellder will launch a toxic
-liquid from the tip of its shell.",1,1,96,ヤドラン,Yadoran,Yadoran,Slowbro,Lahmus,Flagadoss,Water,Psychic,,,,,16,785,,79,95,75,110,100,80,30,10071,,,,
+80,80,kanto,slowbro,"Being bitten by a Shellder shocked this Pokémon into standing on two legs. If the Shellder lets go, it seems Slowbro will turn back into a Slowpoke.",1,1,96,ヤドラン,Yadoran,Yadoran,Slowbro,Lahmus,Flagadoss,Water,Psychic,,,,,16,785,,79,95,75,110,100,80,30,10071,,,,
 81,81,kanto,magnemite,"It subsists on electricity. As Magnemite flies, it
 emits electromagnetic waves from the units on
 each side of its body.",1,1,1536,コイル,Koiru,Coil,Magnemite,Magnetilo,Magnéti,Electric,Steel,,,,,3,60,82,,25,35,70,95,55,45,,,,,
@@ -256,9 +252,7 @@ its long tongue, then swallows the prey whole.",1,1,384,ベロリンガ,Beroring
 109,109,kanto,koffing,"It adores polluted air. Some claim that Koffing
 used to be more plentiful in the Galar region
 than they are now.",1,2,384,ドガース,Dogāsu,Dogars,Koffing,Smogon,Smogo,Poison,,,,,,6,10,110,,40,65,95,60,45,35,,,,,
-110,110,kanto,weezing,"Long ago, during a time when droves of factories
-fouled the air with pollution, Weezing changed
-into this form for some reason.",1,2,96,マタドガス,Matadogasu,Matadogas,Weezing,Smogmog,Smogogo,Poison,,,,,,12,95,,109,65,90,120,85,70,60,,,,,
+110,110,kanto,weezing,"It can’t suck in air quite as well as a Galarian Weezing, but the toxins it creates are more potent than those of its counterpart.",1,2,96,マタドガス,Matadogasu,Matadogas,Weezing,Smogmog,Smogogo,Poison,,,,,,12,95,,109,65,90,120,85,70,60,,,,,
 111,111,kanto,rhyhorn,"It can remember only one thing at a time. Once it
 starts rushing, it forgets why it started.",1,2,1536,サイホーン,Saihōn,Sihorn,Rhyhorn,Rihorn,Rhinocorne,Ground,Rock,,,,,10,1150,112,,80,85,95,30,30,25,,,,,
 112,112,kanto,rhydon,"Protected by an armor-like hide, it is capable of
@@ -688,8 +682,7 @@ those Trainers that it recognizes to possess superior skill.",1,1,96,グラエ�
 263,263,hoenn,zigzagoon,"Zigzagoon that adapted to regions outside
 Galar acquired this appearance. If you’ve lost
 something, this Pokémon can likely find it.",1,2,384,ジグザグマ,Jiguzaguma,Jiguzaguma,Zigzagoon,Zigzachs,Zigzaton,Normal,,,,,,4,175,264,,38,30,41,30,41,60,,,,,
-264,264,hoenn,linoone,"This very aggressive Pokémon will recklessly
-challenge opponents stronger than itself.",1,2,96,マッスグマ,Massuguma,Massuguma,Linoone,Geradaks,Linéon,Normal,,,,,,5,325,,263,78,70,61,50,61,100,,,,,
+264,264,hoenn,linoone,"It uses its explosive speed and razor-sharp claws to bring down prey. Running along winding paths is not its strong suit.",1,2,96,マッスグマ,Massuguma,Massuguma,Linoone,Geradaks,Linéon,Normal,,,,,,5,325,,263,78,70,61,50,61,100,,,,,
 265,265,hoenn,wurmple,"Wurmple is targeted by Swellow as prey. This Pokémon
 will try to resist by pointing the spikes on its rear at the
 attacking predator. It will weaken the foe by leaking poison
@@ -1488,9 +1481,7 @@ lying in wait for prey.",1,1,96,ワルビアル,Warubiaru,Waruvial,Krookodile,Ra
 554,554,unova,darumaka,"This popular symbol of good fortune will never
 fall over in its sleep, no matter how it’s pushed
 or pulled.",1,2,384,ダルマッカ,Darumakka,Darumakka,Darumaka,Flampion,Darumarond,Fire,,,,,,6,375,555,,70,90,45,15,45,50,,,,,
-555,555,unova,darmanitan,"When wounded, it stops moving. It goes as
-still as stone to meditate, sharpening its mind
-and spirit.",1,2,96,ヒヒダルマ,Hihidaruma,Hihidaruma,Darmanitan,Flampivian,Darumacho,Fire,,,,,,13,929,,554,105,140,55,30,55,95,,,,,
+555,555,unova,darmanitan,"Its internal fire burns at 2,500 degrees Fahrenheit, making enough power that it can destroy a dump truck with one punch.",1,2,96,ヒヒダルマ,Hihidaruma,Hihidaruma,Darmanitan,Flampivian,Darumacho,Fire,,,,,,13,929,,554,105,140,55,30,55,95,,,,,
 556,556,unova,maractus,"Once each year, this Pokémon scatters its seeds.
 They’re jam-packed with nutrients, making them
 a precious food source out in the desert.",1,1,96,マラカッチ,Marakatchi,Maracacchi,Maractus,Maracamba,Maracachi,Grass,,,,,,10,280,,,75,86,67,106,67,60,,,,,
@@ -1673,9 +1664,7 @@ Shelmet evolves for some reason.",1,1,384,チョボマキ,Chobomaki,Chobomaki,Sh
 617,617,unova,accelgor,"Discarding its shell made it nimble. To keep
 itself from dehydrating, it wraps its body in
 bands of membrane.",1,1,96,アギルダー,Agirudā,Agilder,Accelgor,Hydragil,Limaspeed,Bug,,,,,,8,253,,616,80,70,40,100,60,145,,,,,
-618,618,unova,stunfisk,"Its conspicuous lips lure prey in as it lies in wait in
-the mud. When prey gets close, Stunfisk clamps
-its jagged steel fins down on them.",1,4,96,マッギョ,Maggyo,Maggyo,Stunfisk,Flunschlik,Limonde,Ground,Electric,,,,,7,110,,,109,66,84,81,99,32,,,,,
+618,618,unova,stunfisk,"For some reason, this Pokémon smiles slightly when it emits a strong electric current from the yellow markings on its body.",1,4,96,マッギョ,Maggyo,Maggyo,Stunfisk,Flunschlik,Limonde,Ground,Electric,,,,,7,110,,,109,66,84,81,99,32,,,,,
 619,619,unova,mienfoo,"Though small, Mienfoo’s temperament is fierce.
 Any creature that approaches Mienfoo carelessly
 will be greeted with a flurry of graceful attacks.",1,1,384,コジョフー,Kojofū,Kojofu,Mienfoo,Lin-Fu,Kungfouine,Fighting,,,,,,9,200,620,,45,85,50,55,50,65,,,,,
@@ -2501,7 +2490,7 @@ Pokémon has raised since the child’s infancy.",1,1,12,ザルード,Zarūdo,,Z
 10014,351,hoenn,castform-rainy,,1,1,96,あまみずのすがた,Amamizunosugata,,Rainy Castform,Regenform,Forme Eau de Pluie,Water,,,,,,3,8,,,70,70,70,70,70,70,,,,1,
 10015,351,hoenn,castform-snowy,,1,1,96,ゆきぐものすがた,Yukigumonosugata,,Snowy Castform,Schneeform,Forme Blizzard,Ice,,,,,,3,8,,,70,70,70,70,70,70,,,,1,
 10016,550,unova,basculin-blue-striped,,1,4,96,あおすじのすがた,Aosujinosugata,,Blue-Striped Basculin,Blaulinige Form,Motif Bleu,Water,,,,,,10,180,,,70,92,65,80,55,98,,,,1,
-10017,555,unova,darmanitan-zen,,1,,,ダルマモード,Darumamōdo,,Zen Darmanitan,Trance-Modus,Mode Transe,Fire,Psychic,,,,,13,929,,,105,30,105,140,105,55,,,,1,
+10017,555,unova,darmanitan-zen,"When wounded, it stops moving. It goes as still as stone to meditate, sharpening its mind and spirit.",1,,,ダルマモード,Darumamōdo,,Zen Darmanitan,Trance-Modus,Mode Transe,Fire,Psychic,,,,,13,929,,,105,30,105,140,105,55,,,,1,
 10018,648,unova,meloetta-pirouette,,1,,,ステップフォルム,Suteppuforumu,,Pirouette Meloetta,Tanzform,Forme Danse,Normal,Fighting,1,,,,6,65,,,100,128,90,77,77,128,,,,1,
 10019,641,unova,tornadus-therian,,1,,,れいじゅうフォルム,Reijūforumu,,Therian Tornadus,Tiergeistform,Forme Totémique,Flying,,,1,,,14,630,,,79,100,80,110,90,121,,,,1,681
 10020,642,unova,thundurus-therian,,1,,,れいじゅうフォルム,Reijūforumu,,Therian Thundurus,Tiergeistform,Forme Totémique,Electric,Flying,,1,,,30,610,,,79,105,70,145,80,101,,,,1,681
@@ -2575,8 +2564,8 @@ Pokémon has raised since the child’s infancy.",1,1,12,ザルード,Zarūdo,,Z
 10088,428,sinnoh,lopunny-mega,,1,,,メガミミロップ,Megamimiroppu,,Mega Lopunny,Mega-Schlapor,Méga-Lockpin,Normal,Fighting,,,,,13,283,,,65,136,94,54,96,135,,,,,
 10089,373,hoenn,salamence-mega,,1,,,メガボーマンダ,Megabōmanda,,Mega Salamence,Mega-Brutalanda,Méga-Drattak,Dragon,Flying,,,,,18,1126,,,95,145,130,120,90,120,,,,,
 10090,15,kanto,beedrill-mega,,1,,,メガスピアー,Megasupiā,,Mega Beedrill,Mega-Bibor,Méga-Dardargnan,Bug,Poison,,,,,14,405,,,65,150,40,15,80,145,,,,,
-10091,19,kanto,rattata-alola,,1,1,24,アローラのすがた,Arōranosugata,,Alolan Rattata,Alola-Form,Forme d'Alola,Dark,Normal,,,,,3,38,,,30,56,35,25,35,72,,,,,
-10092,20,kanto,raticate-alola,,1,1,12,アローラのすがた,Arōranosugata,,Alolan Raticate,Alola-Form,Forme d'Alola,Dark,Normal,,,,,7,255,,,75,71,70,40,80,77,,,,,
+10091,19,kanto,rattata-alola,"Its whiskers provide it with a keen sense of smell, enabling it to pick up the scent of hidden food and locate it instantly.",1,1,24,アローラのすがた,Arōranosugata,,Alolan Rattata,Alola-Form,Forme d'Alola,Dark,Normal,,,,,3,38,,,30,56,35,25,35,72,,,,,
+10092,20,kanto,raticate-alola,"It makes its Rattata underlings gather food for it, dining solely on the most nutritious and delicious fare.",1,1,12,アローラのすがた,Arōranosugata,,Alolan Raticate,Alola-Form,Forme d'Alola,Dark,Normal,,,,,7,255,,,75,71,70,40,80,77,,,,,
 10093,20,kanto,raticate-totem-alola,,,,,,,,Totem Alolan Raticate,,,Dark,Normal,,,,,14,1050,,,75,71,70,40,80,77,,,,,
 10094,25,kanto,pikachu-original-cap,,1,,,オリジナルキャップ,Orijinarukyappu,,Original Cap Pikachu,Original-Kappe,Casquette Originale,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,1,
 10095,25,kanto,pikachu-hoenn-cap,,1,,,ホウエンキャップ,Hōenkyappu,,Hoenn Cap Pikachu,Hoenn-Kappe,Casquette de Hoenn,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,1,
@@ -2643,25 +2632,25 @@ Pokémon has raised since the child’s infancy.",1,1,12,ザルード,Zarūdo,,Z
 10156,800,alola,necrozma-dawn,,,,,あかつきのつばさ,Akatsukinotsubasa,,Dawn Necrozma,Morgenschwingen,Ailes de l'Aurore,Psychic,Ghost,,,,,42,3500,,,97,113,109,157,127,77,,,,,
 10157,800,alola,necrozma-ultra,,,,,ウルトラネクロズマ,Urutoranekurozuma,,Ultra Necrozma,Ultra-Necrozma,Ultra-Necrozma,Psychic,Dragon,,,,,75,2300,,,97,167,97,167,97,129,,,,,
 10158,52,kanto,meowth-galar,"These daring Pokémon have coins on their foreheads. Darker coins are harder, and harder coins garner more respect among Meowth.",1,1,24,,,,Galarian Meowth,,,Steel,,,,,,4,75,,,50,65,55,40,40,40,,,,,
-10159,77,kanto,ponyta-galar,,1,1,24,,,,Galarian Ponyta,,,Psychic,,,,,,8,240,,,50,85,55,65,65,90,,,,,
-10160,78,kanto,rapidash-galar,,1,1,12,,,,Galarian Rapidash,,,Psychic,Fairy,,,,,17,800,,,65,100,70,80,80,105,,,,,
-10161,79,kanto,slowpoke-galar,,1,1,24,,,,Galarian Slowpoke,,,Psychic,,,,,,12,360,,,90,65,65,40,40,15,,,,,
-10162,80,kanto,slowbro-galar,,1,1,12,,,,Galarian Slowbro,,,Poison,Psychic,,,,,16,705,,,95,100,95,100,70,30,,,,,
-10163,83,kanto,farfetchd-galar,,1,1,24,,,,Galarian Farfetch'd,,,Fighting,,,,,,8,420,,,52,95,55,58,62,55,,,,,
-10164,110,kanto,weezing-galar,,1,1,12,,,,Galarian Weezing,,,Poison,Fairy,,,,,30,160,,,65,90,120,85,70,60,,,,,
-10165,122,kanto,mr-mime-galar,,1,1,12,,,,Galarian Mr. Mime,,,Ice,Psychic,,,,,14,568,,,50,65,65,90,90,100,,,,,
-10166,144,kanto,articuno-galar,,1,1,2,,,,Galarian Articuno,,,Psychic,Flying,,1,,,17,509,,,90,85,85,125,100,95,,,,,
-10167,145,kanto,zapdos-galar,,1,1,2,,,,Galarian Zapdos,,,Fighting,Flying,,1,,,16,582,,,90,125,90,85,90,100,,,,,
-10168,146,kanto,moltres-galar,,1,1,2,,,,Galarian Moltres,,,Dark,Flying,,1,,,20,660,,,90,85,90,100,125,90,,,,,
-10169,199,johto,slowking-galar,,1,1,6,,,,Galarian Slowking,,,Poison,Psychic,,,,,18,795,,,95,65,80,110,110,30,,,,,
-10170,222,johto,corsola-galar,,1,1,24,,,,Galarian Corsola,,,Ghost,,,,,,6,5,,,60,55,100,65,100,30,,,,,
-10171,263,hoenn,zigzagoon-galar,,1,1,12,,,,Galarian Zigzagoon,,,Dark,Normal,,,,,4,175,,,38,30,41,30,41,60,,,,,
-10172,264,hoenn,linoone-galar,,1,1,24,,,,Galarian Linoone,,,Dark,Normal,,,,,5,325,,,78,70,61,50,61,100,,,,,
-10173,554,unova,darumaka-galar,,1,1,12,,,,Galarian Darumaka,,,Ice,,,,,,7,400,,,70,90,45,15,45,50,,,,,
-10174,555,unova,darmanitan-standard-galar,,1,1,24,,,,Galarian Darmanitan,,,Ice,,,,,,17,1200,,,105,140,55,30,55,95,,,,,
+10159,77,kanto,ponyta-galar,"This Pokémon will look into your eyes and read the contents of your heart. If it finds evil there, it promptly hides away.",1,1,24,,,,Galarian Ponyta,,,Psychic,,,,,,8,240,,,50,85,55,65,65,90,,,,,
+10160,78,kanto,rapidash-galar,"Brave and prideful, this Pokémon dashes airily through the forest, its steps aided by the psychic power stored in the fur on its fetlocks.",1,1,12,,,,Galarian Rapidash,,,Psychic,Fairy,,,,,17,800,,,65,100,70,80,80,105,,,,,
+10161,79,kanto,slowpoke-galar,"Because Galarian Slowpoke eat the seeds of a plant that grows only in Galar, their tails have developed a spicy flavor.",1,1,24,,,,Galarian Slowpoke,,,Psychic,,,,,,12,360,,,90,65,65,40,40,15,,,,,
+10162,80,kanto,slowbro-galar,"If this Pokémon squeezes the tongue of the Shellder biting it, the Shellder will launch a toxic liquid from the tip of its shell.",1,1,12,,,,Galarian Slowbro,,,Poison,Psychic,,,,,16,705,,,95,100,95,100,70,30,,,,,
+10163,83,kanto,farfetchd-galar,"The stalks of leeks are thicker and longer in the Galar region. Farfetch’d that adapted to these stalks took on a unique form.",1,1,24,,,,Galarian Farfetch'd,,,Fighting,,,,,,8,420,,,52,95,55,58,62,55,,,,,
+10164,110,kanto,weezing-galar,"Long ago, during a time when droves of factories fouled the air with pollution, Weezing changed into this form for some reason.",1,1,12,,,,Galarian Weezing,,,Poison,Fairy,,,,,30,160,,,65,90,120,85,70,60,,,,,
+10165,122,kanto,mr-mime-galar,"It can radiate chilliness from the bottoms of its feet. It’ll spend the whole day tap-dancing on a frozen floor.",1,1,12,,,,Galarian Mr. Mime,,,Ice,Psychic,,,,,14,568,,,50,65,65,90,90,100,,,,,
+10166,144,kanto,articuno-galar,"Known as Articuno, this Pokémon fires beams that can immobilize opponents as if they had been frozen solid.",1,1,2,,,,Galarian Articuno,,,Psychic,Flying,,1,,,17,509,,,90,85,85,125,100,95,,,,,
+10167,145,kanto,zapdos-galar,"One kick from its powerful legs will pulverize a dump truck. Supposedly, this Pokémon runs through the mountains at over 180 mph.",1,1,2,,,,Galarian Zapdos,,,Fighting,Flying,,1,,,16,582,,,90,125,90,85,90,100,,,,,
+10168,146,kanto,moltres-galar,"The sinister aura that blazes like molten fire around this Pokémon is what inspired the name Moltres.",1,1,2,,,,Galarian Moltres,,,Dark,Flying,,1,,,20,660,,,90,85,90,100,125,90,,,,,
+10169,199,johto,slowking-galar,"While chanting strange spells, this Pokémon combines its internal toxins with what it’s eaten, creating strange potions.",1,1,6,,,,Galarian Slowking,,,Poison,Psychic,,,,,18,795,,,95,65,80,110,110,30,,,,,
+10170,222,johto,corsola-galar,"Sudden climate change wiped out this ancient kind of Corsola. This Pokémon absorbs others’ life-force through its branches.",1,1,24,,,,Galarian Corsola,,,Ghost,,,,,,6,5,,,60,55,100,65,100,30,,,,,
+10171,263,hoenn,zigzagoon-galar,"Thought to be the oldest form of Zigzagoon, it moves in zigzags and wreaks havoc upon its surroundings.",1,1,12,,,,Galarian Zigzagoon,,,Dark,Normal,,,,,4,175,,,38,30,41,30,41,60,,,,,
+10172,264,hoenn,linoone-galar,"This very aggressive Pokémon will recklessly challenge opponents stronger than itself.",1,1,24,,,,Galarian Linoone,,,Dark,Normal,,,,,5,325,,,78,70,61,50,61,100,,,,,
+10173,554,unova,darumaka-galar,"The colder they get, the more energetic they are. They freeze their breath to make snowballs, using them as ammo for playful snowball fights.",1,1,12,,,,Galarian Darumaka,,,Ice,,,,,,7,400,,,70,90,45,15,45,50,,,,,
+10174,555,unova,darmanitan-standard-galar,"Though it has a gentle disposition, it’s also very strong. It will quickly freeze the snowball on its head before going for a headbutt.",1,1,24,,,,Galarian Darmanitan,,,Ice,,,,,,17,1200,,,105,140,55,30,55,95,,,,,
 10175,555,unova,darmanitan-zen-galar,,,,,,,,Galarian Zen Darmanitan,,,Ice,Fire,,,,,17,1200,,,105,160,55,30,55,135,,,,,
-10176,562,unova,yamask-galar,,1,1,24,,,,Galarian Yamask,,,Ground,Ghost,,,,,5,15,,,38,55,85,30,65,30,,,,,
-10177,618,unova,stunfisk-galar,,1,1,12,,,,Galarian Stunfisk,,,Ground,,,,,,7,205,,,109,81,99,66,84,32,,,,,
+10176,562,unova,yamask-galar,"It’s said that this Pokémon was formed when an ancient clay tablet was drawn to a vengeful spirit.",1,1,24,,,,Galarian Yamask,,,Ground,Ghost,,,,,5,15,,,38,55,85,30,65,30,,,,,
+10177,618,unova,stunfisk-galar,"Its conspicuous lips lure prey in as it lies in wait in the mud. When prey gets close, Stunfisk clamps its jagged steel fins down on them.",1,1,12,,,,Galarian Stunfisk,,,Ground,,,,,,7,205,,,109,81,99,66,84,32,,,,,
 10178,849,galar,toxtricity-low-key,,,,,,,,Low Key Toxtricity,,,Electric,Poison,,,,,16,400,,,75,98,70,114,70,75,,,,,
 10179,875,galar,eiscue-noice,,,,,,,,Noice Face Eiscue,,,Ice,,,,,,14,890,,,75,80,70,65,50,130,,,,,
 10180,876,galar,indeedee-female,,,,,,,,Female Indeedee,,,Psychic,Normal,,,,,9,28,,,70,55,65,95,105,85,,,,,
