@@ -1,10 +1,12 @@
-import typing
+from collections import defaultdict
 import random
+import typing
 import unicodedata
 from abc import ABC
 from dataclasses import dataclass
-from functools import cached_property
+from functools import cached_property, lru_cache
 from typing import Union
+
 from . import constants
 
 
@@ -667,24 +669,31 @@ class DataManagerBase:
             + [v.mega_y_id for v in self.pokemon.values() if v.mega_y_id is not None]
         )
 
+    @lru_cache()
     def list_type(self, type: str):
         return [v.id for v in self.pokemon.values() if type.title() in v.types]
 
+    @lru_cache()
     def list_region(self, region: str):
         return [v.id for v in self.pokemon.values() if v.region == region.lower()]
 
     def all_items(self):
         return self.items.values()
 
+    @cached_property
+    def species_by_dex_number_index(self):
+        ret = defaultdict(list)
+        for pokemon in self.pokemon.values():
+            ret[pokemon.dex_number].append(pokemon)
+        return dict(ret)
+
     def all_species_by_number(self, number: int) -> Species:
-        return [x for x in self.pokemon.values() if x.dex_number == number]
+        return self.species_by_dex_number_index.get(number, [])
 
     def all_species_by_name(self, name: str) -> Species:
-        return [
-            x
-            for x in self.pokemon.values()
-            if deaccent(name.lower().replace("′", "'")) in x.correct_guesses
-        ]
+        return self.species_by_name_index.get(
+            deaccent(name.lower().replace("′", "'")), []
+        )
 
     def find_all_matches(self, name: str) -> Species:
         return [
@@ -699,16 +708,19 @@ class DataManagerBase:
         except KeyError:
             return None
 
+    @cached_property
+    def species_by_name_index(self):
+        ret = defaultdict(list)
+        for pokemon in self.pokemon.values():
+            for name in pokemon.correct_guesses:
+                ret[name].append(pokemon)
+        return dict(ret)
+
     def species_by_name(self, name: str) -> Species:
         try:
-            return next(
-                filter(
-                    lambda x: deaccent(name.lower().replace("′", "'"))
-                    in x.correct_guesses,
-                    self.pokemon.values(),
-                )
-            )
-        except StopIteration:
+            st = deaccent(name.lower().replace("′", "'"))
+            return self.species_by_name_index[st][0]
+        except (KeyError, IndexError):
             return None
 
     def item_by_number(self, number: int) -> Item:
@@ -717,17 +729,12 @@ class DataManagerBase:
         except KeyError:
             return None
 
+    @cached_property
+    def item_by_name_index(self):
+        return {item.name.lower(): item for item in self.items.values()}
+
     def item_by_name(self, name: str) -> Item:
-        try:
-            return next(
-                filter(
-                    lambda x: deaccent(name.lower().replace("′", "'"))
-                    == x.name.lower(),
-                    self.items.values(),
-                )
-            )
-        except StopIteration:
-            return None
+        return self.item_by_name_index.get(deaccent(name.lower().replace("′", "'")))
 
     def move_by_number(self, number: int) -> Move:
         try:
@@ -735,17 +742,12 @@ class DataManagerBase:
         except KeyError:
             return None
 
+    @cached_property
+    def move_by_name_index(self):
+        return {move.name.lower(): move for move in self.moves.values()}
+
     def move_by_name(self, name: str) -> Move:
-        try:
-            return next(
-                filter(
-                    lambda x: deaccent(name.lower().replace("′", "'"))
-                    == x.name.lower(),
-                    self.moves.values(),
-                )
-            )
-        except StopIteration:
-            return None
+        return self.move_by_name_index.get(deaccent(name.lower().replace("′", "'")))
 
     def random_spawn(self, rarity="normal"):
         if rarity == "mythical":
