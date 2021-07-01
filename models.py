@@ -669,13 +669,26 @@ class DataManagerBase:
             + [v.mega_y_id for v in self.pokemon.values() if v.mega_y_id is not None]
         )
 
-    @lru_cache()
-    def list_type(self, type: str):
-        return [v.id for v in self.pokemon.values() if type.title() in v.types]
+    @cached_property
+    def species_id_by_type_index(self):
+        ret = defaultdict(list)
+        for pokemon in self.pokemon.values():
+            for type in pokemon.types:
+                ret[type.lower()].append(pokemon.id)
+        return dict(ret)
 
-    @lru_cache()
+    def list_type(self, type: str):
+        return self.species_id_by_type_index.get(type.lower(), [])
+
+    @cached_property
+    def species_id_by_region_index(self):
+        ret = defaultdict(list)
+        for pokemon in self.pokemon.values():
+            ret[pokemon.region.lower()].append(pokemon.id)
+        return dict(ret)
+
     def list_region(self, region: str):
-        return [v.id for v in self.pokemon.values() if v.region == region.lower()]
+        return self.species_id_by_region_index.get(region.lower(), [])
 
     def all_items(self):
         return self.items.values()
