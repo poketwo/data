@@ -1,8 +1,11 @@
-import random
-import unicodedata
 from collections import defaultdict
-from functools import cached_property
-from typing import Any, List, NamedTuple, Optional, Tuple, Union
+import random
+import typing
+import unicodedata
+from abc import ABC
+from dataclasses import dataclass
+from functools import cached_property, lru_cache
+from typing import Union
 
 from . import constants
 
@@ -14,24 +17,26 @@ def deaccent(text):
 
 
 class UnregisteredError(Exception):
-    __slots__ = ()
+    pass
 
 
 class UnregisteredDataManager:
-    __slots__ = ()
+    pass
 
 
 # Moves
 
 
-class MoveEffect(NamedTuple):
+@dataclass
+class MoveEffect:
     id: int
     description: str
 
-    instance: Any = None
+    instance: typing.Any = UnregisteredDataManager()
 
 
-class StatChange(NamedTuple):
+@dataclass
+class StatChange:
     stat_id: int
     change: int
 
@@ -42,7 +47,8 @@ class StatChange(NamedTuple):
         ]
 
 
-class StatStages(NamedTuple):
+@dataclass
+class StatStages:
     hp: int = 0
     atk: int = 0
     defn: int = 0
@@ -53,17 +59,30 @@ class StatStages(NamedTuple):
     accuracy: int = 0
     crit: int = 0
 
+    def update(self, stages):
+        self.hp += stages.hp
+        self.atk += stages.atk
+        self.defn += stages.defn
+        self.satk += stages.satk
+        self.sdef += stages.sdef
+        self.spd += stages.spd
+        self.evasion += stages.evasion
+        self.accuracy += stages.accuracy
+        self.crit += stages.crit
 
-class MoveResult(NamedTuple):
+
+@dataclass
+class MoveResult:
     success: bool
     damage: int
     healing: int
     ailment: str
-    messages: List[str]
-    stat_changes: List[StatChange]
+    messages: typing.List[str]
+    stat_changes: typing.List[StatChange]
 
 
-class MoveMeta(NamedTuple):
+@dataclass
+class MoveMeta:
     meta_category_id: int
     meta_ailment_id: int
     drain: int
@@ -72,11 +91,15 @@ class MoveMeta(NamedTuple):
     ailment_chance: int
     flinch_chance: int
     stat_chance: int
-    min_hits: Optional[int] = None
-    max_hits: Optional[int] = None
-    min_turns: Optional[int] = None
-    max_turns: Optional[int] = None
-    stat_changes: List[StatChange] = None
+    min_hits: typing.Optional[int] = None
+    max_hits: typing.Optional[int] = None
+    min_turns: typing.Optional[int] = None
+    max_turns: typing.Optional[int] = None
+    stat_changes: typing.List[StatChange] = None
+
+    def __post_init__(self):
+        if self.stat_changes is None:
+            self.stat_changes = []
 
     @cached_property
     def meta_category(self):
@@ -87,7 +110,8 @@ class MoveMeta(NamedTuple):
         return constants.MOVE_AILMENTS[self.meta_ailment_id]
 
 
-class Move(NamedTuple):
+@dataclass
+class Move:
     id: int
     slug: str
     name: str
@@ -102,7 +126,7 @@ class Move(NamedTuple):
     effect_chance: int
     meta: MoveMeta
 
-    instance: Any = None
+    instance: typing.Any = UnregisteredDataManager()
 
     @cached_property
     def type(self):
@@ -249,7 +273,8 @@ class Move(NamedTuple):
 # Items
 
 
-class Item(NamedTuple):
+@dataclass
+class Item:
     id: int
     name: str
     description: str
@@ -260,27 +285,33 @@ class Item(NamedTuple):
     emote: str = None
     shard: bool = False
 
-    instance: Any = None
+    instance: typing.Any = UnregisteredDataManager()
 
     def __str__(self):
         return self.name
 
 
-class LevelMethod(NamedTuple):
+class MoveMethod(ABC):
+    pass
+
+
+@dataclass
+class LevelMethod(MoveMethod):
     level: int
 
-    instance: Any = None
+    instance: typing.Any = UnregisteredDataManager()
 
     @cached_property
     def text(self):
         return f"Level {self.level}"
 
 
-class PokemonMove(NamedTuple):
+@dataclass
+class PokemonMove:
     move_id: int
-    method: Any
+    method: MoveMethod
 
-    instance: Any = None
+    instance: typing.Any = UnregisteredDataManager()
 
     @cached_property
     def move(self):
@@ -294,7 +325,13 @@ class PokemonMove(NamedTuple):
 # Evolution
 
 
-class LevelTrigger(NamedTuple):
+@dataclass
+class EvolutionTrigger(ABC):
+    pass
+
+
+@dataclass
+class LevelTrigger(EvolutionTrigger):
     level: int
     item_id: int
     move_id: int
@@ -302,7 +339,7 @@ class LevelTrigger(NamedTuple):
     time: str
     relative_stats: int
 
-    instance: Any = None
+    instance: typing.Any = UnregisteredDataManager()
 
     @cached_property
     def item(self):
@@ -351,10 +388,11 @@ class LevelTrigger(NamedTuple):
         return text
 
 
-class ItemTrigger(NamedTuple):
+@dataclass
+class ItemTrigger(EvolutionTrigger):
     item_id: int
 
-    instance: Any = None
+    instance: typing.Any = UnregisteredDataManager()
 
     @cached_property
     def item(self):
@@ -365,10 +403,11 @@ class ItemTrigger(NamedTuple):
         return f"using a {self.item}"
 
 
-class TradeTrigger(NamedTuple):
+@dataclass
+class TradeTrigger(EvolutionTrigger):
     item_id: int = None
 
-    instance: Any = None
+    instance: typing.Any = UnregisteredDataManager()
 
     @cached_property
     def item(self):
@@ -383,27 +422,33 @@ class TradeTrigger(NamedTuple):
         return f"when traded while holding a {self.item}"
 
 
-class OtherTrigger(NamedTuple):
-    instance: Any = None
+@dataclass
+class OtherTrigger(EvolutionTrigger):
+    instance: typing.Any = UnregisteredDataManager()
 
     @cached_property
     def text(self):
         return "somehow"
 
 
-class Evolution(NamedTuple):
+@dataclass
+class Evolution:
     target_id: int
-    trigger: Any
+    trigger: EvolutionTrigger
     type: bool
 
-    instance: Any = None
+    instance: typing.Any = UnregisteredDataManager()
 
     @classmethod
-    def evolve_from(cls, target: int, trigger: Any, instance=None):
+    def evolve_from(cls, target: int, trigger: EvolutionTrigger, instance=None):
+        if instance is None:
+            instance: typing.Any = UnregisteredDataManager()
         return cls(target, trigger, False, instance=instance)
 
     @classmethod
-    def evolve_to(cls, target: int, trigger: Any, instance=None):
+    def evolve_to(cls, target: int, trigger: EvolutionTrigger, instance=None):
+        if instance is None:
+            instance: typing.Any = UnregisteredDataManager()
         return cls(target, trigger, True, instance=instance)
 
     @cached_property
@@ -423,8 +468,9 @@ class Evolution(NamedTuple):
         return f"evolves {self.dir} {self.target} {self.trigger.text}"
 
 
+@dataclass
 class EvolutionList:
-    __slots__ = ("items",)
+    items: list
 
     def __init__(self, evolutions: Union[list, Evolution]):
         if type(evolutions) == Evolution:
@@ -441,7 +487,8 @@ class EvolutionList:
 # Stats
 
 
-class Stats(NamedTuple):
+@dataclass
+class Stats:
     hp: int
     atk: int
     defn: int
@@ -453,17 +500,17 @@ class Stats(NamedTuple):
 # Species
 
 
-class Species(NamedTuple):
+@dataclass
+class Species:
     id: int
-    name: str
-    names: List[Tuple[str, str]]
+    names: typing.List[typing.Tuple[str, str]]
     slug: str
     base_stats: Stats
     height: int
     weight: int
     dex_number: int
     catchable: bool
-    types: List[str]
+    types: typing.List[str]
     abundance: int
     description: str = None
     mega_id: int = None
@@ -477,10 +524,15 @@ class Species(NamedTuple):
     event: bool = False
     is_form: bool = False
     form_item: int = None
-    moves: List[PokemonMove] = None
+    moves: typing.List[PokemonMove] = None
     region: str = None
 
-    instance: Any = None
+    instance: typing.Any = UnregisteredDataManager()
+
+    def __post_init__(self):
+        self.name = next(filter(lambda x: x[0] == "🇬🇧", self.names))[1]
+        if self.moves is None:
+            self.moves = []
 
     def __str__(self):
         return self.name
@@ -559,14 +611,12 @@ class Species(NamedTuple):
             return None
 
 
+@dataclass
 class DataManagerBase:
-    __slots__ = ("pokemon", "items", "effects", "moves")
-
-    def __init__(self, pokemon, items, effects, moves) -> None:
-        self.pokemon = pokemon
-        self.items = items
-        self.effects = effects
-        self.moves = moves
+    pokemon: typing.Dict[int, Species] = None
+    items: typing.Dict[int, Item] = None
+    effects: typing.Dict[int, MoveEffect] = None
+    moves: typing.Dict[int, Move] = None
 
     def all_pokemon(self):
         return self.pokemon.values()

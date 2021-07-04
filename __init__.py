@@ -126,7 +126,6 @@ def get_pokemon(instance):
 
         pokemon[row["id"]] = models.Species(
             id=row["id"],
-            name=next(filter(lambda x: x[0] == "🇬🇧", names))[1],
             names=names,
             slug=row["slug"],
             base_stats=models.Stats(
@@ -156,7 +155,6 @@ def get_pokemon(instance):
             is_form="is_form" in row,
             form_item=row["form_item"] if "form_item" in row else None,
             region=row["region"],
-            moves=[],
             instance=instance,
         )
 
@@ -254,8 +252,6 @@ def get_moves(instance):
 
 
 class DataManager(models.DataManagerBase):
-    __slots__ = ()
-
     def __init__(self):
         self.moves = get_moves(self)
         self.pokemon = get_pokemon(self)
