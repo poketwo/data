@@ -1466,9 +1466,7 @@ its home in a well-tended field or flowerbed.",1,1,384,チュリネ,Churine,Chur
 549,549,unova,lilligant,"Essential oils made from Lilligant flowers
 have a sublime scent, but they’re also
 staggeringly expensive.",1,1,96,ドレディア,Doredia,Dredear,Lilligant,Dressella,Fragilady,Grass,,,,,,11,163,,548,70,60,75,110,75,90,,,,,
-550,550,unova,basculin,"Known for their violence, these Pokémon
-have the most fights with schools of red-
-striped Basculin.",1,4,96,バスラオ,Basurao,Bassrao,Basculin,Barschuft,Bargantua,Water,,,,,,10,180,,,70,92,65,80,55,98,,,,,
+550,550,unova,basculin,"In the past, it often appeared on the dinner table. The meat of red-striped Basculin is on the fatty side, and it’s more popular with the youth.",1,4,96,バスラオ,Basurao,Bassrao,Basculin,Barschuft,Bargantua,Water,,,,,,10,180,,,70,92,65,80,55,98,,,,,
 551,551,unova,sandile,"Sandile is small, but its legs and lower body are
 powerful. Pushing sand aside as it goes, Sandile
 moves through the desert as if it’s swimming.",1,1,1536,メグロコ,Meguroko,Meguroco,Sandile,Ganovil,Mascaïman,Ground,Dark,,,,,7,152,552,,50,72,35,35,35,65,,,,,
@@ -1744,9 +1742,7 @@ will be razed by Zekrom’s lightning.",1,2,6,ゼクロム,Zekuromu,Zekrom,Zekro
 645,645,unova,landorus,"From the forces of lightning and wind, it creates
 energy to give nutrients to the soil and make the
 land abundant.",1,3,6,ランドロス,Randorosu,Landlos,Landorus,Demeteros,Démétéros,Ground,Flying,,1,,,15,680,,,89,125,90,115,80,101,,,,,
-646,646,unova,kyurem,"The sameness of Zekrom’s and Kyurem’s genes
-allowed Kyurem to absorb Zekrom. Kyurem can
-now use the power of both electricity and ice.",1,2,6,キュレム,Kyuremu,Kyurem,Kyurem,Kyurem,Kyurem,Dragon,Ice,,1,,,30,3250,,,125,130,90,130,90,95,,,,,
+646,646,unova,kyurem,"It appears that this Pokémon uses its powers over ice to freeze its own body in order to stabilize its cellular structure.",1,2,6,キュレム,Kyuremu,Kyurem,Kyurem,Kyurem,Kyurem,Dragon,Ice,,1,,,30,3250,,,125,130,90,130,90,95,,,,,
 647,647,unova,keldeo,"When it is resolute, its body fills with power and it
 becomes swifter. Its jumps are then too fast
 to follow.",1,1,12,ケルディオ,Kerudio,Keldeo,Keldeo,Keldeo,Keldeo,Water,Fighting,1,,,,14,485,,,91,72,90,129,90,108,,,,,
@@ -1844,9 +1840,7 @@ drains people’s lives away.",1,2,1536,ヒトツキ,Hitotsuki,Hitotsuki,Honedge
 680,680,kalos,doublade,"The two swords employ a strategy of rapidly
 alternating between offense and defense to
 bring down their prey.",1,2,384,ニダンギル,Nidangiru,Nidangill,Doublade,Duokles,Dimoclès,Steel,Ghost,,,,,8,45,681,679,59,110,150,45,49,35,,,,,
-681,681,kalos,aegislash,"Once upon a time, a king with an Aegislash
-reigned over the land. His Pokémon eventually
-drained him of life, and his kingdom fell with him.",1,2,96,ギルガルド,Girugarudo,Gillgard,Aegislash,Durengard,Exagide,Steel,Ghost,,,,,17,530,,680,60,50,150,50,150,60,,,,,
+681,681,kalos,aegislash,"Apparently, it can detect the innate qualities of leadership. According to legend, whoever it recognizes is destined to become king.",1,2,96,ギルガルド,Girugarudo,Gillgard,Aegislash,Durengard,Exagide,Steel,Ghost,,,,,17,530,,680,60,50,150,50,150,60,,,,,
 682,682,kalos,spritzee,"The scent its body gives off enraptures those
 who smell it. Noble ladies had no shortage of
 love for Spritzee.",1,1,384,シュシュプ,Shushupu,Shushupu,Spritzee,Parfi,Fluvetin,Fairy,,,,,,2,5,683,,78,52,60,63,65,23,,,,,
@@ -2481,31 +2475,31 @@ Pokémon has raised since the child’s infancy.",1,1,12,ザルード,Zarūdo,,Z
 10005,413,sinnoh,wormadam-trash,,1,1,96,ゴミのミノ,Gominomino,,Trash Wormadam,Lumpenumhang,Cape Déchet,Bug,Steel,,,,,5,65,,,60,69,95,69,95,36,,,,1,
 10006,492,sinnoh,shaymin-sky,,1,,,スカイフォルム,Sukaiforumu,,Sky Shaymin,Zenitform,Forme Céleste,Grass,Flying,1,,,,4,52,,,100,103,75,120,75,127,,,,1,444
 10007,487,sinnoh,giratina-origin,,1,,,オリジンフォルム,Orijinforumu,,Origin Giratina,Urform,Forme Originelle,Ghost,Dragon,,1,,,69,6500,,,150,120,100,120,100,90,,,,1,442
-10008,479,sinnoh,rotom-heat,,1,,,ヒートロトム,Hītorotomu,,Heat Rotom,Hitze-Rotom,Motisma Chaleur,Electric,Fire,,,,,3,3,,,50,65,107,105,107,86,,,,1,
-10009,479,sinnoh,rotom-wash,,1,,,ウォッシュロトム,Wosshurotomu,,Wash Rotom,Wasch-Rotom,Motisma Lavage,Electric,Water,,,,,3,3,,,50,65,107,105,107,86,,,,1,
-10010,479,sinnoh,rotom-frost,,1,,,フロストロトム,Furosutorotomu,,Frost Rotom,Frost-Rotom,Motisma Froid,Electric,Ice,,,,,3,3,,,50,65,107,105,107,86,,,,1,
-10011,479,sinnoh,rotom-fan,,1,,,スピンロトム,Supinrotomu,,Fan Rotom,Wirbel-Rotom,Motisma Hélice,Electric,Flying,,,,,3,3,,,50,65,107,105,107,86,,,,1,
-10012,479,sinnoh,rotom-mow,,1,,,カットロトム,Kattorotomu,,Mow Rotom,Schneid-Rotom,Motisma Tonte,Electric,Grass,,,,,3,3,,,50,65,107,105,107,86,,,,1,
-10013,351,hoenn,castform-sunny,,1,1,96,たいようのすがた,Taiyōnosugata,,Sunny Castform,Sonnenform,Forme Solaire,Fire,,,,,,3,8,,,70,70,70,70,70,70,,,,1,
-10014,351,hoenn,castform-rainy,,1,1,96,あまみずのすがた,Amamizunosugata,,Rainy Castform,Regenform,Forme Eau de Pluie,Water,,,,,,3,8,,,70,70,70,70,70,70,,,,1,
-10015,351,hoenn,castform-snowy,,1,1,96,ゆきぐものすがた,Yukigumonosugata,,Snowy Castform,Schneeform,Forme Blizzard,Ice,,,,,,3,8,,,70,70,70,70,70,70,,,,1,
-10016,550,unova,basculin-blue-striped,,1,4,96,あおすじのすがた,Aosujinosugata,,Blue-Striped Basculin,Blaulinige Form,Motif Bleu,Water,,,,,,10,180,,,70,92,65,80,55,98,,,,1,
+10008,479,sinnoh,rotom-heat,"This form of Rotom enjoys making mischief by turning up the heat. It will gleefully burn your favorite outfit.",1,,,ヒートロトム,Hītorotomu,,Heat Rotom,Hitze-Rotom,Motisma Chaleur,Electric,Fire,,,,,3,3,,,50,65,107,105,107,86,,,,1,
+10009,479,sinnoh,rotom-wash,"This Rotom has possessed a washing machine that uses a special motor. It blasts out water to get enemies to back down.",1,,,ウォッシュロトム,Wosshurotomu,,Wash Rotom,Wasch-Rotom,Motisma Lavage,Electric,Water,,,,,3,3,,,50,65,107,105,107,86,,,,1,
+10010,479,sinnoh,rotom-frost,"When it’s like this, Rotom likes to play pranks that are freezing cold. You may find it’s turned the bath you just filled to solid ice!",1,,,フロストロトム,Furosutorotomu,,Frost Rotom,Frost-Rotom,Motisma Froid,Electric,Ice,,,,,3,3,,,50,65,107,105,107,86,,,,1,
+10011,479,sinnoh,rotom-fan,"This Rotom has taken over a fan that has a special motor. Its gusts of wind blow its opponents away!",1,,,スピンロトム,Supinrotomu,,Fan Rotom,Wirbel-Rotom,Motisma Hélice,Electric,Flying,,,,,3,3,,,50,65,107,105,107,86,,,,1,
+10012,479,sinnoh,rotom-mow,"In this form, Rotom focuses its antics on plants. Any flowers you were growing are going to get mowed down.",1,,,カットロトム,Kattorotomu,,Mow Rotom,Schneid-Rotom,Motisma Tonte,Electric,Grass,,,,,3,3,,,50,65,107,105,107,86,,,,1,
+10013,351,hoenn,castform-sunny,"Castform changes to this form when it basks in bright sunlight. When you touch its glowing skin, it feels all dried out!",1,1,96,たいようのすがた,Taiyōnosugata,,Sunny Castform,Sonnenform,Forme Solaire,Fire,,,,,,3,8,,,70,70,70,70,70,70,,,,1,
+10014,351,hoenn,castform-rainy,"This is Castform’s form when pelted by rain. In an experiment where it was placed in a shower, this Pokémon didn’t change to this form.",1,1,96,あまみずのすがた,Amamizunosugata,,Rainy Castform,Regenform,Forme Eau de Pluie,Water,,,,,,3,8,,,70,70,70,70,70,70,,,,1,
+10015,351,hoenn,castform-snowy,"This is Castform’s form when caught in a hailstorm. Its whole body is chilled, and its skin is partially frozen!",1,1,96,ゆきぐものすがた,Yukigumonosugata,,Snowy Castform,Schneeform,Forme Blizzard,Ice,,,,,,3,8,,,70,70,70,70,70,70,,,,1,
+10016,550,unova,basculin-blue-striped,"Known for their violence, these Pokémon have the most fights with schools of red-striped Basculin.",1,4,96,あおすじのすがた,Aosujinosugata,,Blue-Striped Basculin,Blaulinige Form,Motif Bleu,Water,,,,,,10,180,,,70,92,65,80,55,98,,,,1,
 10017,555,unova,darmanitan-zen,"When wounded, it stops moving. It goes as still as stone to meditate, sharpening its mind and spirit.",1,,,ダルマモード,Darumamōdo,,Zen Darmanitan,Trance-Modus,Mode Transe,Fire,Psychic,,,,,13,929,,,105,30,105,140,105,55,,,,1,
 10018,648,unova,meloetta-pirouette,,1,,,ステップフォルム,Suteppuforumu,,Pirouette Meloetta,Tanzform,Forme Danse,Normal,Fighting,1,,,,6,65,,,100,128,90,77,77,128,,,,1,
 10019,641,unova,tornadus-therian,,1,,,れいじゅうフォルム,Reijūforumu,,Therian Tornadus,Tiergeistform,Forme Totémique,Flying,,,1,,,14,630,,,79,100,80,110,90,121,,,,1,681
 10020,642,unova,thundurus-therian,,1,,,れいじゅうフォルム,Reijūforumu,,Therian Thundurus,Tiergeistform,Forme Totémique,Electric,Flying,,1,,,30,610,,,79,105,70,145,80,101,,,,1,681
 10021,645,unova,landorus-therian,,1,,,れいじゅうフォルム,Reijūforumu,,Therian Landorus,Tiergeistform,Forme Totémique,Ground,Flying,,1,,,13,680,,,89,145,90,105,80,91,,,,1,681
-10022,646,unova,kyurem-black,,1,,,ブラックキュレム,Burakkukyuremu,,Black Kyurem,Schwarzes Kyurem,Kyurem Noir,Dragon,Ice,,1,,,33,3250,,,125,170,100,120,90,95,,,,1,
-10023,646,unova,kyurem-white,,1,,,ホワイトキュレム,Howaitokyuremu,,White Kyurem,Weißes Kyurem,Kyurem Blanc,Dragon,Ice,,1,,,36,3250,,,125,120,90,170,100,95,,,,1,
+10022,646,unova,kyurem-black,"The sameness of Zekrom’s and Kyurem’s genes allowed Kyurem to absorb Zekrom. Kyurem can now use the power of both electricity and ice.",1,,,ブラックキュレム,Burakkukyuremu,,Black Kyurem,Schwarzes Kyurem,Kyurem Noir,Dragon,Ice,,1,,,33,3250,,,125,170,100,120,90,95,,,,1,
+10023,646,unova,kyurem-white,"It has foreseen that a world of truth will arrive for people and Pokémon. It strives to protect that future.",1,,,ホワイトキュレム,Howaitokyuremu,,White Kyurem,Weißes Kyurem,Kyurem Blanc,Dragon,Ice,,1,,,36,3250,,,125,120,90,170,100,95,,,,1,
 10024,647,unova,keldeo-resolute,,1,,,かくごのすがた,Kakugonosugata,,Resolute Keldeo,Resolutform,Aspect Décidé,Water,Fighting,1,,,,14,485,,,91,72,90,129,90,108,,,,1,
 10025,678,kalos,meowstic-female,,,,,メスのすがた,Mesunosugata,,Female Meowstic,Weiblich,Femelle,Psychic,,,,,,6,85,,,74,48,76,83,81,104,,,,,
-10026,681,kalos,aegislash-blade,,1,,,ブレードフォルム,Burēdoforumu,,Blade Aegislash,Klingenform,Forme Assaut,Steel,Ghost,,,,,17,530,,,60,150,50,150,50,60,,,,1,
-10027,710,kalos,pumpkaboo-small,,1,,,ちいさいサイズ,Chiisaisaizu,,Small Pumpkaboo,Größe S,Taille Mini,Ghost,Grass,,,,1,3,35,,,44,66,70,44,55,56,,,,,
-10028,710,kalos,pumpkaboo-large,,1,,,おおきいサイズ,Ōkiisaizu,,Large Pumpkaboo,Größe L,Taille Maxi,Ghost,Grass,,,,1,5,75,,,54,66,70,44,55,46,,,,,
-10029,710,kalos,pumpkaboo-super,,1,,,とくだいサイズ,Tokudaisaizu,,Super Pumpkaboo,Größe XL,Taille Ultra,Ghost,Grass,,,,1,8,150,,,59,66,70,44,55,41,,,,,
-10030,711,kalos,gourgeist-small,,1,,,ちいさいサイズ,Chiisaisaizu,,Small Gourgeist,Größe S,Taille Mini,Ghost,Grass,,,,1,7,95,,,55,85,122,58,75,99,,,,,
-10031,711,kalos,gourgeist-large,,1,,,おおきいサイズ,Ōkiisaizu,,Large Gourgeist,Größe L,Taille Maxi,Ghost,Grass,,,,1,11,140,,,75,95,122,58,75,69,,,,,
-10032,711,kalos,gourgeist-super,,1,,,とくだいサイズ,Tokudaisaizu,,Super Gourgeist,Größe XL,Taille Ultra,Ghost,Grass,,,,1,17,390,,,85,100,122,58,75,54,,,,,
+10026,681,kalos,aegislash-blade,"Once upon a time, a king with an Aegislash reigned over the land. His Pokémon eventually drained him of life, and his kingdom fell with him.",1,,,ブレードフォルム,Burēdoforumu,,Blade Aegislash,Klingenform,Forme Assaut,Steel,Ghost,,,,,17,530,,,60,150,50,150,50,60,,,,1,
+10027,710,kalos,pumpkaboo-small,"Small Pumpkaboo are said to be the product of areas where few lost souls lingered.",1,,,ちいさいサイズ,Chiisaisaizu,,Small Pumpkaboo,Größe S,Taille Mini,Ghost,Grass,,,,1,3,35,,,44,66,70,44,55,56,,,,,
+10028,710,kalos,pumpkaboo-large,"Large Pumpkaboo are said to be the product of areas where many lost souls lingered.",1,,,おおきいサイズ,Ōkiisaizu,,Large Pumpkaboo,Größe L,Taille Maxi,Ghost,Grass,,,,1,5,75,,,54,66,70,44,55,46,,,,,
+10029,710,kalos,pumpkaboo-super,"Massive Pumpkaboo are said to be the product of areas where a great number of lost souls lingered.",1,,,とくだいサイズ,Tokudaisaizu,,Super Pumpkaboo,Größe XL,Taille Ultra,Ghost,Grass,,,,1,8,150,,,59,66,70,44,55,41,,,,,
+10030,711,kalos,gourgeist-small,"A small-sized Pumpkaboo evolves into a small-sized Gourgeist. Its bodily proportions also get passed on to its descendants.",1,,,ちいさいサイズ,Chiisaisaizu,,Small Gourgeist,Größe S,Taille Mini,Ghost,Grass,,,,1,7,95,,,55,85,122,58,75,99,,,,,
+10031,711,kalos,gourgeist-large,"A large-sized Pumpkaboo evolves into a large-sized Gourgeist. Its bodily proportions also get passed on to its descendants.",1,,,おおきいサイズ,Ōkiisaizu,,Large Gourgeist,Größe L,Taille Maxi,Ghost,Grass,,,,1,11,140,,,75,95,122,58,75,69,,,,,
+10032,711,kalos,gourgeist-super,"A supersized Pumpkaboo evolves into a supersized Gourgeist. Its bodily proportions also get passed on to its descendants.",1,,,とくだいサイズ,Tokudaisaizu,,Super Gourgeist,Größe XL,Taille Ultra,Ghost,Grass,,,,1,17,390,,,85,100,122,58,75,54,,,,,
 10033,3,kanto,venusaur-mega,,1,,,メガフシギバナ,Megafushigibana,,Mega Venusaur,Mega-Bisaflor,Méga-Florizarre,Grass,Poison,,,,,24,1555,,,80,100,123,122,120,80,,,,,
 10034,6,kanto,charizard-mega-x,,1,,,メガリザードンＸ,Megarizādonx,,Mega Charizard X,Mega-Glurak X,Méga-Dracaufeu X,Fire,Dragon,,,,,17,1105,,,78,130,111,130,85,100,,,,,
 10035,6,kanto,charizard-mega-y,,1,,,メガリザードンＹ,Megarizādony,,Mega Charizard Y,Mega-Glurak Y,Méga-Dracaufeu Y,Fire,Flying,,,,,17,1005,,,78,104,78,159,115,100,,,,,
@@ -2567,38 +2561,38 @@ Pokémon has raised since the child’s infancy.",1,1,12,ザルード,Zarūdo,,Z
 10091,19,kanto,rattata-alola,"Its whiskers provide it with a keen sense of smell, enabling it to pick up the scent of hidden food and locate it instantly.",1,1,24,アローラのすがた,Arōranosugata,,Alolan Rattata,Alola-Form,Forme d'Alola,Dark,Normal,,,,,3,38,,,30,56,35,25,35,72,,,,,
 10092,20,kanto,raticate-alola,"It makes its Rattata underlings gather food for it, dining solely on the most nutritious and delicious fare.",1,1,12,アローラのすがた,Arōranosugata,,Alolan Raticate,Alola-Form,Forme d'Alola,Dark,Normal,,,,,7,255,,,75,71,70,40,80,77,,,,,
 10093,20,kanto,raticate-totem-alola,,,,,,,,Totem Alolan Raticate,,,Dark,Normal,,,,,14,1050,,,75,71,70,40,80,77,,,,,
-10094,25,kanto,pikachu-original-cap,,1,,,オリジナルキャップ,Orijinarukyappu,,Original Cap Pikachu,Original-Kappe,Casquette Originale,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,1,
-10095,25,kanto,pikachu-hoenn-cap,,1,,,ホウエンキャップ,Hōenkyappu,,Hoenn Cap Pikachu,Hoenn-Kappe,Casquette de Hoenn,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,1,
-10096,25,kanto,pikachu-sinnoh-cap,,1,,,シンオウキャップ,Shin'Ōkyappu,,Sinnoh Cap Pikachu,Sinnoh-Kappe,Casquette de Sinnoh,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,1,
-10097,25,kanto,pikachu-unova-cap,,1,,,イッシュキャップ,Isshukyappu,,Unova Cap Pikachu,Einall-Kappe,Casquette d'Unys,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,1,
-10098,25,kanto,pikachu-kalos-cap,,1,,,カロスキャップ,Karosukyappu,,Kalos Cap Pikachu,Kalos-Kappe,Casquette de Kalos,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,1,
-10099,25,kanto,pikachu-alola-cap,,1,,,アローラキャップ,Arōrakyappu,,Alola Cap Pikachu,Alola-Kappe,Casquette d'Alola,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,1,
+10094,25,kanto,pikachu-original-cap,"This Pikachu is wearing its Trainer’s cap. The cap is proof that the two traveled across many regions together.",1,,,オリジナルキャップ,Orijinarukyappu,,Original Cap Pikachu,Original-Kappe,Casquette Originale,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,1,
+10095,25,kanto,pikachu-hoenn-cap,"This Pikachu is wearing its Trainer’s cap. The cap is proof that the two traveled throughout the Hoenn region together.",1,,,ホウエンキャップ,Hōenkyappu,,Hoenn Cap Pikachu,Hoenn-Kappe,Casquette de Hoenn,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,1,
+10096,25,kanto,pikachu-sinnoh-cap,"This Pikachu is wearing its Trainer’s cap. The cap is proof that the two traveled throughout the Sinnoh region together.",1,,,シンオウキャップ,Shin'Ōkyappu,,Sinnoh Cap Pikachu,Sinnoh-Kappe,Casquette de Sinnoh,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,1,
+10097,25,kanto,pikachu-unova-cap,"This Pikachu is wearing its Trainer’s cap. The cap is proof that the two traveled throughout the Unova region together.",1,,,イッシュキャップ,Isshukyappu,,Unova Cap Pikachu,Einall-Kappe,Casquette d'Unys,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,1,
+10098,25,kanto,pikachu-kalos-cap,"This Pikachu is wearing its Trainer’s cap. The cap is proof that the two traveled throughout the Kalos region together.",1,,,カロスキャップ,Karosukyappu,,Kalos Cap Pikachu,Kalos-Kappe,Casquette de Kalos,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,1,
+10099,25,kanto,pikachu-alola-cap,"This Pikachu is wearing its Trainer’s cap. The cap is proof that the two traveled throughout the Alola region together.",1,,,アローラキャップ,Arōrakyappu,,Alola Cap Pikachu,Alola-Kappe,Casquette d'Alola,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,1,
 10100,26,alola,raichu-alola,"This Pokémon rides on its tail while it uses its psychic powers to levitate. It attacks with star-shaped thunderbolts.",1,1,24,アローラのすがた,Arōranosugata,,Alolan Raichu,Alola-Form,Forme d'Alola,Electric,Psychic,,,,,7,210,,,60,85,50,95,85,110,,,,,
 10101,27,alola,sandshrew-alola,"It lives in snowy mountains on southern islands. When a blizzard rolls in, this Pokémon hunkers down in the snow to avoid getting blown away.",1,1,24,アローラのすがた,Arōranosugata,,Alolan Sandshrew,Alola-Form,Forme d'Alola,Ice,Steel,,,,,7,400,,,50,75,90,10,35,40,,,,,
 10102,28,alola,sandslash-alola,"Many people climb snowy mountains, hoping to see the icy spikes of these Pokémon glistening in the light of dawn.",1,1,12,アローラのすがた,Arōranosugata,,Alolan Sandslash,Alola-Form,Forme d'Alola,Ice,Steel,,,,,12,550,,,75,100,120,25,65,65,,,,,
 10103,37,alola,vulpix-alola,"If you observe its curly hairs through a microscope, you’ll see small ice particles springing up.",1,1,24,アローラのすがた,Arōranosugata,,Alolan Vulpix,Alola-Form,Forme d'Alola,Ice,,,,,,6,99,,,38,41,40,50,65,65,,,,,
 10104,38,alola,ninetales-alola,"While it will guide travelers who get lost on a snowy mountain down to the mountain’s base, it won’t forgive anyone who harms nature.",1,1,12,アローラのすがた,Arōranosugata,,Alolan Ninetales,Alola-Form,Forme d'Alola,Ice,Fairy,,,,,11,199,,,73,67,75,81,100,109,,,,,
 10105,50,alola,diglett-alola,"Its three hairs change shape depending on Diglett’s mood. They’re a useful communication tool among these Pokémon.",1,1,24,アローラのすがた,Arōranosugata,,Alolan Diglett,Alola-Form,Forme d'Alola,Ground,Steel,,,,,2,10,,,10,55,30,35,45,90,,,,,
-10106,51,alola,dugtrio-alola,,1,1,12,アローラのすがた,Arōranosugata,"The three of them get along very well. Through their formidable teamwork, they defeat powerful opponents.",Alolan Dugtrio,Alola-Form,Forme d'Alola,Ground,Steel,,,,,7,666,,,35,100,60,50,70,110,,,,,
+10106,51,alola,dugtrio-alola,"The three of them get along very well. Through their formidable teamwork, they defeat powerful opponents.",1,1,12,アローラのすがた,Arōranosugata,,Alolan Dugtrio,Alola-Form,Forme d'Alola,Ground,Steel,,,,,7,666,,,35,100,60,50,70,110,,,,,
 10107,52,alola,meowth-alola,"Deeply proud and keenly smart, this Pokémon moves with cunning during battle and relentlessly attacks enemies’ weak points.",1,1,24,アローラのすがた,Arōranosugata,,Alolan Meowth,Alola-Form,Forme d'Alola,Dark,,,,,,4,42,,,40,35,35,50,40,90,,,,,
 10108,53,alola,persian-alola,"This Pokémon is one tough opponent. Not only does it have formidable physical abilities, but it’s also not above fighting dirty.",1,1,12,アローラのすがた,Arōranosugata,,Alolan Persian,Alola-Form,Forme d'Alola,Dark,,,,,,11,330,,,65,60,60,75,65,115,,,,,
 10109,74,alola,geodude-alola,"Its stone head is imbued with electricity and magnetism. If you carelessly step on one, you’ll be in for a painful shock.",1,2,24,アローラのすがた,Arōranosugata,,Alolan Geodude,Alola-Form,Forme d'Alola,Rock,Electric,,,,,4,203,,,40,80,100,30,30,20,,,,,
-10110,75,alola,graveler-alola,,1,2,12,アローラのすがた,Arōranosugata,"When it comes rolling down a mountain path, anything in its way gets zapped by electricity and sent flying.",Alolan Graveler,Alola-Form,Forme d'Alola,Rock,Electric,,,,,10,1100,,,55,95,115,45,45,35,,,,,
-10111,76,alola,golem-alola,,1,2,6,アローラのすがた,Arōranosugata,"It uses magnetism to accelerate and fire off rocks tinged with electricity. Even if it doesn’t score a direct hit, the jolt of electricity will do the job.",Alolan Golem,Alola-Form,Forme d'Alola,Rock,Electric,,,,,17,3160,,,80,120,130,55,65,45,,,,,
+10110,75,alola,graveler-alola,"When it comes rolling down a mountain path, anything in its way gets zapped by electricity and sent flying.",1,2,12,アローラのすがた,Arōranosugata,,Alolan Graveler,Alola-Form,Forme d'Alola,Rock,Electric,,,,,10,1100,,,55,95,115,45,45,35,,,,,
+10111,76,alola,golem-alola,"It uses magnetism to accelerate and fire off rocks tinged with electricity. Even if it doesn’t score a direct hit, the jolt of electricity will do the job.",1,2,6,アローラのすがた,Arōranosugata,,Alolan Golem,Alola-Form,Forme d'Alola,Rock,Electric,,,,,17,3160,,,80,120,130,55,65,45,,,,,
 10112,88,alola,grimer-alola,"It has a passion for trash above all else, speedily digesting it and creating brilliant crystals of sparkling poison.",1,1,24,アローラのすがた,Arōranosugata,,Alolan Grimer,Alola-Form,Forme d'Alola,Poison,Dark,,,,,7,420,,,80,80,50,40,50,25,,,,,
 10113,89,alola,muk-alola,"Muk’s coloration becomes increasingly vivid the more it feasts on its favorite dish—trash.",1,1,12,アローラのすがた,Arōranosugata,,Alolan Muk,Alola-Form,Forme d'Alola,Poison,Dark,,,,,10,520,,,105,105,75,65,100,50,,,,,
 10114,103,alola,exeggutor-alola,"This Pokémon’s psychic powers aren’t as strong as they once were. The head on this Exeggutor’s tail scans surrounding areas with weak telepathy.",1,1,12,アローラのすがた,Arōranosugata,,Alolan Exeggutor,Alola-Form,Forme d'Alola,Grass,Dragon,,,,,109,4156,,,95,105,85,125,75,45,,,,,
 10115,105,alola,marowak-alola,"The cursed flames that light up the bone carried by this Pokémon are said to cause both mental and physical pain that will never fade.",1,2,12,アローラのすがた,Arōranosugata,,Alolan Marowak,Alola-Form,Forme d'Alola,Fire,Ghost,,,,,10,340,,,60,80,110,50,80,45,,,,,
 10116,658,kalos,greninja-battle-bond,,,,,,,,Battle Bond Greninja,,,Water,Dark,,,,,15,400,,,72,95,67,103,71,122,,,,,
 10117,658,kalos,greninja-ash,,1,,,サトシゲッコウガ,Satoshigekkōga,,Ash's Greninja,Ash-Form,Forme Sacha,Water,Dark,,,,1,15,400,,,72,145,67,153,71,132,,,,1,
-10118,718,kalos,zygarde-10,,1,1,6,１０％フォルム,10%Forumu,,10% Zygarde,10%-Form,Forme 10 %,Dragon,Ground,,1,,,12,335,,,54,100,71,61,85,115,,,,1,
+10118,718,kalos,zygarde-10,"Born when around 10% of Zygarde’s cells have been gathered from all over, this form is skilled in close-range combat.",1,1,6,１０％フォルム,10%Forumu,,10% Zygarde,10%-Form,Forme 10 %,Dragon,Ground,,1,,,12,335,,,54,100,71,61,85,115,,,,1,
 10119,718,kalos,zygarde-50,,,,,５０％フォルム,50%Forumu,,50% Zygarde,50%-Form,Forme 50 %,Dragon,Ground,,1,,,50,3050,,,108,100,121,81,95,95,,,,,
-10120,718,kalos,zygarde-complete,,1,1,6,パーフェクトフォルム,Pāfekutoforumu,,Complete Zygarde,Optimumform,Forme Parfaite,Dragon,Ground,,1,,,45,6100,,,216,100,121,91,95,85,,,,1,
+10120,718,kalos,zygarde-complete,"Born when all of Zygarde’s cells have been gathered together, it uses force to neutralize those who harm the ecosystem.",1,1,6,パーフェクトフォルム,Pāfekutoforumu,,Complete Zygarde,Optimumform,Forme Parfaite,Dragon,Ground,,1,,,45,6100,,,216,100,121,91,95,85,,,,1,
 10121,735,alola,gumshoos-totem,,,,,,,,Totem Gumshoos,,,Normal,,,,,,14,600,,,88,110,60,55,60,45,,,,,
 10122,738,alola,vikavolt-totem,,,,,,,,Totem Vikavolt,,,Bug,Electric,,,,,26,1475,,,77,70,90,145,75,43,,,,,
-10123,741,alola,oricorio-pom-pom,,1,1,96,ぱちぱちスタイル,Pachipachisutairu,,Pom-pom Oricorio,Cheerleading-Stil,Style Pom-Pom,Electric,Flying,,,,,6,34,,,75,70,70,98,70,93,,,,1,890
-10124,741,alola,oricorio-pau,,1,1,96,ふらふらスタイル,Furafurasutairu,,Pa'u Oricorio,Hula-Stil,Style Hula,Psychic,Flying,,,,,6,34,,,75,70,70,98,70,93,,,,1,891
-10125,741,alola,oricorio-sensu,,1,1,96,まいまいスタイル,Maimaisutairu,,Sensu Oricorio,Buyo-Stil,Style Buyō,Ghost,Flying,,,,,6,34,,,75,70,70,98,70,93,,,,1,892
+10123,741,alola,oricorio-pom-pom,"This Oricorio has drunk bright yellow nectar. When it sees someone looking glum, it will try to cheer them up with a dance.",1,1,96,ぱちぱちスタイル,Pachipachisutairu,,Pom-pom Oricorio,Cheerleading-Stil,Style Pom-Pom,Electric,Flying,,,,,6,34,,,75,70,70,98,70,93,,,,1,890
+10124,741,alola,oricorio-pau,"This Oricorio has sipped pink nectar. It gets so caught up in its dancing that it sometimes doesn’t hear its Trainer’s orders.",1,1,96,ふらふらスタイル,Furafurasutairu,,Pa'u Oricorio,Hula-Stil,Style Hula,Psychic,Flying,,,,,6,34,,,75,70,70,98,70,93,,,,1,891
+10125,741,alola,oricorio-sensu,"This Oricorio has sipped purple nectar. Some dancers use its graceful, elegant dancing as inspiration.",1,1,96,まいまいスタイル,Maimaisutairu,,Sensu Oricorio,Buyo-Stil,Style Buyō,Ghost,Flying,,,,,6,34,,,75,70,70,98,70,93,,,,1,892
 10126,745,alola,lycanroc-midnight,,,,,まよなかのすがた,Mayonakanosugata,,Midnight Lycanroc,Nachtform,Forme Nocturne,Rock,,,,,,11,250,,,85,115,75,55,75,82,,,,,
 10127,746,alola,wishiwashi-school,,,,,むれたすがた,Muretasugata,,School Wishiwashi,Schwarmform,Forme Banc,Water,,,,,,82,786,,,45,140,130,140,135,30,,,,,
 10128,754,alola,lurantis-totem,,,,,,,,Totem Lurantis,,,Grass,,,,,,15,580,,,70,105,90,80,90,45,,,,,
@@ -2616,12 +2610,12 @@ Pokémon has raised since the child’s infancy.",1,1,12,ザルード,Zarūdo,,Z
 10140,774,alola,minior-blue,,,,,みずいろのコア,Mizuironokoa,,Blue Core Minior,Hellblauer Kern,Noyau Bleu,Rock,Flying,,,,,3,3,,,60,100,60,100,60,120,,,,,
 10141,774,alola,minior-indigo,,,,,あおいろのコア,Aoironokoa,,Indigo Core Minior,Blauer Kern,Noyau Indigo,Rock,Flying,,,,,3,3,,,60,100,60,100,60,120,,,,,
 10142,774,alola,minior-violet,,,,,むらさきいろのコア,Murasakiironokoa,,Violet Core Minior,Violetter Kern,Noyau Violet,Rock,Flying,,,,,3,3,,,60,100,60,100,60,120,,,,,
-10143,778,alola,mimikyu-busted,,1,,,ばれたすがた,Baretasugata,,Busted Mimikyu,Entlarvte Form,Forme Démasquée,Ghost,Fairy,,,,1,2,7,,,55,90,80,50,105,96,,,,,
+10143,778,alola,mimikyu-busted,"Its disguise made from an old rag allowed it to avoid an attack, but the impact broke the neck of the disguise. Now everyone knows it’s a Mimikyu.",1,,,ばれたすがた,Baretasugata,,Busted Mimikyu,Entlarvte Form,Forme Démasquée,Ghost,Fairy,,,,1,2,7,,,55,90,80,50,105,96,,,,,
 10144,778,alola,mimikyu-totem-disguised,,,,,,,,Totem Disguised Mimikyu,,,Ghost,Fairy,,,,,4,28,,,55,90,80,50,105,96,,,,,
 10145,778,alola,mimikyu-totem-busted,,,,,,,,Totem Busted Mimikyu,,,Ghost,Fairy,,,,,4,28,,,55,90,80,50,105,96,,,,,
 10146,784,alola,kommo-o-totem,,,,,,,,Totem Kommo'o,,,Dragon,Fighting,,,,,24,2075,,,75,110,125,100,105,85,,,,,
 10147,801,alola,magearna-original,,,,,５００ねんまえのいろ,500Nenmaenoiro,,Original Magearna,Originalfarbe,Couleur du Passé,Steel,Fairy,,,,,10,805,,,80,95,115,130,115,65,,,,,
-10148,25,kanto,pikachu-partner-cap,,1,,,キミにきめたキャップ,Kiminikimetakyappu,,Partner Cap Pikachu,Partner-Kappe,Casquette Partenaire,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,1,
+10148,25,kanto,pikachu-partner-cap,"This Pikachu is wearing its Trainer’s cap. The cap is a precious symbol of a fateful encounter.",1,,,キミにきめたキャップ,Kiminikimetakyappu,,Partner Cap Pikachu,Partner-Kappe,Casquette Partenaire,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,1,
 10149,105,kanto,marowak-totem,,,,,,,,,,,Fire,Ghost,,,,,17,980,,,60,80,110,50,80,45,,,,,
 10150,743,alola,ribombee-totem,,,,,,,,Totem Ribombee,,,Bug,Fairy,,,,,4,20,,,60,55,60,95,70,124,,,,,
 10151,744,alola,rockruff-own-tempo,,,,,,,,Own Tempo Rockruff,,,Rock,,,,,,5,92,,,45,65,40,30,40,60,,,,,
