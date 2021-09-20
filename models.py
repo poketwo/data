@@ -573,7 +573,7 @@ class Species:
     @cached_property
     def correct_guesses(self):
         extra = []
-        if self.is_form or self.is_event:
+        if self.is_form or self.event:
             extra.extend(self.instance.pokemon[self.dex_number].correct_guesses)
         if "nidoran" in self.slug:
             extra.append("nidoran")
