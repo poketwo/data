@@ -1,8 +1,8 @@
-from collections import defaultdict
 import random
 import typing
 import unicodedata
 from abc import ABC
+from collections import defaultdict
 from dataclasses import dataclass
 from functools import cached_property, lru_cache
 from typing import Union
@@ -573,7 +573,7 @@ class Species:
     @cached_property
     def correct_guesses(self):
         extra = []
-        if self.is_form:
+        if self.is_form or self.is_event:
             extra.extend(self.instance.pokemon[self.dex_number].correct_guesses)
         if "nidoran" in self.slug:
             extra.append("nidoran")
