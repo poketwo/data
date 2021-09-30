@@ -27,7 +27,7 @@ def get_data_from(filename):
 
 
 def get_pokemon(instance):
-    species = [None] + get_data_from("pokemon.csv")
+    species = {x["id"]: x for x in get_data_from("pokemon.csv")}
     evolution = {
         x["evolved_species_id"]: x for x in reversed(get_data_from("evolution.csv"))
     }
@@ -73,7 +73,7 @@ def get_pokemon(instance):
 
     pokemon = {}
 
-    for row in species[1:]:
+    for row in species.values():
         if "enabled" not in row:
             continue
 
