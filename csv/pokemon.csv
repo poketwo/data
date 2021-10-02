@@ -1,4 +1,4 @@
-﻿id,dex_number,region,slug,description,enabled,catchable,abundance,name.ja,name.ja_r,name.ja_t,name.en,name.de,name.fr,type.0,type.1,mythical,legendary,ultra_beast,event,height,weight,evo.to,evo.from,base.hp,base.atk,base.def,base.satk,base.sdef,base.spd,evo.mega,evo.mega_x,evo.mega_y,is_form,form_item
+id,dex_number,region,slug,description,enabled,catchable,abundance,name.ja,name.ja_r,name.ja_t,name.en,name.de,name.fr,type.0,type.1,mythical,legendary,ultra_beast,event,height,weight,evo.to,evo.from,base.hp,base.atk,base.def,base.satk,base.sdef,base.spd,evo.mega,evo.mega_x,evo.mega_y,is_form,form_item
 1,1,kanto,bulbasaur,"While it is young, it uses the nutrients that are
 stored in the seed on its back in order to grow.",1,1,512,フシギダネ,Fushigidane,Fushigidane,Bulbasaur,Bisasam,Bulbizarre,Grass,Poison,,,,,7,69,2,,45,49,49,65,65,45,,,,,
 2,2,kanto,ivysaur,"Exposure to sunlight adds to its strength.
