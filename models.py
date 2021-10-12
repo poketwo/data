@@ -646,6 +646,31 @@ class DataManagerBase:
         ]
 
     @cached_property
+    def list_galarian(self):
+        return [
+            10158,
+            10159,
+            10160,
+            10161,
+            10162,
+            10163,
+            10164,
+            10165,
+            10166,
+            10167,
+            10168,
+            10169,
+            10170,
+            10171,
+            10172,
+            10173,
+            10174,
+            10175,
+            10176,
+            10177
+        ]
+
+    @cached_property
     def list_mythical(self):
         return [v.id for v in self.pokemon.values() if v.mythical]
 
