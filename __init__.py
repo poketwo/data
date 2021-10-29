@@ -155,6 +155,7 @@ def get_pokemon(instance):
             is_form="is_form" in row,
             form_item=row["form_item"] if "form_item" in row else None,
             region=row["region"],
+            art_credit=row.get("credit"),
             instance=instance,
         )
 

@@ -526,6 +526,7 @@ class Species:
     form_item: int = None
     moves: typing.List[PokemonMove] = None
     region: str = None
+    art_credit: str = None
 
     instance: typing.Any = UnregisteredDataManager()
 
