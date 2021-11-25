@@ -670,7 +670,7 @@ class DataManagerBase:
             10174,
             10175,
             10176,
-            10177
+            10177,
         ]
 
     @cached_property
@@ -725,7 +725,9 @@ class DataManagerBase:
     def species_by_dex_number_index(self):
         ret = defaultdict(list)
         for pokemon in self.pokemon.values():
-            ret[pokemon.dex_number].append(pokemon)
+            ret[pokemon.id].append(pokemon)
+            if pokemon.id != pokemon.dex_number:
+                ret[pokemon.dex_number].append(pokemon)
         return dict(ret)
 
     def all_species_by_number(self, number: int) -> Species:
