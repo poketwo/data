@@ -534,8 +534,6 @@ class Species:
         self.name = next(filter(lambda x: x[0] == "🇬🇧", self.names))[1]
         if self.moves is None:
             self.moves = []
-        if "Ghost" in self.types or "Dark" in self.types:
-            self.abundance *= 2
 
     def __str__(self):
         return self.name
