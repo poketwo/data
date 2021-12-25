@@ -42,9 +42,7 @@ class StatChange:
 
     @cached_property
     def stat(self):
-        return ("hp", "atk", "defn", "satk", "sdef", "spd", "evasion", "accuracy")[
-            self.stat_id - 1
-        ]
+        return ("hp", "atk", "defn", "satk", "sdef", "spd", "evasion", "accuracy")[self.stat_id - 1]
 
 
 @dataclass
@@ -165,18 +163,10 @@ class Move:
 
             if self.damage_class_id == 2:
                 atk = pokemon.atk * constants.STAT_STAGE_MULTIPLIERS[pokemon.stages.atk]
-                defn = (
-                    opponent.defn
-                    * constants.STAT_STAGE_MULTIPLIERS[opponent.stages.defn]
-                )
+                defn = opponent.defn * constants.STAT_STAGE_MULTIPLIERS[opponent.stages.defn]
             else:
-                atk = (
-                    pokemon.satk * constants.STAT_STAGE_MULTIPLIERS[pokemon.stages.satk]
-                )
-                defn = (
-                    opponent.sdef
-                    * constants.STAT_STAGE_MULTIPLIERS[opponent.stages.sdef]
-                )
+                atk = pokemon.satk * constants.STAT_STAGE_MULTIPLIERS[pokemon.stages.satk]
+                defn = opponent.sdef * constants.STAT_STAGE_MULTIPLIERS[opponent.stages.sdef]
 
             damage = int((2 * pokemon.level / 5 + 2) * self.power * atk / defn / 50 + 2)
 
@@ -227,16 +217,12 @@ class Move:
             #     pass
 
         ailment = (
-            self.meta.meta_ailment
-            if random.randrange(100) < self.meta.ailment_chance
-            else None
+            self.meta.meta_ailment if random.randrange(100) < self.meta.ailment_chance else None
         )
 
         typ_mult = 1
         for typ in opponent.species.types:
-            typ_mult *= constants.TYPE_EFFICACY[self.type_id][
-                constants.TYPES.index(typ)
-            ]
+            typ_mult *= constants.TYPE_EFFICACY[self.type_id][constants.TYPES.index(typ)]
 
         damage *= typ_mult
         messages = []
@@ -534,6 +520,8 @@ class Species:
         self.name = next(filter(lambda x: x[0] == "🇬🇧", self.names))[1]
         if self.moves is None:
             self.moves = []
+        if "Ice" in self.types or "Rock" in self.types:
+            self.abundance *= 3
 
     def __str__(self):
         return self.name
@@ -601,9 +589,7 @@ class Species:
             return f"{self.name} transforms from {species} when given a {item.name}."
 
         if self.evolution_from is not None and self.evolution_to is not None:
-            return (
-                f"{self.name} {self.evolution_from.text} and {self.evolution_to.text}."
-            )
+            return f"{self.name} {self.evolution_from.text} and {self.evolution_to.text}."
         elif self.evolution_from is not None:
             return f"{self.name} {self.evolution_from.text}."
         elif self.evolution_to is not None:
@@ -732,15 +718,11 @@ class DataManagerBase:
         return self.species_by_dex_number_index.get(number, [])
 
     def all_species_by_name(self, name: str) -> Species:
-        return self.species_by_name_index.get(
-            deaccent(name.lower().replace("′", "'")), []
-        )
+        return self.species_by_name_index.get(deaccent(name.lower().replace("′", "'")), [])
 
     def find_all_matches(self, name: str) -> Species:
         return [
-            y.id
-            for x in self.all_species_by_name(name)
-            for y in self.all_species_by_number(x.id)
+            y.id for x in self.all_species_by_name(name) for y in self.all_species_by_number(x.id)
         ]
 
     def species_by_number(self, number: int) -> Species:
