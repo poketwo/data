@@ -19,8 +19,7 @@ def get_data_from(filename):
     with open(path) as f:
         reader = csv.DictReader(f)
         data = list(
-            {k: int(v) if isnumber(v) else v for k, v in row.items() if v != ""}
-            for row in reader
+            {k: int(v) if isnumber(v) else v for k, v in row.items() if v != ""} for row in reader
         )
 
     return data
@@ -28,9 +27,7 @@ def get_data_from(filename):
 
 def get_pokemon(instance):
     species = {x["id"]: x for x in get_data_from("pokemon.csv")}
-    evolution = {
-        x["evolved_species_id"]: x for x in reversed(get_data_from("evolution.csv"))
-    }
+    evolution = {x["evolved_species_id"]: x for x in reversed(get_data_from("evolution.csv"))}
 
     def get_evolution_trigger(pid):
         evo = evolution[pid]
@@ -117,6 +114,9 @@ def get_pokemon(instance):
 
         if "name.en" in row:
             names.append(("🇬🇧", row["name.en"]))
+
+        if "name.en2" in row:
+            names.append(("🇬🇧", row["name.en2"]))
 
         if "name.de" in row:
             names.append(("🇩🇪", row["name.de"]))
