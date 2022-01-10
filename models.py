@@ -520,8 +520,6 @@ class Species:
         self.name = next(filter(lambda x: x[0] == "🇬🇧", self.names))[1]
         if self.moves is None:
             self.moves = []
-        if "Ice" in self.types or "Rock" in self.types:
-            self.abundance *= 3
 
     def __str__(self):
         return self.name
