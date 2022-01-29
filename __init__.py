@@ -18,9 +18,7 @@ def get_data_from(filename):
 
     with open(path) as f:
         reader = csv.DictReader(f)
-        data = list(
-            {k: int(v) if isnumber(v) else v for k, v in row.items() if v != ""} for row in reader
-        )
+        data = list({k: int(v) if isnumber(v) else v for k, v in row.items() if v != ""} for row in reader)
 
     return data
 
@@ -86,11 +84,7 @@ def get_pokemon(instance):
 
             for s in str(row["evo.to"]).split():
                 pto = species[int(s)]
-                evo_to.append(
-                    models.Evolution.evolve_to(
-                        int(s), get_evolution_trigger(pto["id"]), instance=instance
-                    )
-                )
+                evo_to.append(models.Evolution.evolve_to(int(s), get_evolution_trigger(pto["id"]), instance=instance))
 
         if evo_to and len(evo_to) == 0:
             evo_to = None
@@ -205,9 +199,7 @@ def get_effects(instance):
     effects = {}
 
     for row in data:
-        effects[row["id"]] = models.MoveEffect(
-            id=row["id"], description=row["text"], instance=instance
-        )
+        effects[row["id"]] = models.MoveEffect(id=row["id"], description=row["text"], instance=instance)
 
     return effects
 
@@ -253,8 +245,11 @@ def get_moves(instance):
 
 
 class DataManager(models.DataManagerBase):
-    def __init__(self):
+    def __init__(self, assets_base_url=None):
         self.moves = get_moves(self)
         self.pokemon = get_pokemon(self)
         self.items = get_items(self)
         self.effects = get_effects(self)
+
+        if assets_base_url is not None:
+            self.assets_base_url = assets_base_url

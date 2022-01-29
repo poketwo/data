@@ -6,6 +6,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 from functools import cached_property, lru_cache
 from typing import Union
+from urllib.parse import urljoin
 
 from . import constants
 
@@ -216,9 +217,7 @@ class Move:
             # elif ailment == "Silence":
             #     pass
 
-        ailment = (
-            self.meta.meta_ailment if random.randrange(100) < self.meta.ailment_chance else None
-        )
+        ailment = self.meta.meta_ailment if random.randrange(100) < self.meta.ailment_chance else None
 
         typ_mult = 1
         for typ in opponent.species.types:
@@ -551,11 +550,13 @@ class Species:
 
     @cached_property
     def image_url(self):
-        return f"https://assets.poketwo.net/images/{self.id}.png?v=26"
+        base_url = getattr(self.instance, "assets_base_url", "https://assets.poketwo.net")
+        return urljoin(base_url, f"/images/{self.id}.png?v=26")
 
     @cached_property
     def shiny_image_url(self):
-        return f"https://assets.poketwo.net/shiny/{self.id}.png?v=26"
+        base_url = getattr(self.instance, "assets_base_url", "https://assets.poketwo.net")
+        return urljoin(base_url, f"/shiny/{self.id}.png?v=26")
 
     @cached_property
     def correct_guesses(self):
@@ -719,9 +720,7 @@ class DataManagerBase:
         return self.species_by_name_index.get(deaccent(name.lower().replace("′", "'")), [])
 
     def find_all_matches(self, name: str) -> Species:
-        return [
-            y.id for x in self.all_species_by_name(name) for y in self.all_species_by_number(x.id)
-        ]
+        return [y.id for x in self.all_species_by_name(name) for y in self.all_species_by_number(x.id)]
 
     def species_by_number(self, number: int) -> Species:
         try:
