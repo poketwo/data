@@ -565,6 +565,8 @@ class Species:
             extra.extend(self.instance.pokemon[self.dex_number].correct_guesses)
         if "nidoran" in self.slug:
             extra.append("nidoran")
+        if self.id == 50053:
+            extra.extend(self.instance.pokemon[10159].correct_guesses)
         return extra + [deaccent(x.lower()) for _, x in self.names] + [self.slug]
 
     @cached_property
