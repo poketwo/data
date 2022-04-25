@@ -656,6 +656,7 @@ class DataManagerBase:
             10175,
             10176,
             10177,
+            50053,
         ]
 
     @cached_property
