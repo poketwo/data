@@ -91,7 +91,6 @@ id,name,description,cost,shard,action,page,emote,separate
 12002,X Mega Evolution,Transforms your pokémon into its X mega form!,1000,,evolve_megax,6,,1
 12003,Y Mega Evolution,Transforms your pokémon into its Y mega form!,1000,,evolve_megay,6,,1
 15001,Shard,,200,,shard,7,,1
-15002,Redeem,"Spawns any catchable pokémon of your choice.
-**Redeems are temporarily disabled until further notice.**",200,1,redeem,7,,1
+15002,Redeem,"Spawns any catchable pokémon of your choice.,200,1,redeem,7,,1
 15003,Incense,Spawns a pokémon every 20 seconds for an hour.,50,1,incense,7,,1
 15004,Shiny Charm,Increases your shiny rate by 20% for 1 week.,150,1,shiny_charm,7,,1
