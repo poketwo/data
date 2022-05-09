@@ -598,6 +598,9 @@ class Species:
         else:
             return None
 
+    def __repr__(self):
+        return f"<Species: {self.name}>"
+
 
 @dataclass
 class DataManagerBase:
