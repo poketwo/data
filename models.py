@@ -662,6 +662,30 @@ class DataManagerBase:
         ]
 
     @cached_property
+    def list_hisuian(self):
+        return [
+            10221,
+            10222,
+            10223,
+            10224,
+            10225,
+            10226,
+            10227,
+            10228,
+            10229,
+            10230,
+            10231,
+            10232,
+            10233,
+            10234,
+            10235,
+            10236,
+            10237,
+            10238,
+            10239,
+        ]
+
+    @cached_property
     def list_mythical(self):
         return [v.id for v in self.pokemon.values() if v.mythical]
 
