@@ -287,7 +287,7 @@ It protects itself from all sorts of attacks by
 emitting auras from its fingers to create walls.",,1,1,96,バリヤード,Bariyādo,Barrierd,Mr. Mime,,Pantimos,M. Mime,Psychic,Fairy,,,,,13,545,,439,40,45,65,100,120,90,,,,,
 123,123,kanto,scyther,"If you come across an area in a forest where a lot
 of the trees have been cut down, what you’ve
-found is a Scyther’s territory.",,1,1,384,ストライク,Sutoraiku,Strike,Scyther,,Sichlor,Insécateur,Bug,Flying,,,,,15,560,212,,70,110,80,55,80,105,,,,,
+found is a Scyther’s territory.",,1,1,384,ストライク,Sutoraiku,Strike,Scyther,,Sichlor,Insécateur,Bug,Flying,,,,,15,560,212 900,,70,110,80,55,80,105,,,,,
 124,124,kanto,jynx,"Appears to move to a rhythm of its own, as if it
 were dancing. It wiggles its hips as it walks.",,1,2,96,ルージュラ,Rūjura,Rougela,Jynx,,Rossana,Lippoutou,Ice,Psychic,,,,,14,406,,238,65,50,35,115,95,95,,,,,
 125,125,kanto,electabuzz,"If a major power outage occurs, it is certain
@@ -544,10 +544,10 @@ It waits for parents to leave their nests,
 and then it sneaks in to steal their eggs.",,1,1,384,ニューラ,Nyūra,Nyula,Sneasel,,Sniebel,Farfuret,Dark,Ice,,,,,9,280,461,,55,95,55,35,75,115,,,,,
 216,216,johto,teddiursa,"This Pokémon likes to lick its palms that are sweetened by
 being soaked in honey. Teddiursa concocts its own honey
-by blending fruits and pollen collected by Beedrill.",,1,1,384,ヒメグマ,Himeguma,Himeguma,Teddiursa,,Teddiursa,Teddiursa,Normal,,,,,,6,88,217,,60,80,50,50,50,40,,,,,
+by blending fruits and pollen collected by Beedrill.",,1,1,1536,ヒメグマ,Himeguma,Himeguma,Teddiursa,,Teddiursa,Teddiursa,Normal,,,,,,6,88,217,,60,80,50,50,50,40,,,,,
 217,217,johto,ursaring,"In the forests inhabited by Ursaring, it is said that there are
 many streams and towering trees where they gather food. This
-Pokémon walks through its forest gathering food every day.",,1,1,96,リングマ,Ringuma,Ringuma,Ursaring,,Ursaring,Ursaring,Normal,,,,,,18,1258,,216,90,130,75,75,75,55,,,,,
+Pokémon walks through its forest gathering food every day.",,1,1,384,リングマ,Ringuma,Ringuma,Ursaring,,Ursaring,Ursaring,Normal,,,,,,18,1258,,216,90,130,75,75,75,55,,,,,
 218,218,johto,slugma,"Slugma does not have any blood in its body. Instead, intensely
 hot magma circulates throughout this Pokémon’s body,
 carrying essential nutrients and oxygen to its organs.",,1,1,384,マグマッグ,Magumaggu,Magmag,Slugma,,Schneckmag,Limagma,Fire,,,,,,7,350,219,,40,40,40,70,40,20,,,,,
@@ -595,7 +595,7 @@ Porygon2, the Pokémon began using a strange
 language that only other Porygon2 understand.",,1,1,384,ポリゴン２,Porigon2,Porygon2,Porygon2,,Porygon2,Porygon2,Normal,,,,,,6,325,474,137,85,80,90,105,95,60,,,,,
 234,234,johto,stantler,"Stantler’s magnificent antlers were traded at high prices as
 works of art. As a result, this Pokémon was hunted close to
-extinction by those who were after the priceless antlers.",,1,1,96,オドシシ,Odoshishi,Odoshishi,Stantler,,Damhirplex,Cerfrousse,Normal,,,,,,14,712,,,73,95,62,85,65,85,,,,,
+extinction by those who were after the priceless antlers.",,1,1,384,オドシシ,Odoshishi,Odoshishi,Stantler,,Damhirplex,Cerfrousse,Normal,,,,,,14,712,899,,73,95,62,85,65,85,,,,,
 235,235,johto,smeargle,"It draws symbols with the fluid that oozes from
 the tip of its tail. Depending on the symbol,
 Smeargle fanatics will pay big money for them.",,1,1,96,ドーブル,Dōburu,Doble,Smeargle,,Farbeagle,Queulorior,Normal,,,,,,12,580,,,55,20,35,20,45,75,,,,,
@@ -2474,6 +2474,13 @@ Pokémon has raised since the child’s infancy.",,1,1,12,ザルード,Zarūdo,,
 896,896,galar,glastrier,"Glastrier has tremendous physical strength, and the mask of ice covering its face is 100 times harder than diamond.",,1,1,6,ブリザポス,Burizaposu,,Glastrier,,Polaross,Blizzeval,Ice,,,1,,,22,8000,,,100,145,130,65,110,30,,,,,
 897,897,galar,spectrier,"As it dashes through the night, Spectrier absorbs the life-force of sleeping creatures. It craves silence and solitude.",,1,1,6,レイスポス,Reisuposu,,Spectrier,,Phantoross,Spectreval,Ghost,,,1,,,20,445,,,100,65,60,145,80,130,,,,,
 898,898,galar,calyrex,Calyrex is known in legend as a king that ruled over Galar in ancient times. It has the power to cause hearts to mend and plants to spring forth.,,1,1,6,バドレックス,Badorekkusu,,Calyrex,,Coronospa,Sylveroy,Psychic,Grass,,1,,,11,77,,,100,80,80,80,80,80,,,,,
+899,899,hisui,wyrdeer,,,1,1,96,アヤシシ,Ayashishi,,Wyrdeer,,Damythir,Cerbyllin,Normal,Psychic,,,,,18,951,,234,103,105,72,105,75,65,,,,,
+900,900,hisui,kleavor,,,1,1,96,バサギリ,Basagiri,,Kleavor,,Axantor,Hachécateur,Bug,Rock,,,,,18,890,,123,70,135,95,45,70,85,,,,,
+901,901,hisui,ursaluna,,,1,1,96,ガチグマ,Gachiguma,,Ursaluna,,Gachiguma,Ursaking,Ground,Normal,,,,,24,2900,,217,130,140,105,45,80,50,,,,,
+902,902,hisui,basculegion,,,1,1,24,イダイトウ,Idaitou,,Basculegion,,Salmagnis,Paragruel,Water,Ghost,,,,,30,1100,,,120,112,65,80,75,78,,,,,
+903,903,hisui,sneasler,,,1,1,24,オオニューラ,Oonyūra,,Sneasler,,Snieboss,Farfurex,Fighting,Poison,,,,,13,430,,10227,80,130,60,40,80,120,,,,,
+904,904,hisui,overqwil,,,1,1,12,ハリーマン,Harīman,,Overqwil,,Myriador,Qwilpik,Dark,Poison,,,,,25,605,,10226,85,115,95,65,65,85,,,,,
+905,905,hisui,enamorus,,,1,1,6,ラブトロス,Rabutorosu,,Enamorus,,Cupidos,Amovénus,Fairy,Flying,,1,,,16,480,,,74,115,70,135,80,106,,,,,
 10001,386,hoenn,deoxys-attack,,,1,1,12,アタックフォルム,Atakkuforumu,,Attack Deoxys,,Angriffsform,Forme Attaque,Psychic,,1,,,,17,608,,,50,180,20,180,20,150,,,,1,
 10002,386,hoenn,deoxys-defense,,,1,1,12,ディフェンスフォルム,Difensuforumu,,Defense Deoxys,,Verteidigungsform,Forme Défense,Psychic,,1,,,,17,608,,,50,70,160,70,160,90,,,,1,
 10003,386,hoenn,deoxys-speed,,,1,1,12,スピードフォルム,Supīdoforumu,,Speed Deoxys,,Initiativeform,Forme Vitesse,Psychic,,1,,,,17,608,,,50,95,90,95,90,180,,,,1,
@@ -2696,6 +2703,25 @@ them. Its strikes are nonstop, flowing like a river.",,1,1,6,れんげきウー�
 10218,892,galar,urshifu-single-strike-gmax,,,1,,,,,,Gigantamax Single Strike Urshifu,,,,Fighting,Dark,,1,,,290,10000,,,100,130,100,63,60,97,,,,,
 10219,892,galar,urshifu-rapid-strike-gmax,,,1,,,,,,Gigantamax Rapid Strike Urshifu,,,,Fighting,Water,,1,,,260,10000,,,100,130,100,63,60,97,,,,,
 10220,849,galar,toxtricity-low-key-gmax,,,1,,,,,,Gigantamax Low Key Toxtricity,,,,Electric,Poison,,,,,240,10000,,,75,98,70,114,70,75,,,,,
+10221,58,kanto,growlithe-hisui,"These daring Pokémon have coins on their foreheads. Darker coins are harder, and harder coins garner more respect among Meowth.",,1,2,24,,,,Hisuian Growlithe,,,,Fire,,,,,,7,190,10222,,55,70,45,70,50,60,,,,,
+10222,59,kanto,arcanine-hisui,,,1,2,12,,,,Hisuian Arcanine,,,,Fire,,,,,,19,1550,,10221,90,110,80,100,80,95,,,,,
+10223,100,kanto,voltorb-hisui,,,1,1,24,,,,Hisuian Voltorb,,,,Electric,,,,,,5,104,10224,,40,30,50,55,55,100,,,,,
+10224,101,kanto,electrode-hisui,,,1,1,12,,,,Hisuian Electrode,,,,Electric,,,,,,12,666,,10223,60,50,70,80,80,150,,,,,
+10225,157,johto,typhlosion-hisui,,,1,1,12,,,,Hisuian Typhlosion,,,,Fire,,,,,,17,795,,,78,84,78,109,85,100,,,,,
+10226,211,johto,qwilfish-hisui,,,1,4,12,,,,Hisuian Qwilfish,,,,Water,Poison,,,,,5,39,904,,65,95,85,55,55,85,,,,,
+10227,215,johto,sneasel-hisui,,,1,1,24,,,,Hisuian Sneasel,,,,Dark,Ice,,,,,9,280,903,,55,95,55,35,75,115,,,,,
+10228,503,unova,samurott-hisui,,,1,1,12,,,,Hisuian Samurott,,,,Water,,,,,,15,946,,,95,100,85,108,70,70,,,,,
+10229,549,unova,lilligant-hisui,,,1,1,12,,,,Hisuian Lilligant,,,,Grass,,,,,,11,163,,,70,60,75,110,75,90,,,,,
+10230,570,unova,zorua-hisui,,,1,1,24,,,,Hisuian Zorua,,,,Dark,,,,,,7,125,10231,,40,65,40,80,40,65,,,,,
+10231,571,unova,zoroark-hisui,,,1,1,12,,,,Hisuian Zoroark,,,,Dark,,,,,,16,811,,10230,60,105,60,120,60,105,,,,,
+10232,628,unova,braviary-hisui,,,1,3,12,,,,Hisuian Braviary,,,,Normal,Flying,,,,,15,410,,,100,123,75,57,75,80,,,,,
+10233,705,kalos,sliggoo-hisui,,,1,1,24,,,,Hisuian Sliggoo,,,,Dragon,,,,,,8,175,10234,,68,75,53,83,113,60,,,,,
+10234,706,kalos,goodra-hisui,,,1,1,8,,,,Hisuian Goodra,,,,Dragon,,,,,,20,1505,,10233,90,100,70,110,150,80,,,,,
+10235,713,kalos,avalugg-hisui,,,1,1,12,,,,Hisuian Avalugg,,,,Ice,,,,,,20,5050,,,95,117,184,44,46,28,,,,,
+10236,724,alola,decidueye-hisui,,,1,1,12,,,,Hisuian Decidueye,,,,Grass,Ghost,,,,,16,366,,,78,107,75,100,100,70,,,,,
+10237,484,sinnoh,palkia-origin,,,1,,,,,,Origin Palkia,,,,Water,Dragon,,1,,,63,6590,,,90,100,100,150,120,120,,,,1,
+10238,483,sinnoh,dialga-origin,,,1,,,,,,Origin Dialga,,,,Steel,Dragon,,1,,,70,8487,,,100,100,120,150,120,90,,,,1,
+10239,905,hisui,enamorus-therian,,,1,,,,,,Therian Enamorus,,,,Fairy,Flying,,1,,,16,480,,,74,115,110,135,100,46,,,,1,681
 50001,249,johto,lugia-shadow,,HiroWilde#6159,1,,,ダークルギア,Dākurugia,Dark Lugia,Shadow Lugia,,Crypto-Lugia,Lugia Obscur,Shadow,Flying,,1,,1,52,2160,,,106,90,130,90,154,110,,,,,
 50002,185,johto,sudowoodo-festive,,SuperJedi224#2591,1,,,クリスマスウソッキー,Kurisumasūsokkī,Christmas Usokkie,Festive Sudowoodo,,Weihnachten Mogelbaum,Simularbre Festif,Rock,,,,,1,12,380,,,70,100,115,30,65,30,,,,,
 50003,519,unova,pidove-festive,,HiroWilde#6159,1,,,クリスマスマメパト,Kurisumasumamepato,Christmas Mamepato,Festive Pidove,,Weihnachten Dusselgurr,Poichigeon Festif,Normal,Flying,,,,1,3,21,,,50,55,50,36,30,43,,,,,
