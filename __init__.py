@@ -1,8 +1,11 @@
 import csv
+import re
 from collections import defaultdict
 from pathlib import Path
 
 from . import models
+
+DESCRIPTION_LINK_REGEX = re.compile(r"\[(.+?)\]\{.+?\}")
 
 
 def isnumber(v):
@@ -208,8 +211,9 @@ def get_effects(instance):
     effects = {}
 
     for row in data:
+        description = re.sub(DESCRIPTION_LINK_REGEX, r"\1", row["short_effect"])
         effects[row["move_effect_id"]] = models.MoveEffect(
-            id=row["move_effect_id"], description=row["short_effect"], instance=instance
+            id=row["move_effect_id"], description=description, instance=instance
         )
 
     return effects
