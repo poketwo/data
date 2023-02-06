@@ -18,14 +18,19 @@ def get_data_from(filename):
 
     with open(path) as f:
         reader = csv.DictReader(f)
-        data = list({k: int(v) if isnumber(v) else v for k, v in row.items() if v != ""} for row in reader)
+        data = list(
+            {k: int(v) if isnumber(v) else v for k, v in row.items() if v != ""}
+            for row in reader
+        )
 
     return data
 
 
 def get_pokemon(instance):
     species = {x["id"]: x for x in get_data_from("pokemon.csv")}
-    evolution = {x["evolved_species_id"]: x for x in reversed(get_data_from("evolution.csv"))}
+    evolution = {
+        x["evolved_species_id"]: x for x in reversed(get_data_from("evolution.csv"))
+    }
 
     def get_evolution_trigger(pid):
         evo = evolution[pid]
@@ -84,7 +89,11 @@ def get_pokemon(instance):
 
             for s in str(row["evo.to"]).split():
                 pto = species[int(s)]
-                evo_to.append(models.Evolution.evolve_to(int(s), get_evolution_trigger(pto["id"]), instance=instance))
+                evo_to.append(
+                    models.Evolution.evolve_to(
+                        int(s), get_evolution_trigger(pto["id"]), instance=instance
+                    )
+                )
 
         if evo_to and len(evo_to) == 0:
             evo_to = None
@@ -194,18 +203,26 @@ def get_items(instance):
 
 
 def get_effects(instance):
-    data = get_data_from("move_effects.csv")
+    data = get_data_from("move_effect_prose.csv")
 
     effects = {}
 
     for row in data:
-        effects[row["id"]] = models.MoveEffect(id=row["id"], description=row["text"], instance=instance)
+        effects[row["move_effect_id"]] = models.MoveEffect(
+            id=row["move_effect_id"], description=row["short_effect"], instance=instance
+        )
 
     return effects
 
 
 def get_moves(instance):
     data = get_data_from("moves.csv")
+    names = {
+        x["move_id"]: x["name"]
+        for x in get_data_from("move_names.csv")
+        if x["local_language_id"] == 9
+    }
+
     meta = {x["move_id"]: x for x in get_data_from("move_meta.csv")}
     meta_stats = defaultdict(list)
     for x in get_data_from("move_meta_stat_changes.csv"):
@@ -226,17 +243,17 @@ def get_moves(instance):
 
         moves[row["id"]] = models.Move(
             id=row["id"],
-            slug=row["slug"],
-            name=row["name"],
+            slug=row["identifier"],
+            name=names[row["id"]],
             power=row.get("power", None),
             pp=row["pp"],
             accuracy=row.get("accuracy", None),
             priority=row["priority"],
-            type_id=row["type"],
-            target_id=row["target"],
-            damage_class_id=row["damage_class"],
-            effect_id=row["effect"],
-            effect_chance=row.get("effect_chance", None),
+            type_id=row["type_id"],
+            target_id=row["target_id"],
+            damage_class_id=row["damage_class_id"],
+            effect_id=row["effect_id"],
+            effect_chance=row.get("effect_chance_id", None),
             instance=instance,
             meta=models.MoveMeta(**mmeta, stat_changes=stat_changes),
         )
