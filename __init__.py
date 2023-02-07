@@ -224,7 +224,7 @@ def get_effects(instance):
 
 
 def get_moves(instance):
-    data = [x for x in get_data_from("moves.csv") if x["version_group_id"] == 20]
+    data = get_data_from("moves.csv")
     names = {
         x["move_id"]: x["name"]
         for x in get_data_from("move_names.csv")
