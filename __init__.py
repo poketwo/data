@@ -167,8 +167,12 @@ def get_pokemon(instance):
 
     moves = get_data_from("pokemon_moves.csv")
 
+    version_group = defaultdict(int)
     for row in moves:
-        if row["pokemon_move_method_id"] == 1 and row["pokemon_id"] in pokemon:
+        version_group[row["pokemon_id"]] = max(version_group[row["pokemon_id"]], row["version_group_id"])
+
+    for row in moves:
+        if row["pokemon_move_method_id"] == 1 and row["pokemon_id"] in pokemon and row["version_group_id"] == version_group[row["pokemon_id"]]:
             pokemon[row["pokemon_id"]].moves.append(
                 models.PokemonMove(
                     row["move_id"],
