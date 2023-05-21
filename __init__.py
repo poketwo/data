@@ -115,7 +115,7 @@ def get_pokemon(instance):
         if "name.ja_r" in row:
             names.append(("🇯🇵", row["name.ja_r"]))
 
-        if "name.ja_t" in row and row["name.ja_t"] != row["name.ja_r"]:
+        if "name.ja_t" in row and row["name.ja_t"] != row.get("name.ja_r"):
             names.append(("🇯🇵", row["name.ja_t"]))
 
         if "name.en" in row:
@@ -166,13 +166,14 @@ def get_pokemon(instance):
         )
 
     moves = get_data_from("pokemon_moves.csv")
-
     version_group = defaultdict(int)
     for row in moves:
         version_group[row["pokemon_id"]] = max(version_group[row["pokemon_id"]], row["version_group_id"])
 
     for row in moves:
         if row["pokemon_move_method_id"] == 1 and row["pokemon_id"] in pokemon and row["version_group_id"] == version_group[row["pokemon_id"]]:
+            if row["move_id"] not in instance.moves:
+                continue
             pokemon[row["pokemon_id"]].moves.append(
                 models.PokemonMove(
                     row["move_id"],
@@ -243,7 +244,10 @@ def get_moves(instance):
         if row["id"] > 10000:
             continue
 
-        mmeta = meta[row["id"]]
+        try:
+            mmeta = meta[row["id"]]
+        except KeyError:
+            continue
         mmeta.pop("move_id")
 
         stat_changes = meta_stats.get(row["id"], [])

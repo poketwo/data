@@ -71,7 +71,7 @@ Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 t
 []{move:rapid-spin} cancels this effect."
 44,9,Has an increased chance for a critical hit.,Inflicts [regular damage]{mechanic:regular-damage}.  User's [critical hit]{mechanic:critical-hit} rate is one level higher when using this move.
 45,9,Hits twice in one turn.,Inflicts [regular damage]{mechanic:regular-damage}.  Hits twice in one turn.
-46,9,"If the user misses, it takes half the damage it would have inflicted in recoil.","Inflicts [regular damage]{mechanic:regular-damage}.  If this move misses, is blocked by []{move:protect} or []{move:detect}, or has no effect, the user takes half the damage it would have inflicted in recoil.  This recoil damage will not exceed half the user's max HP.
+46,9,"If the user misses, it takes half the damage it would have inflicted in recoil.","Inflicts [regular damage]{mechanic:regular-damage}. If this move misses, is blocked by []{move:protect} or []{move:detect}, or has no effect, the user takes damage equal to half of its max HP rounded down.
 
 This move cannot be used while []{move:gravity} is in effect."
 47,9,Protects the user's stats from being changed by enemy moves.,"Pokémon on the user's side of the [field]{mechanic:field} are immune to stat-lowering effects for five turns.
@@ -1058,7 +1058,7 @@ Changes []{move:nature-power} to []{move:thunderbolt}."
 371,9,Does nothing.,Does nothing.
 372,9,Has a $effect_chance% chance to paralyze the target.,Inflicts [regular damage]{mechanic:regular-damage}.  Has a $effect_chance% chance to [paralyze]{mechanic:paralysis} the target.
 373,9,"Grounds the target, and hits even Flying-type or levitating Pokémon.",Inflicts regular damage.  Grounds the target until it leaves battle.  Ignores levitation effects and the immunity of []{type:flying}-type Pokémon.
-374,9,Prevents the target from leaving battle.,Inflicts regular damage.  Traps the target.  
+374,9,Prevents the target from leaving battle.,Inflicts regular damage.  Traps the target.
 375,9,Raises the user's Attack by one stage after inflicting damage.,Inflicts regular damage.  Raises the user's Attack by one stage.
 376,9,Adds []{type:grass} to the target's types.,Adds []{type:grass} to the target's types.
 377,9,Protects all friendly Pokémon from damaging moves.  Only works on the first turn after the user is sent out.,Protects all friendly Pokémon from damaging moves.  Only works on the first turn after the user is sent out.
@@ -1110,32 +1110,17 @@ Any [regular damage]{mechanic:regular-damage} dealt to an affected Pokémon is r
 413,9,Damages the target for 75% of its remaining HP.,Inflicts direct damage equal to ¾ of the target's remaining HP.
 414,9,Raises all of the user's stats by two stages.,"Raises the user's [Attack]{mechanic:attack}, [Defense]{mechanic:defense}, [Special Attack]{mechanic:special-attack}, [Special Defense]{mechanic:special-defense}, and [Speed]{mechanic:speed} by two [stages]{mechanic:stage} each."
 415,9,Changes the terrain to Psychic Terrain after inflicting damage.,"Inflicts [regular damage]{mechanic:regular-damage}, then (if successful) changes the terrain to []{move:psychic-terrain}."
-416,9,XXX new effect for light-that-burns-the-sky,XXX new effect for light-that-burns-the-sky
-417,9,XXX new effect for lets-snuggle-forever,XXX new effect for lets-snuggle-forever
-418,9,XXX new effect for splintered-stormshards,XXX new effect for splintered-stormshards
-419,9,XXX new effect for clangorous-soulblaze,XXX new effect for clangorous-soulblaze
-420,9,XXX new effect for mind-blown,XXX new effect for mind-blown
-421,9,XXX new effect for dynamax-cannon,XXX new effect for dynamax-cannon
-422,9,XXX new effect for snipe-shot,XXX new effect for snipe-shot
-423,9,XXX new effect for jaw-lock,XXX new effect for jaw-lock
-424,9,XXX new effect for stuff-cheeks,XXX new effect for stuff-cheeks
-425,9,XXX new effect for no-retreat,XXX new effect for no-retreat
-426,9,XXX new effect for tar-shot,XXX new effect for tar-shot
-427,9,XXX new effect for magic-powder,XXX new effect for magic-powder
-428,9,XXX new effect for dragon-darts,XXX new effect for dragon-darts
-429,9,XXX new effect for teatime,XXX new effect for teatime
-430,9,XXX new effect for octolock,XXX new effect for octolock
-431,9,XXX new effect for bolt-beak,XXX new effect for bolt-beak
-432,9,XXX new effect for court-change,XXX new effect for court-change
-433,9,XXX new effect for clangorous-soul,XXX new effect for clangorous-soul
-434,9,XXX new effect for body-press,XXX new effect for body-press
-435,9,XXX new effect for decorate,XXX new effect for decorate
-436,9,XXX new effect for behemoth-blade,XXX new effect for behemoth-blade
-437,9,XXX new effect for aura-wheel,XXX new effect for aura-wheel
-439,9,XXX new effect for overdrive,XXX new effect for overdrive
-440,9,XXX new effect for apple-acid,XXX new effect for apple-acid
-441,9,XXX new effect for life-dew,XXX new effect for life-dew
-442,9,XXX new effect for obstruct,XXX new effect for obstruct
+416,9,"Inflicts damage using either Attack or Special Attack stat, whichever is higher.","Inflicts damage using either [Attack]{mechanic:attack} or [Special Attack]{mechanic:special-attack} stat, whichever is higher. Determining which stat is used takes into account [stat changes]{mechanic:stage} but not held items or abilities."
+417,9,"After inflicting damage, causes all Normal-type moves to become Electric-type for the remainder of the turn.","After inflicting damage, all Normal-type moves become Electric-type for the remainder of the turn, including status moves. This effect is applied after move type-changing abilities, such as [Pixilate]{ability:pixilate} and [Normalize]{ability:normalize}."
+418,9,Inflicts damage and removes any terrain present on the battlefield.,Inflicts damage and removes any terrain present on the battlefield.
+419,9,"Inflicts damage to all opposing Pokémon and increases the user's Attack, Defense, Special Attack, Special Defense, and Speed by one stage each.","Inflicts sound-based damage to all opposing Pokémon and increases the user's [Attack]{mechanic:attack}, [Defense]{mechanic:defense}, [Special Attack]{mechanic:special-attack}, [Special Defense]{mechanic:special-defense}, and [Speed]{mechanic:speed} by one [stage]{mechanic:stage} each. The user's stats are not raised if the move fails to damage any opposing Pokémon."
+420,9,"Inflicts damage, and the user takes damage equal to half of its max HP, rounded up.","Inflicts damage, and the user takes damage equal to half of its max [HP]{mechanic:hp}, rounded up. The user still takes damage if the move is blocked by [Protect]{move:protect} or [Substitute]{move:substitute}, misses, or if the target has [Flash Fire]{ability:flash-fire}."
+421,9,Sets [Light Screen]{move:light-screen} on the user's side of the field after inflicting damage.,"Inflicts [regular damage]{mechanic:regular-damage}, then (if successful) sets []{move:light-screen} on the user's side of the [field]{mechanic:field}."
+422,9,Sets [Reflect]{move:reflect} on the user's side of the field after inflicting damage.,"Inflicts [regular damage]{mechanic:regular-damage}, then (if successful) sets []{move:reflect} on the user's side of the [field]{mechanic:field}."
+423,9,Seeds the target after inflicting damage.,"Inflicts [regular damage]{mechanic:regular-damage}, then (if successful) sets []{move:leech-seed} on the target."
+424,9,Cures the entire party of major status effects after inflicting damage.,"Inflicts [regular damage]{mechanic:regular-damage}, then (if successful) removes [major status effects]{mechanic:major-status-effects} from every Pokémon in the user's party."
+425,9,"Hits twice in one turn, with a $effect_chance% chance to make the target flinch.","Inflicts [regular damage]{mechanic:regular-damage}.  Hits twice in one turn, with a $effect_chance% chance to make the target [flinch]{mechanic:flinch}."
+443,9,Boosts the user's Speed and lowers their Defense by one stage after inflicting damage two to five times in a row.,"Inflicts [regular damage]{mechanic:regular-damage} two to five times in a row, raising the user's [Speed]{mechanic:speed} and lowering the user's [Defense]{mechanic:defense} by one [stage]{mechanic:stage} each upon last hit."
 10001,9,Has an increased chance for a critical hit in Hyper Mode.,Inflicts [regular damage]{mechanic:regular-damage}.  User's [critical hit]{mechanic:critical-hit} rate is one level higher when using this move while in [hyper mode]{mechanic:hyper-mode}.
 10002,9,User receives 1/2 its HP in recoil.,Inflicts [regular damage]{mechanic:regular-damage}.  User takes 1/2 of its current [HP]{mechanic:hp} in recoil.
 10003,9,Halves HP of all Pokémon on the field.  Must recharge,"Halves [HP]{mechanic:hp} of all Pokémon on the field.  User loses its next turn to ""recharge"", and cannot attack or [switch]{mechanic:switch} out during that turn."
