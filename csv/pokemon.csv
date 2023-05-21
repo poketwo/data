@@ -1028,7 +1028,7 @@ in its body provide the energy it needs to Mega Evolve.",,1,1,6,レックウザ,
 385,385,hoenn,jirachi,"It’s believed that when this Pokémon wakes from
 its 1,000-year slumber, it will grant any wishes
 written on the notes attached to its head.",,1,1,12,ジラーチ,Jirāchi,Jirachi,Jirachi,,Jirachi,Jirachi,Steel,Psychic,1,,,,3,11,,,100,100,100,100,100,100,,,,,
-386,386,hoenn,deoxys,"Deoxys emerged from a virus that came from space. It is highly
+386,386,hoenn,deoxys-normal,"Deoxys emerged from a virus that came from space. It is highly
 intelligent and wields psychokinetic powers. This Pokémon
 shoots lasers from the crystalline organ on its chest.",,1,1,12,デオキシス,Deokishisu,Deoxys,Deoxys,,Deoxys,Deoxys,Psychic,,1,,,,17,608,,,50,150,50,150,50,150,,,,,
 387,387,sinnoh,turtwig,"It undertakes photosynthesis with its body, making
@@ -1093,7 +1093,7 @@ ago. Its terrifyingly tough face is harder
 than steel.",,1,2,96,トリデプス,Toridepusu,Torideps,Bastiodon,,Bollterus,Bastiodon,Rock,Steel,,,,,13,1495,,410,60,52,168,47,138,30,,,,,
 412,412,sinnoh,burmy,"If its cloak is broken in battle, it quickly remakes
 the cloak with materials nearby.",,1,1,384,ミノムッチ,Minomutchi,Minomucchi,Burmy,,Burmy,Cheniti,Bug,,,,,,2,34,413 414,,40,29,45,29,45,36,,,,,
-413,413,sinnoh,wormadam,"When Burmy evolved, its cloak became a part of
+413,413,sinnoh,wormadam-plant,"When Burmy evolved, its cloak became a part of
 this Pokémon’s body. The cloak is never shed.",,1,1,96,ミノマダム,Minomadamu,Minomadam,Wormadam,,Burmadame,Cheniselle,Bug,Grass,,,,,5,65,,412,60,59,85,79,105,36,,,,,
 414,414,sinnoh,mothim,"It flutters around at night and steals honey from
 the Combee hive.",,1,1,96,ガーメイル,Gāmeiru,Gamale,Mothim,,Moterpel,Papilord,Bug,Flying,,,,,9,233,,412,70,94,50,94,50,66,,,,,
@@ -1291,7 +1291,7 @@ a deity in Sinnoh-region mythology.",,1,2,6,パルキア,Parukia,Palkia,Palkia,,
 body. It makes its dwelling place in volcanic caves.",,1,2,6,ヒードラン,Hīdoran,Heatran,Heatran,,Heatran,Heatran,Fire,Steel,,1,,,17,4300,,,91,90,106,130,106,77,,,,,
 486,486,sinnoh,regigigas,"There is an enduring legend that states this
 Pokémon towed continents with ropes.",,1,2,6,レジギガス,Rejigigasu,Regigigas,Regigigas,,Regigigas,Regigigas,Normal,,,1,,,37,4200,,,110,160,110,80,110,100,,,,,
-487,487,sinnoh,giratina,"It was banished for its violence. It silently gazed
+487,487,sinnoh,giratina-altered,"It was banished for its violence. It silently gazed
 upon the old world from the Distortion World.",,1,2,6,ギラティナ,Giratina,Giratina,Giratina,,Giratina,Giratina,Ghost,Dragon,,1,,,45,7500,,,150,100,120,100,120,90,,,,,
 488,488,sinnoh,cresselia,"Those who sleep holding Cresselia’s feather are
 assured of joyful dreams. It is said to represent
@@ -1302,7 +1302,7 @@ was born, no matter how far it may have drifted.",,1,4,12,フィオネ,Fione,Phi
 it to bond with any kind of Pokémon.",,1,4,12,マナフィ,Manafi,Manaphy,Manaphy,,Manaphy,Manaphy,Water,,1,,,,3,14,,,100,100,100,100,100,100,,,,,
 491,491,sinnoh,darkrai,"It can lull people to sleep and make them dream.
 It is active during nights of the new moon.",,1,2,12,ダークライ,Dākurai,Darkrai,Darkrai,,Darkrai,Darkrai,Dark,,1,,,,15,505,,,70,90,90,135,90,125,,,,,
-492,492,sinnoh,shaymin,"The blooming of Gracidea flowers confers the
+492,492,sinnoh,shaymin-land,"The blooming of Gracidea flowers confers the
 power of flight upon it. Feelings of gratitude are
 the message it delivers.",,1,1,12,シェイミ,Sheimi,Shaymin,Shaymin,,Shaymin,Shaymin,Grass,,1,,,,2,21,,,100,100,100,100,100,100,,,,,
 493,493,sinnoh,arceus,"It is told in mythology that this Pokémon was born
@@ -1466,7 +1466,7 @@ its home in a well-tended field or flowerbed.",,1,1,384,チュリネ,Churine,Chu
 549,549,unova,lilligant,"Essential oils made from Lilligant flowers
 have a sublime scent, but they’re also
 staggeringly expensive.",,1,1,96,ドレディア,Doredia,Dredear,Lilligant,,Dressella,Fragilady,Grass,,,,,,11,163,,548,70,60,75,110,75,90,,,,,
-550,550,unova,basculin,"Known for their violence, these Pokémon
+550,550,unova,basculin-red-striped,"Known for their violence, these Pokémon
 have the most fights with schools of red-
 striped Basculin.",,1,4,96,バスラオ,Basurao,Bassrao,Basculin,,Barschuft,Bargantua,Water,,,,,,10,180,,,70,92,65,80,55,98,,,,,
 551,551,unova,sandile,"Sandile is small, but its legs and lower body are
@@ -1481,7 +1481,7 @@ lying in wait for prey.",,1,1,96,ワルビアル,Warubiaru,Waruvial,Krookodile,,
 554,554,unova,darumaka,"This popular symbol of good fortune will never
 fall over in its sleep, no matter how it’s pushed
 or pulled.",,1,2,384,ダルマッカ,Darumakka,Darumakka,Darumaka,,Flampion,Darumarond,Fire,,,,,,6,375,555,,70,90,45,15,45,50,,,,,
-555,555,unova,darmanitan,"Its internal fire burns at 2,500 degrees Fahrenheit, making enough power that it can destroy a dump truck with one punch.",,1,2,96,ヒヒダルマ,Hihidaruma,Hihidaruma,Darmanitan,,Flampivian,Darumacho,Fire,,,,,,13,929,,554,105,140,55,30,55,95,,,,,
+555,555,unova,darmanitan-standard,"Its internal fire burns at 2,500 degrees Fahrenheit, making enough power that it can destroy a dump truck with one punch.",,1,2,96,ヒヒダルマ,Hihidaruma,Hihidaruma,Darmanitan,,Flampivian,Darumacho,Fire,,,,,,13,929,,554,105,140,55,30,55,95,,,,,
 556,556,unova,maractus,"Once each year, this Pokémon scatters its seeds.
 They’re jam-packed with nutrients, making them
 a precious food source out in the desert.",,1,1,96,マラカッチ,Marakatchi,Maracacchi,Maractus,,Maracamba,Maracachi,Grass,,,,,,10,280,,,75,86,67,106,67,60,,,,,
@@ -1729,10 +1729,10 @@ phenomenal power to destroy a castle in its effort
 to protect Pokémon.",,1,1,6,テラキオン,Terakion,Terrakion,Terrakion,,Terrakium,Terrakium,Rock,Fighting,,1,,,19,2600,,,91,129,90,72,90,108,,,,,
 640,640,unova,virizion,"Legends say this Pokémon confounded opponents
 with its swift movements.",,1,1,6,ビリジオン,Birijion,Virizion,Virizion,,Viridium,Viridium,Grass,Fighting,,1,,,20,2000,,,91,90,72,90,129,108,,,,,
-641,641,unova,tornadus,"Tornadus expels massive energy from its tail,
+641,641,unova,tornadus-incarnate,"Tornadus expels massive energy from its tail,
 causing severe storms. Its power is great enough
 to blow houses away.",,1,3,6,トルネロス,Torunerosu,Tornelos,Tornadus,,Boreos,Boréas,Flying,,,1,,,15,630,,,79,115,70,125,80,111,,,,,
-642,642,unova,thundurus,"As it flies around, it shoots lightning all over
+642,642,unova,thundurus-incarnate,"As it flies around, it shoots lightning all over
 the place and causes forest fires. It is
 therefore disliked.",,1,3,6,ボルトロス,Borutorosu,Voltolos,Thundurus,,Voltolos,Fulguris,Electric,Flying,,1,,,15,610,,,79,115,70,125,80,111,,,,,
 643,643,unova,reshiram,"According to myth, if people ignore truth and
@@ -1741,16 +1741,16 @@ Reshiram will arrive to burn their kingdoms down.",,1,3,6,レシラム,Reshiramu
 644,644,unova,zekrom,"Mythology tells us that if people lose the
 righteousness in their hearts, their kingdoms
 will be razed by Zekrom’s lightning.",,1,2,6,ゼクロム,Zekuromu,Zekrom,Zekrom,,Zekrom,Zekrom,Dragon,Electric,,1,,,29,3450,,,100,150,120,120,100,90,,,,,
-645,645,unova,landorus,"From the forces of lightning and wind, it creates
+645,645,unova,landorus-incarnate,"From the forces of lightning and wind, it creates
 energy to give nutrients to the soil and make the
 land abundant.",,1,3,6,ランドロス,Randorosu,Landlos,Landorus,,Demeteros,Démétéros,Ground,Flying,,1,,,15,680,,,89,125,90,115,80,101,,,,,
 646,646,unova,kyurem,"The sameness of Zekrom’s and Kyurem’s genes
 allowed Kyurem to absorb Zekrom. Kyurem can
 now use the power of both electricity and ice.",,1,2,6,キュレム,Kyuremu,Kyurem,Kyurem,,Kyurem,Kyurem,Dragon,Ice,,1,,,30,3250,,,125,130,90,130,90,95,,,,,
-647,647,unova,keldeo,"When it is resolute, its body fills with power and it
+647,647,unova,keldeo-ordinary,"When it is resolute, its body fills with power and it
 becomes swifter. Its jumps are then too fast
 to follow.",,1,1,12,ケルディオ,Kerudio,Keldeo,Keldeo,,Keldeo,Keldeo,Water,Fighting,1,,,,14,485,,,91,72,90,129,90,108,,,,,
-648,648,unova,meloetta,"Its melodies are sung with a special vocalization
+648,648,unova,meloetta-aria,"Its melodies are sung with a special vocalization
 method that can control the feelings of those who
 hear it.",,1,1,12,メロエッタ,Meroetta,Meloetta,Meloetta,,Meloetta,Meloetta,Normal,Psychic,1,,,,6,65,,,100,77,77,128,128,90,,,,,
 649,649,unova,genesect,"This Pokémon existed 300 million years ago. Team
@@ -1835,7 +1835,7 @@ but it will only allow someone it trusts to cut it.",,1,1,96,トリミアン,Tor
 677,677,kalos,espurr,"There’s enough psychic power in Espurr to send a
 wrestler flying, but because this power can’t be
 controlled, Espurr finds it troublesome.",,1,1,384,ニャスパー,Nyasupā,Nyasper,Espurr,,Psiau,Psystigri,Psychic,,,,,,3,35,678,,62,48,54,63,60,68,,,,,
-678,678,kalos,meowstic,"The defensive instinct of the males is strong.
+678,678,kalos,meowstic-male,"The defensive instinct of the males is strong.
 It’s when they’re protecting themselves or their
 partners that they unleash their full power.",,1,1,96,ニャオニクス,Nyaonikusu,Nyaonix,Meowstic,,Psiaugon,Mistigrix,Psychic,,,,,,6,85,,677,74,48,76,83,81,104,,,,,
 679,679,kalos,honedge,"The blue eye on the sword’s handguard is the
@@ -1844,7 +1844,7 @@ drains people’s lives away.",,1,2,1536,ヒトツキ,Hitotsuki,Hitotsuki,Honedg
 680,680,kalos,doublade,"The two swords employ a strategy of rapidly
 alternating between offense and defense to
 bring down their prey.",,1,2,384,ニダンギル,Nidangiru,Nidangill,Doublade,,Duokles,Dimoclès,Steel,Ghost,,,,,8,45,681,679,59,110,150,45,49,35,,,,,
-681,681,kalos,aegislash,"Once upon a time, a king with an Aegislash
+681,681,kalos,aegislash-shield,"Once upon a time, a king with an Aegislash
 reigned over the land. His Pokémon eventually
 drained him of life, and his kingdom fell with him.",,1,2,96,ギルガルド,Girugarudo,Gillgard,Aegislash,,Durengard,Exagide,Steel,Ghost,,,,,17,530,,680,60,50,150,50,150,60,,,,,
 682,682,kalos,spritzee,"The scent its body gives off enraptures those
@@ -1928,10 +1928,10 @@ among the trees.",,1,2,384,ボクレー,Bokurē,Bokurei,Phantump,,Paragoni,Broc�
 709,709,kalos,trevenant,"Small roots that extend from the tips of this
 Pokémon’s feet can tie into the trees of the
 forest and give Trevenant control over them.",,1,2,96,オーロット,Ōrotto,Ohrot,Trevenant,,Trombork,Desséliande,Ghost,Grass,,,,,15,710,,708,85,110,76,65,82,56,,,,,
-710,710,kalos,pumpkaboo,"The light that streams out from the holes in the
+710,710,kalos,pumpkaboo-average,"The light that streams out from the holes in the
 pumpkin can hypnotize and control the people
 and Pokémon that see it.",,1,2,384,バケッチャ,Baketcha,Bakeccha,Pumpkaboo,,Irrbis,Pitrouille,Ghost,Grass,,,,,4,50,711,,49,66,70,44,55,51,,,,,
-711,711,kalos,gourgeist,"In the darkness of a new-moon night, Gourgeist
+711,711,kalos,gourgeist-average,"In the darkness of a new-moon night, Gourgeist
 will come knocking. Whoever answers the door
 will be swept off to the afterlife.",,1,2,96,パンプジン,Panpujin,Pumpjin,Gourgeist,,Pumpdjinn,Banshitrouye,Ghost,Grass,,,,,9,125,,710,65,90,122,58,75,84,,,,,
 712,712,kalos,bergmite,"This Pokémon lives in areas of frigid cold.
@@ -1952,7 +1952,7 @@ sharing everlasting life.",,1,1,6,ゼルネアス,Zeruneasu,Xerneas,Xerneas,,Xer
 717,717,kalos,yveltal,"When its life comes to an end, it absorbs
 the life energy of every living thing
 and turns into a cocoon once more.",,1,3,6,イベルタル,Iberutaru,Yveltal,Yveltal,,Yveltal,Yveltal,Dark,Flying,,1,,,58,2030,,,126,131,95,131,98,99,,,,,
-718,718,kalos,zygarde,"Some say it can change to an even more
+718,718,kalos,zygarde-50,"Some say it can change to an even more
 powerful form when battling those who threaten
 the ecosystem.",,1,2,6,ジガルデ,Jigarude,Zygarde,Zygarde,,Zygarde,Zygarde,Dragon,Ground,,1,,,50,3050,,,108,100,121,81,95,95,,,,,
 719,719,kalos,diancie,"It can instantly create many diamonds
@@ -2020,7 +2020,7 @@ enraged Exeggutor shakes it off and stomps it.",,1,1,384,マケンカニ,Makenka
 740,740,alola,crabominable,"Before it stops to think, it just starts pummeling.
 There are records of its turning back
 avalanches with a flurry of punches.",,1,1,96,ケケンカニ,Kekenkani,Kekenkani,Crabominable,,Krawell,Crabominable,Fighting,Ice,,,,,17,1800,,739,97,132,77,62,67,43,,,,,
-741,741,alola,oricorio,"This Oricorio has drunk red nectar. If its Trainer
+741,741,alola,oricorio-baile,"This Oricorio has drunk red nectar. If its Trainer
 gives the wrong order, this passionate Pokémon
 becomes fiercely angry.",,1,1,96,オドリドリ,Odoridori,Odoridori,Oricorio,,Choreogel,Plumeline,Fire,Flying,,,,,6,34,,,75,70,70,98,70,93,,,,,889
 742,742,alola,cutiefly,"An opponent’s aura can tell Cutiefly what that
@@ -2032,10 +2032,10 @@ they are very seldom seen.",,1,1,96,アブリボン,Aburibon,Aburibbon,Ribombee,
 744,744,alola,rockruff,"This Pokémon intimidates opponents by striking
 the ground with the rocks on its neck. The
 moment an opponent flinches, Rockruff attacks.",,1,1,384,イワンコ,Iwanko,Iwanko,Rockruff,,Wuffels,Rocabot,Rock,,,,,,5,92,745,,45,65,40,30,40,60,,,,,
-745,745,alola,lycanroc,"With swift movements, this Pokémon gradually
+745,745,alola,lycanroc-midday,"With swift movements, this Pokémon gradually
 backs its prey into a corner. Lycanroc’s fangs are
 always aimed toward opponents’ weak spots.",,1,1,96,ルガルガン,Rugarugan,Lugarugan,Lycanroc,,Wolwerock,Lougaroc,Rock,,,,,,8,250,,744,75,115,65,55,65,112,,,,,
-746,746,alola,wishiwashi,"When it senses danger, its eyes tear up.
+746,746,alola,wishiwashi-solo,"When it senses danger, its eyes tear up.
 The sparkle of its tears signals other
 Wishiwashi to gather.",,1,4,96,ヨワシ,Yowashi,Yowashi,Wishiwashi,,Lusardin,Froussardine,Water,,,,,,2,3,,,45,20,20,25,25,40,,,,,
 747,747,alola,mareanie,"Unlike their Alolan counterparts, the Mareanie
@@ -2119,7 +2119,7 @@ to keep it under control.",,1,2,6,タイプ：ヌル,Taipu: Nuru,Type: Null,Type
 773,773,alola,silvally,"The final factor needed to release this
 Pokémon’s true power was a strong bond
 with a Trainer it trusts.",,1,2,6,シルヴァディ,Shiruvadi,Silvady,Silvally,,Amigento,Silvallié,Normal,,,1,,,23,1005,,772,95,95,95,95,95,95,,,,,
-774,774,alola,minior,"Although its outer shell is uncommonly durable,
+774,774,alola,minior-red-meteor,"Although its outer shell is uncommonly durable,
 the shock of falling to the ground smashes the
 shell to smithereens.",,1,2,96,メテノ,Meteno,Meteno,Minior,,Meteno,Météno,Rock,Flying,,,,,3,400,,,60,60,100,60,100,60,,,,,
 775,775,alola,komala,"It remains asleep from birth to death as a result
@@ -2131,7 +2131,7 @@ Its droppings are also dangerously explosive.",,1,1,96,バクガメス,Bakugames
 777,777,alola,togedemaru,"When it’s in trouble, it curls up into a ball, makes
 its fur spikes stand on end, and then discharges
 electricity indiscriminately.",,1,1,96,トゲデマル,Togedemaru,Togedemaru,Togedemaru,,Togedemaru,Togedemaru,Electric,Steel,,,,,3,33,,,65,98,63,40,73,96,,,,,
-778,778,alola,mimikyu,"There was a scientist who peeked under
+778,778,alola,mimikyu-disguised,"There was a scientist who peeked under
 Mimikyu’s old rag in the name of research.
 The scientist died of a mysterious disease.",,1,1,96,ミミッキュ,Mimikkyu,Mimikkyu,Mimikyu,,Mimigma,Mimiqui,Ghost,Fairy,,,,,2,7,,,55,90,80,50,105,96,,,,,
 779,779,alola,bruxish,"Its skin is thick enough to fend off Mareanie’s
@@ -2418,7 +2418,7 @@ hair into the sea to lure in prey.",,1,1,96,コオリッポ,Kōrippo,,Eiscue,,Ku
 876,876,galar,indeedee-male,"Through its horns, it can pick up on the emotions
 of creatures around it. Positive emotions are the
 source of its strength.",,1,1,96,イエッサン,Iessan,,Indeedee,,Servol,Wimessir,Psychic,Normal,,,,,9,280,,,60,65,55,105,95,95,,,,,
-877,877,galar,morpeko,"It carries electrically roasted seeds with it as if
+877,877,galar,morpeko-full-belly,"It carries electrically roasted seeds with it as if
 they’re precious treasures. No matter how much
 it eats, it always gets hungry again in short order.",,1,1,96,モルペコ,Morupeko,,Morpeko,,Morpeko,Morpeko,Electric,Dark,,,,,3,30,,,58,95,58,70,58,97,,,,,
 878,878,galar,cufant,"If a job requires serious strength, this Pokémon
@@ -2451,10 +2451,10 @@ any Pokémon it finds for the missing Dreepy.",,1,1,384,ドロンチ,Doronchi,,D
 887,887,galar,dragapult,"Apparently the Dreepy inside Dragapult’s
 horns eagerly look forward to being launched out
 at Mach speeds.",,1,1,96,ドラパルト,Doraparuto,,Dragapult,,Katapuldra,Lanssorien,Dragon,Ghost,,,,,30,500,,886,88,120,75,100,75,142,,,,,
-888,888,galar,zacian-hero,"This Pokémon has slumbered for many years.
+888,888,galar,zacian,"This Pokémon has slumbered for many years.
 Some say it’s Zamazenta’s elder sister—others
 say the two Pokémon are rivals.",,1,1,6,ザシアン,Zashian,,Zacian,,Zacian,Zacian,Fairy,,,1,,,28,1100,,,92,130,115,80,115,138,,,,,
-889,889,galar,zamazenta-hero,"This Pokémon slept for aeons while in the form of
+889,889,galar,zamazenta,"This Pokémon slept for aeons while in the form of
 a statue. It was asleep for so long, people forgot
 that it ever existed.",,1,1,6,ザマゼンタ,Zamazenta,,Zamazenta,,Zamazenta,Zamazenta,Fighting,,,1,,,29,2100,,,92,130,115,80,115,138,,,,,
 890,890,galar,eternatus,"It was inside a meteorite that fell 20,000 years
@@ -2477,10 +2477,10 @@ Pokémon has raised since the child’s infancy.",,1,1,12,ザルード,Zarūdo,,
 899,899,hisui,wyrdeer,,,1,1,96,アヤシシ,Ayashishi,,Wyrdeer,,Damythir,Cerbyllin,Normal,Psychic,,,,,18,951,,234,103,105,72,105,75,65,,,,,
 900,900,hisui,kleavor,,,1,1,96,バサギリ,Basagiri,,Kleavor,,Axantor,Hachécateur,Bug,Rock,,,,,18,890,,123,70,135,95,45,70,85,,,,,
 901,901,hisui,ursaluna,,,1,1,96,ガチグマ,Gachiguma,,Ursaluna,,Gachiguma,Ursaking,Ground,Normal,,,,,24,2900,,217,130,140,105,45,80,50,,,,,
-902,902,hisui,basculegion,,,1,1,24,イダイトウ,Idaitou,,Basculegion,,Salmagnis,Paragruel,Water,Ghost,,,,,30,1100,,,120,112,65,80,75,78,,,,,
+902,902,hisui,basculegion-male,,,1,1,24,イダイトウ,Idaitou,,Basculegion,,Salmagnis,Paragruel,Water,Ghost,,,,,30,1100,,,120,112,65,80,75,78,,,,,
 903,903,hisui,sneasler,,,1,1,24,オオニューラ,Oonyūra,,Sneasler,,Snieboss,Farfurex,Fighting,Poison,,,,,13,430,,10227,80,130,60,40,80,120,,,,,
 904,904,hisui,overqwil,,,1,1,12,ハリーマン,Harīman,,Overqwil,,Myriador,Qwilpik,Dark,Poison,,,,,25,605,,10226,85,115,95,65,65,85,,,,,
-905,905,hisui,enamorus,,,1,1,6,ラブトロス,Rabutorosu,,Enamorus,,Cupidos,Amovénus,Fairy,Flying,,1,,,16,480,,,74,115,70,135,80,106,,,,,
+905,905,hisui,enamorus-incarnate,,,1,1,6,ラブトロス,Rabutorosu,,Enamorus,,Cupidos,Amovénus,Fairy,Flying,,1,,,16,480,,,74,115,70,135,80,106,,,,,
 10001,386,hoenn,deoxys-attack,,,1,1,12,アタックフォルム,Atakkuforumu,,Attack Deoxys,,Angriffsform,Forme Attaque,Psychic,,1,,,,17,608,,,50,180,20,180,20,150,,,,1,
 10002,386,hoenn,deoxys-defense,,,1,1,12,ディフェンスフォルム,Difensuforumu,,Defense Deoxys,,Verteidigungsform,Forme Défense,Psychic,,1,,,,17,608,,,50,70,160,70,160,90,,,,1,
 10003,386,hoenn,deoxys-speed,,,1,1,12,スピードフォルム,Supīdoforumu,,Speed Deoxys,,Initiativeform,Forme Vitesse,Psychic,,1,,,,17,608,,,50,95,90,95,90,180,,,,1,
@@ -2598,8 +2598,8 @@ Pokémon has raised since the child’s infancy.",,1,1,12,ザルード,Zarūdo,,
 10115,105,alola,marowak-alola,The cursed flames that light up the bone carried by this Pokémon are said to cause both mental and physical pain that will never fade.,,1,2,12,アローラのすがた,Arōranosugata,,Alolan Marowak,,Alola-Form,Forme d'Alola,Fire,Ghost,,,,,10,340,,,60,80,110,50,80,45,,,,,
 10116,658,kalos,greninja-battle-bond,,,,,,,,,Battle Bond Greninja,,,,Water,Dark,,,,,15,400,,,72,95,67,103,71,122,,,,,
 10117,658,kalos,greninja-ash,,,1,,,サトシゲッコウガ,Satoshigekkōga,,Ash's Greninja,,Ash-Form,Forme Sacha,Water,Dark,,,,1,15,400,,,72,145,67,153,71,132,,,,1,
-10118,718,kalos,zygarde-10,,,1,1,6,１０％フォルム,10%Forumu,,10% Zygarde,,10%-Form,Forme 10 %,Dragon,Ground,,1,,,12,335,,,54,100,71,61,85,115,,,,1,
-10119,718,kalos,zygarde-50,,,,,,５０％フォルム,50%Forumu,,50% Zygarde,,50%-Form,Forme 50 %,Dragon,Ground,,1,,,50,3050,,,108,100,121,81,95,95,,,,,
+10118,718,kalos,zygarde-10-power-construct,,,1,1,6,１０％フォルム,10%Forumu,,10% Zygarde,,10%-Form,Forme 10 %,Dragon,Ground,,1,,,12,335,,,54,100,71,61,85,115,,,,1,
+10119,718,kalos,zygarde-50-power-construct,,,,,,５０％フォルム,50%Forumu,,50% Zygarde,,50%-Form,Forme 50 %,Dragon,Ground,,1,,,50,3050,,,108,100,121,81,95,95,,,,,
 10120,718,kalos,zygarde-complete,,,1,1,6,パーフェクトフォルム,Pāfekutoforumu,,Complete Zygarde,,Optimumform,Forme Parfaite,Dragon,Ground,,1,,,45,6100,,,216,100,121,91,95,85,,,,1,
 10121,735,alola,gumshoos-totem,,,,,,,,,Totem Gumshoos,,,,Normal,,,,,,14,600,,,88,110,60,55,60,45,,,,,
 10122,738,alola,vikavolt-totem,,,,,,,,,Totem Vikavolt,,,,Bug,Electric,,,,,26,1475,,,77,70,90,145,75,43,,,,,
@@ -2654,8 +2654,8 @@ Pokémon has raised since the child’s infancy.",,1,1,12,ザルード,Zarūdo,,
 10171,263,hoenn,zigzagoon-galar,"Thought to be the oldest form of Zigzagoon, it moves in zigzags and wreaks havoc upon its surroundings.",,1,1,12,,,,Galarian Zigzagoon,,,,Dark,Normal,,,,,4,175,,,38,30,41,30,41,60,,,,,
 10172,264,hoenn,linoone-galar,This very aggressive Pokémon will recklessly challenge opponents stronger than itself.,,1,1,24,,,,Galarian Linoone,,,,Dark,Normal,,,,,5,325,862,,78,70,61,50,61,100,,,,,
 10173,554,unova,darumaka-galar,"The colder they get, the more energetic they are. They freeze their breath to make snowballs, using them as ammo for playful snowball fights.",,1,1,12,,,,Galarian Darumaka,,,,Ice,,,,,,7,400,,,70,90,45,15,45,50,,,,,
-10174,555,unova,darmanitan-standard-galar,"Though it has a gentle disposition, it’s also very strong. It will quickly freeze the snowball on its head before going for a headbutt.",,1,1,24,,,,Galarian Darmanitan,,,,Ice,,,,,,17,1200,,,105,140,55,30,55,95,,,,,
-10175,555,unova,darmanitan-zen-galar,,,,,,,,,Galarian Zen Darmanitan,,,,Ice,Fire,,,,,17,1200,,,105,160,55,30,55,135,,,,,
+10174,555,unova,darmanitan-galar-standard,"Though it has a gentle disposition, it’s also very strong. It will quickly freeze the snowball on its head before going for a headbutt.",,1,1,24,,,,Galarian Darmanitan,,,,Ice,,,,,,17,1200,,,105,140,55,30,55,95,,,,,
+10175,555,unova,darmanitan-galar-zen,,,,,,,,,Galarian Zen Darmanitan,,,,Ice,Fire,,,,,17,1200,,,105,160,55,30,55,135,,,,,
 10176,562,unova,yamask-galar,It’s said that this Pokémon was formed when an ancient clay tablet was drawn to a vengeful spirit.,,1,1,24,,,,Galarian Yamask,,,,Ground,Ghost,,,,,5,15,867,,38,55,85,30,65,30,,,,,
 10177,618,unova,stunfisk-galar,"Its conspicuous lips lure prey in as it lies in wait in the mud. When prey gets close, Stunfisk clamps its jagged steel fins down on them.",,1,1,12,,,,Galarian Stunfisk,,,,Ground,,,,,,7,205,,,109,81,99,66,84,32,,,,,
 10178,849,galar,toxtricity-low-key,,,,,,,,,Low Key Toxtricity,,,,Electric,Poison,,,,,16,400,,,75,98,70,114,70,75,,,,,
@@ -2666,8 +2666,8 @@ Pokémon has raised since the child’s infancy.",,1,1,12,ザルード,Zarūdo,,
 10183,892,galar,urshifu-rapid-strike,"This form of Urshifu is a strong believer in
 defeating foes by raining many blows down on
 them. Its strikes are nonstop, flowing like a river.",,1,1,6,れんげきウーラオス,Rengekiūraosu,,Rapid Strike Urshifu,,,,Fighting,Water,,1,,,19,1050,,891,100,130,100,63,60,97,,,,1,
-10184,898,galar,calyrex-ice-rider,,,,,,,,,Ice Rider Calyrex,,,,Psychic,Ice,,1,,,24,8091,,,100,165,150,85,130,50,,,,,
-10185,898,galar,calyrex-shadow-rider,,,,,,,,,Shadow Rider Calyrex,,,,Psychic,Ghost,,1,,,24,536,,,100,85,80,165,100,150,,,,,
+10184,898,galar,calyrex-ice,,,,,,,,,Ice Rider Calyrex,,,,Psychic,Ice,,1,,,24,8091,,,100,165,150,85,130,50,,,,,
+10185,898,galar,calyrex-shadow,,,,,,,,,Shadow Rider Calyrex,,,,Psychic,Ghost,,1,,,24,536,,,100,85,80,165,100,150,,,,,
 10186,3,kanto,venusaur-gmax,,,1,,,,,,Gigantamax Venusaur,,,,Grass,Poison,,,,,240,10000,,,80,82,83,100,100,80,,,,,
 10187,6,kanto,charizard-gmax,,,1,,,,,,Gigantamax Charizard,,,,Fire,Flying,,,,,280,10000,,,78,84,78,109,85,100,,,,,
 10188,9,kanto,blastoise-gmax,,,1,,,,,,Gigantamax Blastoise,,,,Water,,,,,,250,10000,,,79,83,100,85,105,78,,,,,
