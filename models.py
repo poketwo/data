@@ -519,8 +519,6 @@ class Species:
         self.name = next(filter(lambda x: x[0] == "🇬🇧", self.names))[1]
         if self.moves is None:
             self.moves = []
-        if self.dex_number == 81:
-            self.abundance *= 10
 
     def __str__(self):
         return self.name
