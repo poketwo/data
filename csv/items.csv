@@ -14,6 +14,8 @@ id,name,description,cost,shard,action,page,emote,separate
 107,Shiny Stone,,150,,evolve_normal,2,stone_shiny,
 108,Dusk Stone,,150,,evolve_normal,2,stone_dusk,
 109,Dawn Stone,,150,,evolve_normal,2,stone_dawn,
+2045,Auspicious Armor,,150,,evolve_normal,2,armor_auspicious,
+1677,Malicious Armor,,150,,evolve_normal,2,armor_malicious,
 442,Griseous Orb,,150,,form_item,3,item_griseous_orb,
 444,Gracidea,,150,,form_item,3,item_gracidea,
 681,Reveal Glass,,150,,form_item,3,item_reveal_glass,
