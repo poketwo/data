@@ -21,19 +21,14 @@ def get_data_from(filename):
 
     with open(path) as f:
         reader = csv.DictReader(f)
-        data = list(
-            {k: int(v) if isnumber(v) else v for k, v in row.items() if v != ""}
-            for row in reader
-        )
+        data = list({k: int(v) if isnumber(v) else v for k, v in row.items() if v != ""} for row in reader)
 
     return data
 
 
 def get_pokemon(instance):
     species = {x["id"]: x for x in get_data_from("pokemon.csv")}
-    evolution = {
-        x["evolved_species_id"]: x for x in reversed(get_data_from("evolution.csv"))
-    }
+    evolution = {x["evolved_species_id"]: x for x in reversed(get_data_from("evolution.csv"))}
 
     def get_evolution_trigger(pid):
         evo = evolution[pid]
@@ -92,11 +87,7 @@ def get_pokemon(instance):
 
             for s in str(row["evo.to"]).split():
                 pto = species[int(s)]
-                evo_to.append(
-                    models.Evolution.evolve_to(
-                        int(s), get_evolution_trigger(pto["id"]), instance=instance
-                    )
-                )
+                evo_to.append(models.Evolution.evolve_to(int(s), get_evolution_trigger(pto["id"]), instance=instance))
 
         if evo_to and len(evo_to) == 0:
             evo_to = None
@@ -171,7 +162,11 @@ def get_pokemon(instance):
         version_group[row["pokemon_id"]] = max(version_group[row["pokemon_id"]], row["version_group_id"])
 
     for row in moves:
-        if row["pokemon_move_method_id"] == 1 and row["pokemon_id"] in pokemon and row["version_group_id"] == version_group[row["pokemon_id"]]:
+        if (
+            row["pokemon_move_method_id"] == 1
+            and row["pokemon_id"] in pokemon
+            and row["version_group_id"] == version_group[row["pokemon_id"]]
+        ):
             if row["move_id"] not in instance.moves:
                 continue
             pokemon[row["pokemon_id"]].moves.append(
@@ -217,6 +212,7 @@ def get_effects(instance):
 
     for row in data:
         description = re.sub(DESCRIPTION_LINK_REGEX, r"\1", row["short_effect"])
+        description = description.replace("$effect_chance", "{effect_chance}")
         effects[row["move_effect_id"]] = models.MoveEffect(
             id=row["move_effect_id"], description=description, instance=instance
         )
@@ -226,11 +222,7 @@ def get_effects(instance):
 
 def get_moves(instance):
     data = get_data_from("moves.csv")
-    names = {
-        x["move_id"]: x["name"]
-        for x in get_data_from("move_names.csv")
-        if x["local_language_id"] == 9
-    }
+    names = {x["move_id"]: x["name"] for x in get_data_from("move_names.csv") if x["local_language_id"] == 9}
 
     meta = {x["move_id"]: x for x in get_data_from("move_meta.csv")}
     meta_stats = defaultdict(list)
@@ -265,7 +257,7 @@ def get_moves(instance):
             target_id=row["target_id"],
             damage_class_id=row["damage_class_id"],
             effect_id=row["effect_id"],
-            effect_chance=row.get("effect_chance_id", None),
+            effect_chance=row.get("effect_chance", None),
             instance=instance,
             meta=models.MoveMeta(**mmeta, stat_changes=stat_changes),
         )
