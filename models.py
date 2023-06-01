@@ -567,6 +567,11 @@ class Species:
             extra.append("nidoran")
         if self.id == 50053:
             extra.extend(self.instance.pokemon[10159].correct_guesses)
+        if self.id == 50107:
+            # can't set two dex_numbers
+            extra.extend(self.instance.pokemon[655].correct_guesses)
+            extra.append("pride gardevoir")
+            extra.append("pride delphox")
         return extra + [deaccent(x.lower()) for _, x in self.names] + [self.slug]
 
     @cached_property
