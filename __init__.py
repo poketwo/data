@@ -142,6 +142,7 @@ def get_pokemon(instance):
             catchable="catchable" in row,
             dex_number=row["dex_number"],
             abundance=row["abundance"] if "abundance" in row else 0,
+            gender_rate=row["gender_rate"] if "gender_rate" in row else -1,
             description=row.get("description", None),
             evolution_from=models.EvolutionList(evo_from) if evo_from else None,
             evolution_to=models.EvolutionList(evo_to) if evo_to else None,

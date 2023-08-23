@@ -497,6 +497,7 @@ class Species:
     catchable: bool
     types: typing.List[str]
     abundance: int
+    gender_rate: int
     description: str = None
     mega_id: int = None
     mega_x_id: int = None
