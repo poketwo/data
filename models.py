@@ -551,13 +551,11 @@ class Species:
 
     @cached_property
     def image_url(self):
-        base_url = getattr(self.instance, "assets_base_url", "https://cdn.poketwo.net")
-        return urljoin(base_url, f"/images/{self.id}.png?v=26")
+        return self.instance.asset(f"/images/{self.id}.png")
 
     @cached_property
     def shiny_image_url(self):
-        base_url = getattr(self.instance, "assets_base_url", "https://cdn.poketwo.net")
-        return urljoin(base_url, f"/shiny/{self.id}.png?v=26")
+        return self.instance.asset(f"/shiny/{self.id}.png")
 
     @cached_property
     def correct_guesses(self):

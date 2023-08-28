@@ -2,6 +2,7 @@ import csv
 import re
 from collections import defaultdict
 from pathlib import Path
+from urllib.parse import urljoin
 
 from . import models
 
@@ -275,3 +276,7 @@ class DataManager(models.DataManagerBase):
 
         if assets_base_url is not None:
             self.assets_base_url = assets_base_url
+
+    def asset(self, path):
+        base_url = getattr(self, "assets_base_url", "https://cdn.poketwo.net")
+        return urljoin(base_url, path)
