@@ -4,9 +4,8 @@ import unicodedata
 from abc import ABC
 from collections import defaultdict
 from dataclasses import dataclass
-from functools import cached_property, lru_cache
+from functools import cached_property
 from typing import Union
-from urllib.parse import urljoin
 
 from . import constants
 
@@ -566,6 +565,8 @@ class Species:
             extra.append("nidoran")
         if self.id == 50053:
             extra.extend(self.instance.pokemon[10159].correct_guesses)
+        if self.id == 50076:
+            extra.extend(self.instance.pokemon[10104].correct_guesses)
         if self.id == 50107:
             # can't set two dex_numbers
             extra.extend(self.instance.pokemon[655].correct_guesses)
@@ -638,6 +639,7 @@ class DataManagerBase:
             10113,
             10114,
             10115,
+            50076
         ]
 
     @cached_property
@@ -663,6 +665,7 @@ class DataManagerBase:
             10175,
             10176,
             10177,
+            50053
         ]
 
     @cached_property
@@ -800,7 +803,8 @@ class DataManagerBase:
         return {move.name.lower(): move for move in self.moves.values()}
 
     def move_by_name(self, name: str) -> Move:
-        return self.move_by_name_index.get(deaccent(name.lower().replace("′", "'")))
+        # Replace to ’ (RIGHT SINGLE QUOTATION MARK) because move names use that instead of ' (APOSTROPHE)
+        return self.move_by_name_index.get(deaccent(name.lower().replace("′", "’")))
 
     def random_spawn(self, rarity="normal"):
         if rarity == "mythical":

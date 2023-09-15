@@ -1,30 +1,10 @@
-import csv
-import re
 from collections import defaultdict
-from pathlib import Path
 from urllib.parse import urljoin
 
+from .constants import ARTISTS, DESCRIPTION_LINK_REGEX
+from .utils import comma_formatted, get_data_from, isnumber
+
 from . import models
-
-DESCRIPTION_LINK_REGEX = re.compile(r"\[(.+?)\]\{.+?\}")
-
-
-def isnumber(v):
-    try:
-        int(v)
-    except ValueError:
-        return False
-    return True
-
-
-def get_data_from(filename):
-    path = Path(__file__).parent / "csv" / filename
-
-    with open(path) as f:
-        reader = csv.DictReader(f)
-        data = list({k: int(v) if isnumber(v) else v for k, v in row.items() if v != ""} for row in reader)
-
-    return data
 
 
 def get_pokemon(instance):
@@ -122,6 +102,15 @@ def get_pokemon(instance):
         if "name.fr" in row:
             names.append(("🇫🇷", row["name.fr"]))
 
+        art_credit = row.get("credit")
+        if art_credit:
+            # Each user in the credit must be separated by `|`.
+            # And gotta make sure that no username ever contains a `|`,
+            # but ideally they should all be user ID anyway
+            artist_ids = [int(s) if isnumber(s) else s.strip() for s in str(art_credit).split("|")]
+            artists = [ARTISTS.get(aid, aid) for aid in artist_ids]
+            art_credit = comma_formatted(artists)
+
         pokemon[row["id"]] = models.Species(
             id=row["id"],
             names=names,
@@ -154,7 +143,7 @@ def get_pokemon(instance):
             is_form="is_form" in row,
             form_item=row["form_item"] if "form_item" in row else None,
             region=row["region"],
-            art_credit=row.get("credit"),
+            art_credit=art_credit,
             instance=instance,
         )
 
@@ -213,7 +202,7 @@ def get_effects(instance):
     effects = {}
 
     for row in data:
-        description = re.sub(DESCRIPTION_LINK_REGEX, r"\1", row["short_effect"])
+        description = DESCRIPTION_LINK_REGEX.sub(r"\1", row["short_effect"])
         description = description.replace("$effect_chance", "{effect_chance}")
         effects[row["move_effect_id"]] = models.MoveEffect(
             id=row["move_effect_id"], description=description, instance=instance
