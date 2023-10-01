@@ -496,7 +496,8 @@ class Species:
     catchable: bool
     types: typing.List[str]
     abundance: int
-    gender_rate: int
+    gender_rate: int 
+    has_gender_differences: int
     description: str = None
     mega_id: int = None
     mega_x_id: int = None
@@ -528,6 +529,10 @@ class Species:
         return [self.instance.moves[x] for x in self.moveset_ids]
 
     @cached_property
+    def gender_ratios(self):
+        return constants.GENDER_RATES[self.gender_rate]
+
+    @cached_property
     def mega(self):
         if self.mega_id is None:
             return None
@@ -555,6 +560,16 @@ class Species:
     @cached_property
     def shiny_image_url(self):
         return self.instance.asset(f"/shiny/{self.id}.png")
+    
+    @cached_property
+    def image_url_female(self):
+        if self.has_gender_differences == 1:
+            return self.instance.asset(f"/images/{self.id}F.png")
+
+    @cached_property
+    def shiny_image_url_female(self):
+        if self.has_gender_differences == 1:
+            return self.instance.asset(f"/shiny/{self.id}F.png")
 
     @cached_property
     def correct_guesses(self):
@@ -605,6 +620,12 @@ class Species:
 
     def __repr__(self):
         return f"<Species: {self.name}>"
+    
+    def get_gender_image_url(self, shiny, gender):
+        if shiny:
+            return self.image_url if gender in ["♂", "male"] else self.image_url_female
+        else:
+            return self.shiny_image_url if gender in ["♂", "male"] else self.shiny_image_url_female
 
 
 @dataclass
