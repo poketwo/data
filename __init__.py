@@ -237,18 +237,23 @@ def get_moves(instance):
         stat_changes = meta_stats.get(row["id"], [])
         stat_changes = [models.StatChange(**x) for x in stat_changes]
 
+        effect_id = row["effect_id"]
+        accuracy = row.get("accuracy", None)
+        if "never misses" in instance.effects[effect_id].description.lower():
+            accuracy = 100
+
         moves[row["id"]] = models.Move(
             id=row["id"],
             slug=row["identifier"],
             name=names[row["id"]],
             power=row.get("power", None),
             pp=row["pp"],
-            accuracy=row.get("accuracy", None),
+            accuracy=accuracy,
             priority=row["priority"],
             type_id=row["type_id"],
             target_id=row["target_id"],
             damage_class_id=row["damage_class_id"],
-            effect_id=row["effect_id"],
+            effect_id=effect_id,
             effect_chance=row.get("effect_chance", None),
             instance=instance,
             meta=models.MoveMeta(**mmeta, stat_changes=stat_changes),
@@ -259,10 +264,10 @@ def get_moves(instance):
 
 class DataManager(models.DataManagerBase):
     def __init__(self, assets_base_url=None):
+        self.effects = get_effects(self)
         self.moves = get_moves(self)
         self.pokemon = get_pokemon(self)
         self.items = get_items(self)
-        self.effects = get_effects(self)
 
         if assets_base_url is not None:
             self.assets_base_url = assets_base_url

@@ -220,7 +220,10 @@ class Move:
 
         typ_mult = 1
         for typ in opponent.species.types:
-            typ_mult *= constants.TYPE_EFFICACY[self.type_id][constants.TYPES.index(typ)]
+            try:
+                typ_mult *= constants.TYPE_EFFICACY[self.type_id][constants.TYPES.index(typ)]
+            except IndexError:  # Type does not exist in the TYPE_EFFICACY list. Such as the Shadow type.
+                pass
 
         damage *= typ_mult
         messages = []
