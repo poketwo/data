@@ -717,6 +717,27 @@ class DataManagerBase:
         ]
 
     @cached_property
+    def list_paradox(self):
+        return [
+            984,
+            985,
+            986,
+            987,
+            988,
+            989,
+            990,
+            991,
+            992,
+            993,
+            994,
+            995,
+            1005,
+            1006,
+            1009,
+            1010,
+        ]
+
+    @cached_property
     def list_mythical(self):
         return [v.id for v in self.pokemon.values() if v.mythical]
 
