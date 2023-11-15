@@ -529,7 +529,7 @@ class Species:
 
     @cached_property
     def moveset(self):
-        return [self.instance.moves[x] for x in self.moveset_ids]
+        return [self.instance.moves[x.id] for x in self.moves]
 
     @cached_property
     def gender_ratios(self):
@@ -781,6 +781,26 @@ class DataManagerBase:
 
     def list_region(self, region: str):
         return self.species_id_by_region_index.get(region.lower(), [])
+
+    @cached_property
+    def species_id_by_move_index(self):
+        ret = defaultdict(list)
+        for pokemon in self.all_pokemon():
+            for pmove in pokemon.moves:
+                ls = ret[pmove.move_id]
+                if pokemon.id not in ls:
+                    ls.append(pokemon.id)
+        return dict(ret)
+
+    def list_move(self, move_name: str):
+        if not move_name:
+            return [s.id for s in self.all_pokemon() if s.moves]
+
+        move = self.move_by_name(move_name)
+        if move is None:
+            return []
+
+        return self.species_id_by_move_index.get(move.id, [])
 
     def all_items(self):
         return self.items.values()
