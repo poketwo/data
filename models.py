@@ -499,7 +499,7 @@ class Species:
     catchable: bool
     types: typing.List[str]
     abundance: int
-    gender_rate: int 
+    gender_rate: int
     has_gender_differences: int
     description: str = None
     mega_id: int = None
@@ -563,7 +563,7 @@ class Species:
     @cached_property
     def shiny_image_url(self):
         return self.instance.asset(f"/shiny/{self.id}.png")
-    
+
     @cached_property
     def image_url_female(self):
         if self.has_gender_differences == 1:
@@ -590,6 +590,10 @@ class Species:
             extra.extend(self.instance.pokemon[655].correct_guesses)
             extra.append("pride gardevoir")
             extra.append("pride delphox")
+        if self.id == 50149:
+            # can't set two dex_numbers
+            extra.extend(self.instance.pokemon[312].correct_guesses)
+            extra.append("christmas minun")
         return extra + [deaccent(x.lower()) for _, x in self.names] + [self.slug]
 
     @cached_property
@@ -623,7 +627,7 @@ class Species:
 
     def __repr__(self):
         return f"<Species: {self.name}>"
-    
+
     def get_gender_image_url(self, shiny, gender):
         if shiny:
             return self.image_url if gender in ["♂", "male"] else self.image_url_female
@@ -714,6 +718,7 @@ class DataManagerBase:
             10237,
             10238,
             10239,
+            50145,
         ]
 
     @cached_property
