@@ -577,23 +577,43 @@ class Species:
     @cached_property
     def correct_guesses(self):
         extra = []
+
         if self.is_form or self.event:
             extra.extend(self.instance.pokemon[self.dex_number].correct_guesses)
+
         if "nidoran" in self.slug:
             extra.append("nidoran")
+
+        # Elsa Galarian Ponyta
         if self.id == 50053:
             extra.extend(self.instance.pokemon[10159].correct_guesses)
+
+        # Halloween Alolan Ninetales
         if self.id == 50076:
             extra.extend(self.instance.pokemon[10104].correct_guesses)
+
+        # Pride Gardevoir & Delphox
         if self.id == 50107:
             # can't set two dex_numbers
             extra.extend(self.instance.pokemon[655].correct_guesses)
             extra.append("pride gardevoir")
             extra.append("pride delphox")
+
+        # Pyjama Plusle & Minun
         if self.id == 50149:
             # can't set two dex_numbers
             extra.extend(self.instance.pokemon[312].correct_guesses)
             extra.append("christmas minun")
+
+        # Santa Hisuian Zorua
+        if self.id == 50145:
+            extra.extend(self.instance.pokemon[10230].correct_guesses)
+            extra.append("christmas zorua")
+
+        # Reindeer Deerling
+        if self.id == 50147:
+            extra.append("christmas deerling")
+
         return extra + [deaccent(x.lower()) for _, x in self.names] + [self.slug]
 
     @cached_property
