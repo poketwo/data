@@ -5,7 +5,7 @@ from abc import ABC
 from collections import defaultdict
 from dataclasses import dataclass
 from functools import cached_property
-from typing import Union
+from typing import Literal, Union
 
 from . import constants
 
@@ -557,8 +557,14 @@ class Species:
         return constants.GENDER_RATES[self.gender_rate]
 
     @cached_property
-    def gender_ratios(self):
-        return constants.GENDER_RATES[self.gender_rate]
+    def default_gender(self) -> Literal["Unknown", "Male", "Female"] | None:
+        if self.gender_rate == -1:
+            return "Unknown"
+
+        if 100 in self.gender_ratios:  # If species is exclusively one gender
+            return constants.GENDER_TYPES[self.gender_ratios.index(100) + 1]
+        else:  # If both male and female are possible
+            return None  # There is no default
 
     @cached_property
     def mega(self):
