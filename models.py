@@ -5,7 +5,7 @@ from abc import ABC
 from collections import defaultdict
 from dataclasses import dataclass
 from functools import cached_property
-from typing import Literal, Union
+from typing import Literal, Optional, Union
 
 from . import constants
 
@@ -681,12 +681,27 @@ class Species:
     def __repr__(self):
         return f"<Species: {self.name}>"
 
-    def get_gender_image_url(self, shiny, gender):
-        gender = gender.lower()
+    def get_image_url(
+        self,
+        shiny: Optional[bool] = False,
+        gender: Optional[Literal["unknown", "male", "female"]] = None
+    ) -> str:
+
+        if gender is not None:
+            gender = gender.lower()
+
+        attr_parts = ["image_url"]
+
         if shiny:
-            return self.shiny_image_url if gender in ["male"] else self.shiny_image_url_female
-        else:
-            return self.image_url if gender in ["male"] else self.image_url_female
+            attr_parts.insert(0, "shiny")
+
+        if self.has_gender_differences:
+            match gender:
+                case "female":
+                    attr_parts.append(gender)
+
+        attr = "_".join(attr_parts)
+        return getattr(self, attr)
 
 
 @dataclass
