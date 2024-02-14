@@ -9,7 +9,9 @@ from . import models
 
 def get_pokemon(instance):
     species = {x["id"]: x for x in get_data_from("pokemon.csv")}
-    evolution = {x["evolved_species_id"]: x for x in reversed(get_data_from("evolution.csv"))}
+    evolution = {
+        x["evolved_species_id"]: x for x in reversed(get_data_from("evolution.csv"))
+    }
 
     def get_evolution_trigger(pid):
         evo = evolution[pid]
@@ -21,6 +23,7 @@ def get_pokemon(instance):
             movetype = evo.get("known_move_type_id", None)
             time = evo.get("time_of_day", None)
             relative_stats = evo.get("relative_physical_stats", None)
+            gender = evo.get("gender_id", None)
 
             if "location_id" in evo:
                 return models.OtherTrigger(instance=instance)
@@ -36,6 +39,7 @@ def get_pokemon(instance):
                 time=time,
                 relative_stats=relative_stats,
                 instance=instance,
+                gender_id=gender,
             )
 
         elif evo["evolution_trigger_id"] == 2:
@@ -68,7 +72,11 @@ def get_pokemon(instance):
 
             for s in str(row["evo.to"]).split():
                 pto = species[int(s)]
-                evo_to.append(models.Evolution.evolve_to(int(s), get_evolution_trigger(pto["id"]), instance=instance))
+                evo_to.append(
+                    models.Evolution.evolve_to(
+                        int(s), get_evolution_trigger(pto["id"]), instance=instance
+                    )
+                )
 
         if evo_to and len(evo_to) == 0:
             evo_to = None
@@ -107,7 +115,9 @@ def get_pokemon(instance):
             # Each user in the credit must be separated by `|`.
             # And gotta make sure that no username ever contains a `|`,
             # but ideally they should all be user ID anyway
-            artist_ids = [int(s) if isnumber(s) else s.strip() for s in str(art_credit).split("|")]
+            artist_ids = [
+                int(s) if isnumber(s) else s.strip() for s in str(art_credit).split("|")
+            ]
             artists = [ARTISTS.get(aid, aid) for aid in artist_ids]
             art_credit = comma_formatted(artists)
 
@@ -151,7 +161,9 @@ def get_pokemon(instance):
     moves = get_data_from("pokemon_moves.csv")
     version_group = defaultdict(int)
     for row in moves:
-        version_group[row["pokemon_id"]] = max(version_group[row["pokemon_id"]], row["version_group_id"])
+        version_group[row["pokemon_id"]] = max(
+            version_group[row["pokemon_id"]], row["version_group_id"]
+        )
 
     for row in moves:
         if (
@@ -214,7 +226,11 @@ def get_effects(instance):
 
 def get_moves(instance):
     data = get_data_from("moves.csv")
-    names = {x["move_id"]: x["name"] for x in get_data_from("move_names.csv") if x["local_language_id"] == 9}
+    names = {
+        x["move_id"]: x["name"]
+        for x in get_data_from("move_names.csv")
+        if x["local_language_id"] == 9
+    }
 
     meta = {x["move_id"]: x for x in get_data_from("move_meta.csv")}
     meta_stats = defaultdict(list)

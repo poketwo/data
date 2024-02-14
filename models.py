@@ -42,7 +42,9 @@ class StatChange:
 
     @cached_property
     def stat(self):
-        return ("hp", "atk", "defn", "satk", "sdef", "spd", "evasion", "accuracy")[self.stat_id - 1]
+        return ("hp", "atk", "defn", "satk", "sdef", "spd", "evasion", "accuracy")[
+            self.stat_id - 1
+        ]
 
 
 @dataclass
@@ -163,10 +165,18 @@ class Move:
 
             if self.damage_class_id == 2:
                 atk = pokemon.atk * constants.STAT_STAGE_MULTIPLIERS[pokemon.stages.atk]
-                defn = opponent.defn * constants.STAT_STAGE_MULTIPLIERS[opponent.stages.defn]
+                defn = (
+                    opponent.defn
+                    * constants.STAT_STAGE_MULTIPLIERS[opponent.stages.defn]
+                )
             else:
-                atk = pokemon.satk * constants.STAT_STAGE_MULTIPLIERS[pokemon.stages.satk]
-                defn = opponent.sdef * constants.STAT_STAGE_MULTIPLIERS[opponent.stages.sdef]
+                atk = (
+                    pokemon.satk * constants.STAT_STAGE_MULTIPLIERS[pokemon.stages.satk]
+                )
+                defn = (
+                    opponent.sdef
+                    * constants.STAT_STAGE_MULTIPLIERS[opponent.stages.sdef]
+                )
 
             damage = int((2 * pokemon.level / 5 + 2) * self.power * atk / defn / 50 + 2)
 
@@ -216,7 +226,11 @@ class Move:
             # elif ailment == "Silence":
             #     pass
 
-        ailment = self.meta.meta_ailment if random.randrange(100) < self.meta.ailment_chance else None
+        ailment = (
+            self.meta.meta_ailment
+            if random.randrange(100) < self.meta.ailment_chance
+            else None
+        )
 
         typ_mult = 1
         for typ in opponent.species.types:
@@ -325,6 +339,7 @@ class LevelTrigger(EvolutionTrigger):
     move_type_id: int
     time: str
     relative_stats: int
+    gender_id: str
 
     instance: typing.Any = UnregisteredDataManager()
 
@@ -345,6 +360,12 @@ class LevelTrigger(EvolutionTrigger):
         if self.move_type_id is None:
             return None
         return constants.TYPES[self.move_type_id]
+
+    @cached_property
+    def gender(self):
+        if self.gender_id is None:
+            return None
+        return constants.GENDER_TYPES[self.gender_id]
 
     @cached_property
     def text(self):
@@ -536,6 +557,10 @@ class Species:
         return constants.GENDER_RATES[self.gender_rate]
 
     @cached_property
+    def gender_ratios(self):
+        return constants.GENDER_RATES[self.gender_rate]
+
+    @cached_property
     def mega(self):
         if self.mega_id is None:
             return None
@@ -637,7 +662,9 @@ class Species:
             return f"{self.name} transforms from {species} when given a {item.name}."
 
         if self.evolution_from is not None and self.evolution_to is not None:
-            return f"{self.name} {self.evolution_from.text} and {self.evolution_to.text}."
+            return (
+                f"{self.name} {self.evolution_from.text} and {self.evolution_to.text}."
+            )
         elif self.evolution_from is not None:
             return f"{self.name} {self.evolution_from.text}."
         elif self.evolution_to is not None:
@@ -649,10 +676,11 @@ class Species:
         return f"<Species: {self.name}>"
 
     def get_gender_image_url(self, shiny, gender):
+        gender = gender.lower()
         if shiny:
-            return self.image_url if gender in ["♂", "male"] else self.image_url_female
+            return self.shiny_image_url if gender in ["male"] else self.shiny_image_url_female
         else:
-            return self.shiny_image_url if gender in ["♂", "male"] else self.shiny_image_url_female
+            return self.image_url if gender in ["male"] else self.image_url_female
 
 
 @dataclass
@@ -687,7 +715,7 @@ class DataManagerBase:
             10113,
             10114,
             10115,
-            50076
+            50076,
         ]
 
     @cached_property
@@ -713,7 +741,7 @@ class DataManagerBase:
             10175,
             10176,
             10177,
-            50053
+            50053,
         ]
 
     @cached_property
@@ -845,10 +873,16 @@ class DataManagerBase:
         return self.species_by_dex_number_index.get(number, [])
 
     def all_species_by_name(self, name: str) -> Species:
-        return self.species_by_name_index.get(deaccent(name.lower().replace("′", "'")), [])
+        return self.species_by_name_index.get(
+            deaccent(name.lower().replace("′", "'")), []
+        )
 
     def find_all_matches(self, name: str) -> Species:
-        return [y.id for x in self.all_species_by_name(name) for y in self.all_species_by_number(x.id)]
+        return [
+            y.id
+            for x in self.all_species_by_name(name)
+            for y in self.all_species_by_number(x.id)
+        ]
 
     def species_by_number(self, number: int) -> Species:
         try:

@@ -161,3 +161,17 @@ ARTISTS = {
     470615071035359262: "@ellewoods.",
     984530916565188648: "ISO#4100"
 }
+
+GENDER_RATES = {
+    0: [100, 0],
+    1: [87.5, 12.5],
+    2: [75, 25],
+    4: [50, 50],
+    6: [25, 75],
+    7: [12.5, 87.5],
+    8: [0, 100],
+}
+
+GENDER_TYPES = {1: "Female", 2: "Male"}
+
+GENDER_IMAGE_SUFFIXES = {"female": "F"}  # TODO: Use gender ID later when refactoring poketwo genders code
