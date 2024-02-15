@@ -562,7 +562,11 @@ class Species:
             return "Unknown"
 
         if 100 in self.gender_ratios:  # If species is exclusively one gender
-            return constants.GENDER_TYPES[self.gender_ratios.index(100) + 1]
+            always_male = self.gender_ratios[0] == 100
+            if always_male:
+                return "Male"
+            else:
+                return "Female"
         else:  # If both male and female are possible
             return None  # There is no default
 
