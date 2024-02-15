@@ -791,6 +791,15 @@ class DataManagerBase:
         ]
 
     @cached_property
+    def list_paldean(self):
+        return [
+            10250,
+            10251,
+            10252,
+            10253,
+        ]
+
+    @cached_property
     def list_paradox(self):
         return [
             984,
