@@ -939,6 +939,19 @@ class DataManagerBase:
         except (KeyError, IndexError):
             return None
 
+    @cached_property
+    def species_id_by_default_gender_index(self):
+        ret = defaultdict(list)
+        for pokemon in self.pokemon.values():
+            default_gender = pokemon.default_gender
+            default_gender = default_gender.lower() if isinstance(default_gender, str) else default_gender
+            ret[default_gender].append(pokemon.id)
+        return dict(ret)
+
+    def list_default_gender(self, gender: str | None):
+        gender = gender.lower() if isinstance(gender, str) else gender
+        return self.species_id_by_default_gender_index.get(gender, [])
+
     def item_by_number(self, number: int) -> Item:
         try:
             return self.items[number]
