@@ -1066,7 +1066,7 @@ id,dex_number,region,slug,description,credit,enabled,catchable,abundance,gender_
 10048,229,johto,houndoom-mega,Houndoom’s entire body generates heat when it Mega Evolves. Its fearsome fiery breath turns its opponents to ash.,,1,,,4,0,メガヘルガー,Megaherugā,,Mega Houndoom,,Mega-Hundemon,Méga-Démolosse,Dark,Fire,,,,,19,495,,,75,90,90,140,90,115,,,,,
 10049,248,johto,tyranitar-mega,The effects of Mega Evolution make it more ferocious than ever. It’s unclear whether it can even hear its Trainer’s orders.,,1,,,4,0,メガバンギラス,Megabangirasu,,Mega Tyranitar,,Mega-Despotar,Méga-Tyranocif,Rock,Dark,,,,,25,2550,,,100,164,150,95,120,71,,,,,
 10050,257,hoenn,blaziken-mega,,,1,,,1,0,メガバシャーモ,Megabashāmo,,Mega Blaziken,,Mega-Lohgock,Méga-Braségali,Fire,Fighting,,,,,19,520,,,80,160,80,130,80,100,,,,,
-10051,282,hoenn,gardevoir-mega,,,1,,,8,0,メガサーナイト,Megasānaito,,Mega Gardevoir,,Mega-Guardevoir,Méga-Gardevoir,Psychic,Fairy,,,,,16,484,,,68,85,65,165,135,100,,,,,
+10051,282,hoenn,gardevoir-mega,,,1,,,4,0,メガサーナイト,Megasānaito,,Mega Gardevoir,,Mega-Guardevoir,Méga-Gardevoir,Psychic,Fairy,,,,,16,484,,,68,85,65,165,135,100,,,,,
 10052,303,hoenn,mawile-mega,Its two sets of jaws thrash about violently as if they each had a will of their own. One gnash from them can turn a boulder to dust.,,1,,,4,0,メガクチート,Megakuchīto,,Mega Mawile,,Mega-Flunkifer,Méga-Mysdibule,Steel,Fairy,,,,,10,235,,,50,105,125,55,95,50,,,,,
 10053,306,hoenn,aggron-mega,,,1,,,4,0,メガボスゴドラ,Megabosugodora,,Mega Aggron,,Mega-Stolloss,Méga-Galeking,Steel,,,,,,22,3950,,,70,140,230,60,80,50,,,,,
 10054,308,hoenn,medicham-mega,,,1,,,4,0,メガチャーレム,Megachāremu,,Mega Medicham,,Mega-Meditalis,Méga-Charmina,Fighting,Psychic,,,,,13,315,,,60,100,85,80,85,100,,,,,
