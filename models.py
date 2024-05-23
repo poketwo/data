@@ -649,6 +649,11 @@ class Species:
         if self.id == 50147:
             extra.append("christmas deerling")
 
+        # Birthday Cake Alolan Vulpix
+        if self.id == 50177:
+            extra.extend(self.instance.pokemon[10103].correct_guesses)
+            extra.extend(["anniversary alolan vulpix", "anniversary vulpix"])
+
         return extra + [deaccent(x.lower()) for _, x in self.names] + [self.slug]
 
     @cached_property
@@ -741,6 +746,7 @@ class DataManagerBase:
             10114,
             10115,
             50076,
+            50177,
         ]
 
     @cached_property
