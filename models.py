@@ -650,7 +650,7 @@ class Species:
             extra.append("christmas deerling")
 
         # Birthday Cake Alolan Vulpix
-        if self.id == 50177:
+        if self.id == 50168:
             extra.extend(self.instance.pokemon[10103].correct_guesses)
             extra.extend(["anniversary alolan vulpix", "anniversary vulpix"])
 
