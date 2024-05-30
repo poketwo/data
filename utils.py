@@ -1,5 +1,5 @@
 import csv
-from typing import Iterable
+from typing import Iterable, Optional
 from pathlib import Path
 
 
@@ -21,7 +21,7 @@ def get_data_from(filename):
     return data
 
 
-def comma_formatted(iterable: Iterable) -> str:
+def comma_formatted(iterable: Iterable, *, conjunction: Optional[str] = "and") -> str:
     """Function to take in a list and return a comma formatted string of its elements"""
 
     if len(iterable) == 0:
@@ -29,4 +29,4 @@ def comma_formatted(iterable: Iterable) -> str:
     elif len(iterable) == 1:
         return str(iterable[0])
 
-    return f"{', '.join(map(str, iterable[:-1]))} and {iterable[-1]}"
+    return f"{', '.join(map(str, iterable[:-1]))} {conjunction} {iterable[-1]}"

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import random
 import typing
 import unicodedata
@@ -5,7 +7,11 @@ from abc import ABC
 from collections import defaultdict
 from dataclasses import dataclass
 from functools import cached_property
-from typing import Literal, Optional, Union
+from typing import List, Literal, Optional, Union
+
+import discord
+
+from data.utils import comma_formatted
 
 from . import constants
 
@@ -235,7 +241,9 @@ class Move:
         typ_mult = 1
         for typ in opponent.species.types:
             try:
-                typ_mult *= constants.TYPE_EFFICACY[self.type_id][constants.TYPES.index(typ)]
+                typ_mult *= constants.TYPE_EFFICACY[self.type_id][
+                    constants.TYPES.index(typ)
+                ]
             except IndexError:  # Type does not exist in the TYPE_EFFICACY list. Such as the Shadow type.
                 pass
 
@@ -340,6 +348,7 @@ class LevelTrigger(EvolutionTrigger):
     time: str
     relative_stats: int
     gender_id: str
+    natures: List[str]
 
     instance: typing.Any = UnregisteredDataManager()
 
@@ -374,6 +383,9 @@ class LevelTrigger(EvolutionTrigger):
         else:
             text = f"starting from level {self.level}"
 
+        if self.gender:
+            text += f" as {self.gender}"
+
         if self.item is not None:
             text += f" while holding a {self.item}"
 
@@ -392,6 +404,11 @@ class LevelTrigger(EvolutionTrigger):
 
         if self.time is not None:
             text += " in the " + self.time + "time"
+
+        if self.natures:
+            text += (
+                f" with a Nature of {comma_formatted(self.natures, conjunction='or')}"
+            )
 
         return text
 
@@ -468,12 +485,30 @@ class Evolution:
         return self.instance.pokemon[self.target_id]
 
     @cached_property
+    def current(self):
+        return discord.utils.find(
+            lambda s: s.evolution_from and self in s.evolution_from.items,
+            self.instance.all_pokemon(),
+        )
+
+    @cached_property
     def text(self):
+        # At the moment this says 'transforms' only for Piroette Meloetta and Resolute Keldeo since
+        # we're piggybacking off the evolution method. But in the future this could
+        # show the incorrect action, although unlikely.
+        action = "evolves"
+        if (self.target.is_form and self.dir != "from") or (
+            self.current
+            and self.current.is_form
+            and self.target.id == self.current.dex_number
+        ):
+            action = "transforms"
+
         if getattr(self.target, f"evolution_{self.dir}") is not None:
             pevo = getattr(self.target, f"evolution_{self.dir}")
-            return f"evolves {self.dir} {self.target} {self.trigger.text}, which {pevo.text}"
+            return f"{action} {self.dir} {self.target} {self.trigger.text}, which {pevo.text}"
 
-        return f"evolves {self.dir} {self.target} {self.trigger.text}"
+        return f"{action} {self.dir} {self.target} {self.trigger.text}"
 
 
 @dataclass
@@ -503,6 +538,10 @@ class Stats:
     satk: int
     sdef: int
     spd: int
+
+    @property
+    def total(self) -> int:
+        return self.hp + self.atk + self.defn + self.satk + self.sdef + self.spd
 
 
 # Species
@@ -534,7 +573,7 @@ class Species:
     event: bool = False
     is_form: bool = False
     form_item: int = None
-    moves: typing.List[PokemonMove] = None
+    _moves: typing.List[PokemonMove] = None
     region: str = None
     art_credit: str = None
 
@@ -542,11 +581,19 @@ class Species:
 
     def __post_init__(self):
         self.name = next(filter(lambda x: x[0] == "🇬🇧", self.names))[1]
-        if self.moves is None:
-            self.moves = []
+        if self._moves is None:
+            self._moves = []
 
     def __str__(self):
         return self.name
+
+    @cached_property
+    def moves(self) -> List[Move]:
+        if not self._moves:
+            if self.base_species:
+                self._moves.extend(self.base_species.moves)
+
+        return self._moves
 
     @cached_property
     def moveset(self):
@@ -590,6 +637,25 @@ class Species:
             return None
 
         return self.instance.pokemon[self.mega_y_id]
+
+    @cached_property
+    def gmax(self) -> Species | None:
+        return self.instance.gmax_mapping.get(self.id)
+
+    @cached_property
+    def is_gmax(self) -> bool:
+        return self.id in self.instance.list_gmax
+
+    @cached_property
+    def variants(self) -> List[Species]:
+        return self.instance.all_species_by_number(self.dex_number)
+
+    @cached_property
+    def base_species(self) -> Species | None:
+        if self.id != self.dex_number:
+            return self.instance.species_by_number(self.dex_number)
+        else:
+            return None
 
     @cached_property
     def image_url(self):
@@ -671,19 +737,22 @@ class Species:
 
     @cached_property
     def evolution_text(self):
+        text = ""
         if self.is_form and self.form_item is not None:
             species = self.instance.pokemon[self.dex_number]
             item = self.instance.items[self.form_item]
-            return f"{self.name} transforms from {species} when given a {item.name}."
-
-        if self.evolution_from is not None and self.evolution_to is not None:
-            return (
-                f"{self.name} {self.evolution_from.text} and {self.evolution_to.text}."
-            )
+            text += f" transforms from {species} when given a {item.name}"
         elif self.evolution_from is not None:
-            return f"{self.name} {self.evolution_from.text}."
-        elif self.evolution_to is not None:
-            return f"{self.name} {self.evolution_to.text}."
+            text += f" {self.evolution_from.text}"
+
+        if text and self.evolution_to is not None:
+            text += " and"
+
+        if self.evolution_to is not None:
+            text += f" {self.evolution_to.text}"
+
+        if text:
+            return f"{self.name}{text}."
         else:
             return None
 
@@ -693,7 +762,7 @@ class Species:
     def get_image_url(
         self,
         shiny: Optional[bool] = False,
-        gender: Optional[Literal["unknown", "male", "female"]] = None
+        gender: Optional[Literal["unknown", "male", "female"]] = None,
     ) -> str:
 
         if gender is not None:
@@ -722,6 +791,10 @@ class DataManagerBase:
 
     def all_pokemon(self):
         return self.pokemon.values()
+
+    @cached_property
+    def total_pokedex_count(self) -> int:
+        return sum(x.catchable and x.id < 10000 for x in self.all_pokemon())
 
     @cached_property
     def list_alolan(self):
@@ -830,6 +903,10 @@ class DataManagerBase:
             1008,
             1009,
             1010,
+            1020,
+            1021,
+            1022,
+            1023,
         ]
 
     @cached_property
@@ -855,6 +932,51 @@ class DataManagerBase:
             + [v.mega_x_id for v in self.pokemon.values() if v.mega_x_id is not None]
             + [v.mega_y_id for v in self.pokemon.values() if v.mega_y_id is not None]
         )
+
+    @cached_property
+    def gmax_mapping(self):
+        mapping = {
+            3: 10186,
+            6: 10187,
+            9: 10188,
+            12: 10189,
+            25: 10190,
+            52: 10191,
+            68: 10192,
+            94: 10193,
+            99: 10194,
+            131: 10195,
+            133: 10196,
+            143: 10197,
+            569: 10198,
+            809: 10199,
+            812: 10200,
+            815: 10201,
+            818: 10202,
+            823: 10203,
+            826: 10204,
+            834: 10205,
+            839: 10206,
+            841: 10207,
+            842: 10208,
+            844: 10209,
+            849: 10210,
+            851: 10211,
+            858: 10212,
+            861: 10213,
+            869: 10214,
+            879: 10215,
+            884: 10216,
+            890: 10217,
+            892: 10218,
+            10183: 10219,
+            10178: 10220,
+        }
+        return {sid: self.species_by_number(gmax_id) for sid, gmax_id in mapping.items()}
+
+    @cached_property
+    def list_gmax(self):
+        return [s.id for s in self.gmax_mapping.values()]
 
     @cached_property
     def species_id_by_type_index(self):
@@ -950,7 +1072,11 @@ class DataManagerBase:
         ret = defaultdict(list)
         for pokemon in self.pokemon.values():
             default_gender = pokemon.default_gender
-            default_gender = default_gender.lower() if isinstance(default_gender, str) else default_gender
+            default_gender = (
+                default_gender.lower()
+                if isinstance(default_gender, str)
+                else default_gender
+            )
             ret[default_gender].append(pokemon.id)
         return dict(ret)
 

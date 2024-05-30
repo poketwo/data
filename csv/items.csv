@@ -16,7 +16,17 @@ id,name,description,cost,shard,action,page,emote,separate
 109,Dawn Stone,,150,,evolve_normal,2,stone_dawn,
 2045,Auspicious Armor,,150,,evolve_normal,2,armor_auspicious,
 1677,Malicious Armor,,150,,evolve_normal,2,armor_malicious,
+1174,Sweet Apple,,150,,evolve_normal,2,item_sweet_apple,
+1175,Tart Apple,,150,,evolve_normal,2,item_tart_apple,
+2109,Syrupy Apple,,150,,evolve_normal,2,item_syrupy_apple,
+1311,Cracked Pot,,150,,evolve_normal,2,item_cracked_pot,
+1675,Scroll of Darkness,,150,,evolve_normal,2,item_scroll_of_darkness,
+1676,Scroll of Waters,,150,,evolve_normal,2,item_scroll_of_waters,
+2110,Unremarkable Cup,,150,,evolve_normal,2,item_unremarkable_cup,
+688,Metal Alloy,,150,,evolve_normal,2,item_metal_alloy,
 442,Griseous Orb,,150,,form_item,3,item_griseous_orb,
+1659,Adamant Crystal,,150,,form_item,3,item_adamant_crystal,
+1660,Lustrous Globe,,150,,form_item,3,item_lustrous_globe,
 444,Gracidea,,150,,form_item,3,item_gracidea,
 681,Reveal Glass,,150,,form_item,3,item_reveal_glass,
 806,Prison Bottle,,150,,form_item,3,item_prison_bottle,
@@ -24,6 +34,19 @@ id,name,description,cost,shard,action,page,emote,separate
 890,Yellow Nectar,,150,,form_item,3,item_yellow_nectar,
 891,Pink Nectar,,150,,form_item,3,item_pink_nectar,
 892,Purple Nectar,,150,,form_item,3,item_purple_nectar,
+671,Black DNA Splicer,,150,,form_item,3,item_black_dna_splicer,
+20002,White DNA Splicer,,150,,form_item,3,item_white_dna_splicer,
+969,Ultranecrozium Z,,150,,form_item,3,item_ultranecrozium_z,
+989,N-Solarizer,,150,,form_item,3,item_n_solarizer,
+990,N-Lunarizer,,150,,form_item,3,item_n_lunarizer,
+1161,Rusted Sword,,150,,form_item,3,item_rusted_sword,
+1162,Rusted Shield,,150,,form_item,3,item_rusted_shield,
+1658,Ice Reins of Unity,,150,,form_item,3,item_ice_reins_of_unity,
+20001,Shadow Reins of Unity,,150,,form_item,3,item_shadow_reins_of_unity,
+2102,Teal Mask,,150,,form_item,3,item_teal_mask,
+2106,Wellspring Mask,,150,,form_item,3,item_wellspring_mask,
+2107,Hearthflame Mask,,150,,form_item,3,item_hearthflame_mask,
+2108,Cornerstone Mask,,150,,form_item,3,item_cornerstone_mask,
 13001,Everstone,Prevents pokémon from evolving.,150,,held_item,4,item_everstone,1
 13002,XP Blocker,Prevents pokémon from gaining XP.,150,,held_item,4,,1
 14001,Friendship Bracelet,Causes certain pokémon to evolve when leveled up.,150,,held_item,4,,1
@@ -44,6 +67,7 @@ id,name,description,cost,shard,action,page,emote,separate
 580,Prism Scale,,150,,held_item,4,item_prism_scale,
 686,Whipped Dream,,150,,held_item,4,item_whipped_dream,
 687,Sachet,,150,,held_item,4,item_sachet,
+1167,Strawberry Sweet,,150,,held_item,4,item_strawberry_sweet,
 11001,Adamant Mint,"+10% Attack
 -10% Sp. Atk",50,,nature_0,5,mint_atk,
 11002,Bashful Mint,No effect,50,,nature_1,5,mint_serious,
@@ -89,9 +113,10 @@ id,name,description,cost,shard,action,page,emote,separate
 11024,Serious Mint,No effect,50,,nature_23,5,mint_serious,
 11025,Timid Mint,"+10% Speed
 -10% Attack",50,,nature_24,5,mint_spd,
-12001,Mega Evolution,Transforms your pokémon into its mega form!,1000,,evolve_mega,6,,1
-12002,X Mega Evolution,Transforms your pokémon into its X mega form!,1000,,evolve_megax,6,,1
-12003,Y Mega Evolution,Transforms your pokémon into its Y mega form!,1000,,evolve_megay,6,,1
+12001,Mega Evolution,Transforms your pokémon into its mega form!,1000,,evolve_mega,6,item_mega_evolution,1
+12002,X Mega Evolution,Transforms your pokémon into its X mega form!,1000,,evolve_megax,6,item_mega_evolution,1
+12003,Y Mega Evolution,Transforms your pokémon into its Y mega form!,1000,,evolve_megay,6,item_mega_evolution,1
+20000,Transformation,Transforms eligible pokémon into their alternative form!,500,,form_item,6,item_transformation,1
 15001,Shard,,200,,shard,7,,1
 15002,Redeem,Spawns any catchable pokémon of your choice.,200,1,redeem,7,,1
 15003,Incense,Spawns a pokémon every 20 seconds for an hour.,50,1,incense,7,,1

@@ -24,6 +24,10 @@ def get_pokemon(instance):
             time = evo.get("time_of_day", None)
             relative_stats = evo.get("relative_physical_stats", None)
             gender = evo.get("gender_id", None)
+            natures = evo.get("natures", None)
+
+            if natures:
+                natures = natures.split()
 
             if "location_id" in evo:
                 return models.OtherTrigger(instance=instance)
@@ -40,6 +44,7 @@ def get_pokemon(instance):
                 relative_stats=relative_stats,
                 instance=instance,
                 gender_id=gender,
+                natures=natures,
             )
 
         elif evo["evolution_trigger_id"] == 2:
@@ -173,7 +178,8 @@ def get_pokemon(instance):
         ):
             if row["move_id"] not in instance.moves:
                 continue
-            pokemon[row["pokemon_id"]].moves.append(
+
+            pokemon[row["pokemon_id"]]._moves.append(
                 models.PokemonMove(
                     row["move_id"],
                     models.LevelMethod(row["level"], instance=instance),
@@ -182,7 +188,7 @@ def get_pokemon(instance):
             )
 
     for p in pokemon.values():
-        p.moves.sort(key=lambda x: x.method.level)
+        p._moves.sort(key=lambda x: x.method.level)
 
     return pokemon
 
