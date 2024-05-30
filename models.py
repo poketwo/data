@@ -484,7 +484,7 @@ class Evolution:
 
     @cached_property
     def current(self):
-        return [s for s in self.instance.all_pokemon() if s.evolution_from and self in s.evolution_from.items][0]
+        return next((s for s in self.instance.all_pokemon() if s.evolution_from and self in s.evolution_from.items), None)
 
     @cached_property
     def text(self):
