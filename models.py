@@ -9,8 +9,6 @@ from dataclasses import dataclass
 from functools import cached_property
 from typing import List, Literal, Optional, Union
 
-import discord
-
 from data.utils import comma_formatted
 
 from . import constants
@@ -486,10 +484,7 @@ class Evolution:
 
     @cached_property
     def current(self):
-        return discord.utils.find(
-            lambda s: s.evolution_from and self in s.evolution_from.items,
-            self.instance.all_pokemon(),
-        )
+        return [s for s in self.instance.all_pokemon() if s.evolution_from and self in s.evolution_from.items][0]
 
     @cached_property
     def text(self):
