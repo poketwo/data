@@ -504,11 +504,13 @@ class Evolution:
         action = "evolves"
         if (
             self.target.is_form
-            and self.target.dex_number == self.current.dex_number  # checks if target is a form of the same base pokemon, aka 'transforms to'
+            and self.target.dex_number
+            == self.current.dex_number  # checks if target is a form of the same base pokemon, aka 'transforms to'
             and self.dir != "from"
         ) or (
             self.current.is_form
-            and self.target.id == self.current.dex_number  # checks if target is the base species, aka 'transforms from'
+            and self.target.id
+            == self.current.dex_number  # checks if target is the base species, aka 'transforms from'
         ):
             action = "transforms"
 
