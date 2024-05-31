@@ -22,7 +22,7 @@ id,name,description,cost,shard,action,page,emote,separate
 1311,Cracked Pot,,150,,evolve_normal,2,item_cracked_pot,
 1675,Scroll of Darkness,,150,,evolve_normal,2,item_scroll_of_darkness,
 1676,Scroll of Waters,,150,,evolve_normal,2,item_scroll_of_waters,
-2110,Unremarkable Cup,,150,,evolve_normal,2,item_unremarkable_cup,
+2110,Unremarkable Teacup,,150,,evolve_normal,2,item_unremarkable_cup,
 688,Metal Alloy,,150,,evolve_normal,2,item_metal_alloy,
 442,Griseous Orb,,150,,form_item,3,item_griseous_orb,
 1659,Adamant Crystal,,150,,form_item,3,item_adamant_crystal,
