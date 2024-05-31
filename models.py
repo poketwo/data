@@ -484,18 +484,31 @@ class Evolution:
 
     @cached_property
     def current(self):
-        return next((s for s in self.instance.all_pokemon() if s.evolution_from and self in s.evolution_from.items), None)
+        for dir in ("to", "from"):
+            species = next(
+                (
+                    s
+                    for s in self.instance.all_pokemon()
+                    if getattr(s, f"evolution_{dir}")
+                    and self in getattr(s, f"evolution_{dir}").items
+                ),
+                None,
+            )
+            if species:
+                return species
 
     @cached_property
     def text(self):
-        # At the moment this says 'transforms' only for Piroette Meloetta and Resolute Keldeo since
-        # we're piggybacking off the evolution method. But in the future this could
-        # show the incorrect action, although unlikely.
+        # At the moment this says 'transforms' only for Piroette Meloetta, Resolute Keldeo and School WIshiwashi since
+        # we're piggybacking off the evolution method. But in the future this could show the incorrect action, although unlikely.
         action = "evolves"
-        if (self.target.is_form and self.dir != "from") or (
-            self.current
-            and self.current.is_form
-            and self.target.id == self.current.dex_number
+        if (
+            self.target.is_form
+            and self.target.dex_number == self.current.dex_number  # checks if target is a form of the same base pokemon, aka 'transforms to'
+            and self.dir != "from"
+        ) or (
+            self.current.is_form
+            and self.target.id == self.current.dex_number  # checks if target is the base species, aka 'transforms from'
         ):
             action = "transforms"
 
@@ -967,7 +980,9 @@ class DataManagerBase:
             10183: 10219,
             10178: 10220,
         }
-        return {sid: self.species_by_number(gmax_id) for sid, gmax_id in mapping.items()}
+        return {
+            sid: self.species_by_number(gmax_id) for sid, gmax_id in mapping.items()
+        }
 
     @cached_property
     def list_gmax(self):
