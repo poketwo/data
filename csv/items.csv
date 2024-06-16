@@ -41,6 +41,7 @@ id,name,description,cost,shard,action,page,emote,separate
 990,N-Lunarizer,,150,,form_item,3,item_n_lunarizer,
 1161,Rusted Sword,,150,,form_item,3,item_rusted_sword,
 1162,Rusted Shield,,150,,form_item,3,item_rusted_shield,
+1329,Rotom Catalog,,150,,form_item,3,item_rotom_catalog,
 1658,Ice Reins of Unity,,150,,form_item,3,item_ice_reins_of_unity,
 20001,Shadow Reins of Unity,,150,,form_item,3,item_shadow_reins_of_unity,
 2102,Teal Mask,,150,,form_item,3,item_teal_mask,
