@@ -598,7 +598,7 @@ class Species:
         return self.name
 
     @cached_property
-    def moves(self) -> List[Move]:
+    def moves(self) -> List[PokemonMove]:
         if not self._moves:
             if self.base_species:
                 self._moves.extend(self.base_species.moves)
@@ -606,8 +606,8 @@ class Species:
         return self._moves
 
     @cached_property
-    def moveset(self):
-        return [self.instance.moves[x.id] for x in self.moves]
+    def moveset(self) -> List[Move]:
+        return [pmove.move for pmove in self.moves]
 
     @cached_property
     def gender_ratios(self):
