@@ -34,7 +34,7 @@ id,name,description,cost,shard,action,page,emote,separate
 890,Yellow Nectar,,150,,form_item,3,item_yellow_nectar,
 891,Pink Nectar,,150,,form_item,3,item_pink_nectar,
 892,Purple Nectar,,150,,form_item,3,item_purple_nectar,
-671,DNA Splicer,,150,,form_item,3,item_dna_splicer,
+671,DNA Splicers,,150,,form_item,3,item_dna_splicer,
 969,Ultranecrozium Z,,150,,form_item,3,item_ultranecrozium_z,
 989,N-Solarizer,,150,,form_item,3,item_n_solarizer,
 990,N-Lunarizer,,150,,form_item,3,item_n_lunarizer,
