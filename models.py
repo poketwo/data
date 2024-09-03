@@ -673,8 +673,8 @@ class Species:
         return evoline
 
     @cached_property
-    def evolution_line(self) -> List[int]:
-        return list(sorted(self.get_evoline({self.id})))
+    def evolution_line(self) -> List[Species]:
+        return [self.instance.species_by_number(i) for i in sorted(self.get_evoline({self.id}))]
 
     @cached_property
     def base_species(self) -> Species | None:
