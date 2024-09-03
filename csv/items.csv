@@ -24,6 +24,8 @@ id,name,description,cost,shard,action,page,emote,separate
 1676,Scroll of Waters,,150,,evolve_normal,2,item_scroll_of_waters,
 2110,Unremarkable Teacup,,150,,evolve_normal,2,item_unremarkable_cup,
 688,Metal Alloy,,150,,evolve_normal,2,item_metal_alloy,
+3001,Black Augurite,,150,,evolve_normal,2,item_black_augurite,
+3002,Peat Block,,150,,evolve_normal,2,item_peat_block,
 442,Griseous Orb,,150,,form_item,3,item_griseous_orb,
 1659,Adamant Crystal,,150,,form_item,3,item_adamant_crystal,
 1660,Lustrous Globe,,150,,form_item,3,item_lustrous_globe,
