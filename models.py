@@ -7,7 +7,7 @@ from abc import ABC
 from collections import defaultdict
 from dataclasses import dataclass
 from functools import cached_property
-from typing import List, Literal, Optional, Union
+from typing import List, Literal, Optional, Set, Union
 
 from data.utils import comma_formatted
 
@@ -659,6 +659,22 @@ class Species:
     @cached_property
     def variants(self) -> List[Species]:
         return self.instance.all_species_by_number(self.dex_number)
+
+    def get_evoline(self, evos_done: Set[int]) -> Set[int]:
+        evoline = {self.id}
+        evos = (self.evolution_from.items if self.evolution_from else []) + (self.evolution_to.items if self.evolution_to else [])
+        for evo in evos:
+            evo_species = self.instance.species_by_number(evo.target_id)
+            if evo_species.id in evos_done:
+                continue
+            evoline.update(evo_species.get_evoline(evoline))
+            evos_done.add(evo_species.id)
+
+        return evoline
+
+    @cached_property
+    def evolution_line(self) -> List[int]:
+        return list(sorted(self.get_evoline({self.id})))
 
     @cached_property
     def base_species(self) -> Species | None:
