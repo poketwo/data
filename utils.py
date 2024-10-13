@@ -24,6 +24,7 @@ def get_data_from(filename):
 def comma_formatted(iterable: Iterable, *, conjunction: Optional[str] = "and") -> str:
     """Function to take in a list and return a comma formatted string of its elements"""
 
+    iterable = list(iterable)
     if len(iterable) == 0:
         return ""
     elif len(iterable) == 1:
