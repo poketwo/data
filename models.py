@@ -746,6 +746,11 @@ class Species:
             extra.extend(self.instance.pokemon[10103].correct_guesses)
             extra.extend(["anniversary alolan vulpix", "anniversary vulpix"])
 
+        # La Catrina Hisuian Lilligant
+        if self.id == 50198:
+            extra.extend(self.instance.pokemon[10229].correct_guesses)
+            extra.append("halloween lilligant")
+
         return extra + [deaccent(x.lower()) for _, x in self.names] + [self.slug]
 
     @cached_property
