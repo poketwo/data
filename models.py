@@ -746,10 +746,14 @@ class Species:
             extra.extend(self.instance.pokemon[10103].correct_guesses)
             extra.extend(["anniversary alolan vulpix", "anniversary vulpix"])
 
+        # Día de Muertos pokémon
+        if self.id in range(50192, 50199):
+            extra.append(f"day of the dead {self.base_species.name.lower()}")
+
         # La Catrina Hisuian Lilligant
         if self.id == 50198:
             extra.extend(self.instance.pokemon[10229].correct_guesses)
-            extra.append("halloween lilligant")
+            extra.extend(["dia de muertos lilligant", "day of the dead hisuian lilligant"])
 
         return extra + [deaccent(x.lower()) for _, x in self.names] + [self.slug]
 
