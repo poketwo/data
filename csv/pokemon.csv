@@ -1391,7 +1391,7 @@ id,dex_number,region,slug,description,credit,enabled,catchable,abundance,gender_
 50085,865,galar,sirfetchd-christmas,,285861483412193280,1,,36,4,0,,,,Nutcrack Sirfetch'd,Christmas Sirfetch'd,,,Fighting,,,,,1,8,1170,,,62,135,95,68,82,65,,,,,
 50086,875,galar,eiscue-ice-christmas,,690194873650905155,1,,288,4,0,,,,Ice Present Eiscue,Christmas Eiscue,,,Ice,,,,,1,14,890,,,75,80,110,65,90,50,,,,,
 50087,837,galar,rolycoly-christmas,,285861483412193280,1,,,4,0,,,,Coal Rolycoly,Christmas Rolycoly,,,Rock,,,,,1,3,120,,,30,40,50,40,50,30,,,,,
-50088,717,kalos,yveltal-christmas,,285861483412193280,1,,,-1,0,,,,Ice Yveltal,Christmas Yveltal,,,Dark,Flying,,1,,1,58,2030,,,126,131,95,131,98,99,,,,,
+50088,717,kalos,yveltal-christmas,,285861483412193280,1,,,-1,0,,,,Ice Yveltal,Christmas Yveltal,,,Ice,Flying,,1,,1,58,2030,,,126,131,95,131,98,99,,,,,
 50089,724,alola,decidueye-valentine,,285861483412193280,1,,,1,0,,,,Cupid Decidueye,,,,Grass,Ghost,,,,1,16,366,,,78,107,75,100,100,70,,,,,
 50090,13,kanto,weedle-spring,Beware of its net. It hides in grass and bushes where it hunts small bugs for its collection.,285861483412193280,1,,,4,0,,,,Bug Catcher Weedle,Spring Weedle,,,Bug,Poison,,,,1,3,32,,,40,35,30,20,20,50,,,,,
 50091,46,kanto,paras-spring,Burrows close to trees to cover itself. The flowers on its back gives it all the energy it needs.,979108831118364774,1,,,4,0,,,,Flower Paras,Spring Paras,,,Bug,Grass,,,,1,3,54,,,35,70,55,45,55,25,,,,,
