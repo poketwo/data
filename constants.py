@@ -163,6 +163,7 @@ ARTISTS = {
     805868750666465350: "@acheron4eva",
     1079903072572158003: "@izzyisback",
     267550284979503104: "@witherr.",
+    546492524366266369: "@frankmyocean",
 }
 
 GENDER_RATES = {
