@@ -1,10 +1,18 @@
 from collections import defaultdict
+import re
 from urllib.parse import urljoin
 
 from .constants import ARTISTS, DESCRIPTION_LINK_REGEX
 from .utils import comma_formatted, get_data_from, isnumber
 
 from . import models
+
+
+ID_REGEX = re.compile(r"\d{18,20}")
+
+def replace_ids(match: re.Match):
+    group = match.group()
+    return ARTISTS.get(int(group), group)
 
 
 def get_pokemon(instance):
@@ -117,14 +125,13 @@ def get_pokemon(instance):
 
         art_credit = row.get("credit")
         if art_credit:
-            # Each user in the credit must be separated by `|`.
-            # And gotta make sure that no username ever contains a `|`,
-            # but ideally they should all be user ID anyway
-            artist_ids = [
-                int(s) if isnumber(s) else s.strip() for s in str(art_credit).split("|")
-            ]
-            artists = [ARTISTS.get(aid, aid) for aid in artist_ids]
-            art_credit = comma_formatted(artists)
+            # Replaces IDs in the credits with the artist username.
+            # If it is only ID(s) with no text, prefixes 'Artwork by '
+            parts = str(art_credit).split(" | ")
+            if all((isnumber(part) for part in parts)):
+                art_credit = f"Artwork by {comma_formatted(parts)}"
+
+            art_credit = ID_REGEX.sub(replace_ids, art_credit).replace("|", "•")
 
         pokemon[row["id"]] = models.Species(
             id=row["id"],
