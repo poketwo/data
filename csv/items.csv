@@ -26,6 +26,9 @@ id,name,description,cost,shard,action,page,emote,separate
 688,Metal Alloy,,150,,evolve_normal,2,item_metal_alloy,
 3001,Black Augurite,,150,,evolve_normal,2,item_black_augurite,
 3002,Peat Block,,150,,evolve_normal,2,item_peat_block,
+1136,Meltan Candy,,400,,evolve_normal,2,item_meltan_candy,
+1633,Galarica Cuff,,150,,evolve_normal,2,item_galarica_cuff,
+1643,Galarica Wreath,,150,,evolve_normal,2,item_galarica_wreath,
 442,Griseous Orb,,150,,form_item,3,item_griseous_orb,
 1659,Adamant Crystal,,150,,form_item,3,item_adamant_crystal,
 1660,Lustrous Globe,,150,,form_item,3,item_lustrous_globe,
@@ -69,6 +72,8 @@ id,name,description,cost,shard,action,page,emote,separate
 686,Whipped Dream,,150,,held_item,4,item_whipped_dream,
 687,Sachet,,150,,held_item,4,item_sachet,
 1167,Strawberry Sweet,,150,,held_item,4,item_strawberry_sweet,
+1938,Gimmighoul Coin,,999,,held_item,4,item_gimmighoul_coin,
+2046,Leader's Crest,,150,,held_item,4,item_leaders_crest,
 11001,Adamant Mint,"+10% Attack
 -10% Sp. Atk",50,,nature_0,5,mint_atk,
 11002,Bashful Mint,No effect,50,,nature_1,5,mint_serious,
