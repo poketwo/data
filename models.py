@@ -755,6 +755,10 @@ class Species:
             extra.extend(self.instance.pokemon[10229].correct_guesses)
             extra.extend(["dia de muertos lilligant", "day of the dead hisuian lilligant"])
 
+        # Grinch Grimmsnarl
+        if self.id == 50207:
+            extra.append("christmas grimmsnarl")
+
         return extra + [deaccent(x.lower()) for _, x in self.names] + [self.slug]
 
     @cached_property
