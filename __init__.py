@@ -10,9 +10,31 @@ from . import models
 
 ID_REGEX = re.compile(r"\d{18,20}")
 
+
 def replace_ids(match: re.Match):
     group = match.group()
     return ARTISTS.get(int(group), group)
+
+
+def get_egg_groups(instance):
+    data = get_data_from("egg_groups.csv")
+    names = {
+        x["egg_group_id"]: x["name"]
+        for x in get_data_from("egg_group_names.csv")
+        if x["local_language_id"] == 9
+    }
+
+    egg_groups = {}
+
+    for row in data:
+        egg_groups[row["id"]] = models.EggGroup(
+            id=row["id"],
+            slug=row["identifier"],
+            name=names[row["id"]],
+            instance=instance,
+        )
+
+    return egg_groups
 
 
 def get_pokemon(instance):
@@ -20,6 +42,12 @@ def get_pokemon(instance):
     evolution = {
         x["evolved_species_id"]: x for x in reversed(get_data_from("evolution.csv"))
     }
+
+    egg_groups = get_egg_groups(instance)
+    pokemon_egg_groups = defaultdict(list)
+    for x in get_data_from("pokemon_egg_groups.csv"):
+        egg_group = egg_groups[x["egg_group_id"]]
+        pokemon_egg_groups[x["species_id"]].append(egg_group)
 
     def get_evolution_trigger(pid):
         evo = evolution[pid]
@@ -133,6 +161,12 @@ def get_pokemon(instance):
 
             art_credit = ID_REGEX.sub(replace_ids, art_credit).replace("|", "•")
 
+        _egg_groups = pokemon_egg_groups.get(row["id"])
+        if not _egg_groups:
+            # If egg group not found, it'll become undiscovered
+            if "event" in row:
+                _egg_groups = [egg_groups[15]]
+
         pokemon[row["id"]] = models.Species(
             id=row["id"],
             names=names,
@@ -155,7 +189,11 @@ def get_pokemon(instance):
             dex_number=row["dex_number"],
             abundance=row["abundance"] if "abundance" in row else 0,
             gender_rate=row["gender_rate"] if "gender_rate" in row else -1,
-            has_gender_differences=row["has_gender_differences"] if "has_gender_differences" in row else 0,
+            has_gender_differences=row["has_gender_differences"]
+            if "has_gender_differences" in row
+            else 0,
+            _egg_groups=_egg_groups,
+            _hatch_counter=row.get("hatch_counter", None),
             description=row.get("description", None),
             evolution_from=models.EvolutionList(evo_from) if evo_from else None,
             evolution_to=models.EvolutionList(evo_to) if evo_to else None,
@@ -170,6 +208,8 @@ def get_pokemon(instance):
             instance=instance,
         )
 
+    # Moves
+
     moves = get_data_from("pokemon_moves.csv")
     version_group = defaultdict(int)
     for row in moves:
@@ -179,23 +219,35 @@ def get_pokemon(instance):
 
     for row in moves:
         if (
-            row["pokemon_move_method_id"] == 1
-            and row["pokemon_id"] in pokemon
+            row["pokemon_id"] in pokemon
             and row["version_group_id"] == version_group[row["pokemon_id"]]
         ):
             if row["move_id"] not in instance.moves:
                 continue
 
+            Method = models.MOVE_METHODS.get(row["pokemon_move_method_id"])
+            if not Method:
+                continue
+
+            match Method:
+                case models.LevelMethod:
+                    method = Method(row["level"], instance=instance)
+                case _:
+                    method = Method(instance=instance)
+
             pokemon[row["pokemon_id"]]._moves.append(
                 models.PokemonMove(
                     row["move_id"],
-                    models.LevelMethod(row["level"], instance=instance),
+                    method,
                     instance=instance,
                 )
             )
 
+    def sort_moves(move: models.PokemonMove):
+        return ([models.LevelMethod, models.EggMethod, models.LightBallEggMethod].index(move.method.__class__), getattr(move.method, "level", 0))
+
     for p in pokemon.values():
-        p._moves.sort(key=lambda x: x.method.level)
+        p._moves.sort(key=sort_moves)
 
     return pokemon
 

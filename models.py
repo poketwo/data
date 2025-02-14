@@ -3,7 +3,7 @@ from __future__ import annotations
 import random
 import typing
 import unicodedata
-from abc import ABC
+from abc import ABC, abstractmethod
 from collections import defaultdict
 from dataclasses import dataclass
 from functools import cached_property
@@ -308,9 +308,46 @@ class LevelMethod(MoveMethod):
 
     instance: typing.Any = UnregisteredDataManager()
 
+    slug = "level-up"
+    name = "Level up"
+    aliases = ["level"]
+
     @cached_property
     def text(self):
         return f"Level {self.level}"
+
+
+@dataclass
+class EggMethod(MoveMethod):
+    instance: typing.Any = UnregisteredDataManager()
+
+    slug = "egg"
+    name = "Egg"
+    aliases = ["eggs", "breeding"]
+
+    @cached_property
+    def text(self):
+        return f"Breeding"
+
+
+@dataclass
+class LightBallEggMethod(MoveMethod):
+    instance: typing.Any = UnregisteredDataManager()
+
+    slug = "light-ball-egg"
+    name = "Light Ball Egg"
+    aliases = ["light ball", "light-ball"]
+
+    @cached_property
+    def text(self):
+        return f"Breeding, while holding Light Ball"
+
+
+MOVE_METHODS = {
+    1: LevelMethod,
+    2: EggMethod,
+    6: LightBallEggMethod,
+}
 
 
 @dataclass
@@ -554,6 +591,28 @@ class Stats:
         return self.hp + self.atk + self.defn + self.satk + self.sdef + self.spd
 
 
+@dataclass
+class EggGroup:
+    id: int
+    slug: str
+    name: str
+
+    instance: typing.Any = UnregisteredDataManager()
+
+    def __eq__(self, value):
+        if isinstance(value, str):
+            value = value.casefold().strip()
+            return self.slug == value or self.name.casefold() == value
+
+        if isinstance(value, int):
+            return self.id == value
+
+        if not isinstance(value, EggGroup):
+            return self.id == value.id
+
+        return False
+
+
 # Species
 
 
@@ -571,6 +630,8 @@ class Species:
     abundance: int
     gender_rate: int
     has_gender_differences: int
+    _egg_groups: typing.List[EggGroup] | None
+    _hatch_counter: int | None
     description: str = None
     mega_id: int = None
     mega_x_id: int = None
@@ -604,6 +665,22 @@ class Species:
                 self._moves.extend(self.base_species.moves)
 
         return self._moves
+
+    @cached_property
+    def egg_groups(self) -> List[EggGroup]:
+        if self._egg_groups is None:
+            if self.base_species:
+                self._egg_groups = self.base_species.egg_groups
+
+        return self._egg_groups
+
+    @cached_property
+    def hatch_counter(self) -> List[EggGroup]:
+        if self._hatch_counter is None:
+            if self.base_species:
+                self._hatch_counter = self.base_species.hatch_counter
+
+        return self._hatch_counter
 
     @cached_property
     def moveset(self) -> List[Move]:
@@ -649,6 +726,22 @@ class Species:
         return self.instance.pokemon[self.mega_y_id]
 
     @cached_property
+    def is_mega(self):
+        return self.base_species and self in (
+            self.base_species.mega,
+            self.base_species.mega_x,
+            self.base_species.mega_y,
+        )
+
+    @cached_property
+    def is_rare(self):
+        return self.id in [i for rarity in ("mythical", "legendary", "ub") for i in getattr(self.instance, f"list_{rarity}")]
+
+    @cached_property
+    def is_regional(self):
+        return self.id in [i for regional in ("alolan", "galarian", "hisuian", "paldean") for i in getattr(self.instance, f"list_{regional}")]
+
+    @cached_property
     def gmax(self) -> Species | None:
         return self.instance.gmax_mapping.get(self.id)
 
@@ -660,9 +753,15 @@ class Species:
     def variants(self) -> List[Species]:
         return self.instance.all_species_by_number(self.dex_number)
 
+    @cached_property
+    def transformable_form(self) -> bool:
+        return (self.is_form and self.form_item is not None) or self.is_mega
+
     def get_evoline(self, evos_done: Set[int]) -> Set[int]:
         evoline = {self.id}
-        evos = (self.evolution_from.items if self.evolution_from else []) + (self.evolution_to.items if self.evolution_to else [])
+        evos = (self.evolution_from.items if self.evolution_from else []) + (
+            self.evolution_to.items if self.evolution_to else []
+        )
         for evo in evos:
             evo_species = self.instance.species_by_number(evo.target_id)
             if evo_species.id in evos_done:
@@ -674,7 +773,18 @@ class Species:
 
     @cached_property
     def evolution_line(self) -> List[Species]:
-        return [self.instance.species_by_number(i) for i in sorted(self.get_evoline({self.id}))]
+        return [
+            self.instance.species_by_number(i)
+            for i in sorted(self.get_evoline({self.id}))
+        ]
+
+    @cached_property
+    def first_evolution(self) -> List[Species]:
+        first = self
+        while ((e := first.evolution_from) is not None):
+            first = self.instance.species_by_number(e.items[0].target_id)
+
+        return first
 
     @cached_property
     def base_species(self) -> Species | None:
@@ -753,7 +863,9 @@ class Species:
         # La Catrina Hisuian Lilligant
         if self.id == 50198:
             extra.extend(self.instance.pokemon[10229].correct_guesses)
-            extra.extend(["dia de muertos lilligant", "day of the dead hisuian lilligant"])
+            extra.extend(
+                ["dia de muertos lilligant", "day of the dead hisuian lilligant"]
+            )
 
         # Grinch Grimmsnarl
         if self.id == 50207:
@@ -777,9 +889,20 @@ class Species:
     @cached_property
     def evolution_text(self):
         text = ""
-        if self.is_form and self.form_item is not None:
+        if self.transformable_form:
+            if self.is_mega:
+                match self:
+                    case self.base_species.mega:
+                        form_item = 12001
+                    case self.base_species.mega_x:
+                        form_item = 12002
+                    case self.base_species.mega_y:
+                        form_item = 12003
+            else:
+                form_item = self.form_item
+
             species = self.instance.pokemon[self.dex_number]
-            item = self.instance.items[self.form_item]
+            item = self.instance.items[form_item]
             text += f" transforms from {species} when given a {item.name}"
         elif self.evolution_from is not None:
             text += f" {self.evolution_from.text}"
@@ -1040,6 +1163,18 @@ class DataManagerBase:
 
     def list_region(self, region: str):
         return self.species_id_by_region_index.get(region.lower(), [])
+
+    @cached_property
+    def species_id_by_egg_group_index(self):
+        ret = defaultdict(list)
+        for pokemon in self.pokemon.values():
+            for egg_group in pokemon.egg_groups:
+                for n in (egg_group.slug, egg_group.name):
+                    ret[n.lower()].append(pokemon.id)
+        return dict(ret)
+
+    def list_egg_group(self, egg_group: str):
+        return self.species_id_by_egg_group_index.get(egg_group.lower(), [])
 
     @cached_property
     def species_id_by_move_index(self):
