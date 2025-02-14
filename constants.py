@@ -164,6 +164,7 @@ ARTISTS = {
     1079903072572158003: "@t.empress",
     267550284979503104: "@witherr.",
     546492524366266369: "@frankmyocean",
+    635631164601663489: "@jjyamanie",
 }
 
 GENDER_RATES = {
