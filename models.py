@@ -795,7 +795,7 @@ class Species:
         if "ditto" in self.egg_groups:
             return False
 
-        if self.transformable_form:
+        if self.transformable_form or (self.base_species and not self.is_regional and not self.is_gmax):
             return False
 
         first_evo = self == self.first_evolution
