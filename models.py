@@ -787,6 +787,28 @@ class Species:
         return first
 
     @cached_property
+    def hatchable(self) -> bool:
+        EXCEPTIONS = [490]  # Manaphy
+        if self.id in EXCEPTIONS:
+            return False
+
+        if "ditto" in self.egg_groups:
+            return False
+
+        if self.transformable_form:
+            return False
+
+        first_evo = self == self.first_evolution
+        evo_line_not_undiscovered = any(
+            (
+                "no-eggs" not in evo.egg_groups
+                for evo in self.evolution_line
+            )
+        )
+
+        return first_evo and evo_line_not_undiscovered
+
+    @cached_property
     def base_species(self) -> Species | None:
         if self.id != self.dex_number:
             return self.instance.species_by_number(self.dex_number)
