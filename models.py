@@ -779,7 +779,7 @@ class Species:
         ]
 
     @cached_property
-    def first_evolution(self) -> List[Species]:
+    def first_evolution(self) -> Species:
         first = self
         while ((e := first.evolution_from) is not None):
             first = self.instance.species_by_number(e.items[0].target_id)
