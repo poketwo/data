@@ -1203,6 +1203,14 @@ class DataManagerBase:
         return self.species_id_by_egg_group_index.get(egg_group.lower(), [])
 
     @cached_property
+    def list_breedable(self):
+        return [s.id for s in self.all_pokemon() if s.breedable]
+
+    @cached_property
+    def list_hatchable(self):
+        return [s.id for s in self.all_pokemon() if s.hatchable]
+
+    @cached_property
     def species_id_by_move_index(self):
         ret = defaultdict(list)
         for pokemon in self.all_pokemon():
