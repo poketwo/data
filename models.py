@@ -787,6 +787,10 @@ class Species:
         return first
 
     @cached_property
+    def breedable(self) -> bool:
+        return "no-eggs" not in self.egg_groups
+
+    @cached_property
     def hatchable(self) -> bool:
         EXCEPTIONS = [490]  # Manaphy
         if self.id in EXCEPTIONS:
