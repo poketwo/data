@@ -179,4 +179,4 @@ GENDER_RATES = {
 
 GENDER_TYPES = {0: "Unknown", 1: "Female", 2: "Male"}
 
-GENDER_IMAGE_SUFFIXES = {"female": "F"}  # TODO: Use gender ID later when refactoring poketwo genders code
+GENDER_IMAGE_SUFFIXES = {"Female": "F"}  # TODO: Use gender ID later when refactoring poketwo genders code
