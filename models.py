@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import random
+import re
 import typing
 import unicodedata
 from abc import ABC, abstractmethod
@@ -847,6 +848,8 @@ class Species:
         if "nidoran" in self.slug:
             extra.append("nidoran")
 
+        # Event pokemon with extra names
+
         # Elsa Galarian Ponyta
         if self.id == 50053:
             extra.extend(self.instance.pokemon[10159].correct_guesses)
@@ -897,7 +900,14 @@ class Species:
         if self.id == 50207:
             extra.append("christmas grimmsnarl")
 
-        return extra + [deaccent(x.lower()) for _, x in self.names] + [self.slug]
+        names = extra + [deaccent(x.lower()) for _, x in self.names] + [self.slug]
+        return list(
+            dict.fromkeys(
+                names + [
+                    re.sub(r'[^\w\s-]', '', name) for name in names  # Allow punctuationless guesses
+                ]
+            )
+        )
 
     @cached_property
     def trade_evolutions(self):
