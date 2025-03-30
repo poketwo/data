@@ -992,7 +992,7 @@ class DataManagerBase:
 
     @cached_property
     def total_pokedex_count(self) -> int:
-        return sum(x.catchable and x.id < 10000 for x in self.all_pokemon())
+        return sum(x.catchable and 0 < x.id < 10000 for x in self.all_pokemon())
 
     @cached_property
     def list_alolan(self):
