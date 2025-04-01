@@ -166,6 +166,9 @@ ARTISTS = {
     267550284979503104: "@witherr.",
     546492524366266369: "@frankmyocean",
     635631164601663489: "@jjyamanie",
+    965115065550377021: "@flickerofatrocity",
+    807345153051590701: "@mozzsylveon700",
+    954808079638208512: "@ahmedtheguy_role",
 }
 
 GENDER_RATES = {
@@ -180,4 +183,6 @@ GENDER_RATES = {
 
 GENDER_TYPES = {0: "Unknown", 1: "Female", 2: "Male"}
 
-GENDER_IMAGE_SUFFIXES = {"Female": "F"}  # TODO: Use gender ID later when refactoring poketwo genders code
+GENDER_IMAGE_SUFFIXES = {
+    "Female": "F"
+}  # TODO: Use gender ID later when refactoring poketwo genders code
