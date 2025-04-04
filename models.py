@@ -736,11 +736,19 @@ class Species:
 
     @cached_property
     def is_rare(self):
-        return self.id in [i for rarity in ("mythical", "legendary", "ub") for i in getattr(self.instance, f"list_{rarity}")]
+        return self.id in [
+            i
+            for rarity in ("mythical", "legendary", "ub")
+            for i in getattr(self.instance, f"list_{rarity}")
+        ]
 
     @cached_property
     def is_regional(self):
-        return self.id in [i for regional in ("alolan", "galarian", "hisuian", "paldean") for i in getattr(self.instance, f"list_{regional}")]
+        return self.id in [
+            i
+            for regional in ("alolan", "galarian", "hisuian", "paldean")
+            for i in getattr(self.instance, f"list_{regional}")
+        ]
 
     @cached_property
     def gmax(self) -> Species | None:
@@ -782,7 +790,7 @@ class Species:
     @cached_property
     def first_evolution(self) -> Species:
         first = self
-        while ((e := first.evolution_from) is not None):
+        while (e := first.evolution_from) is not None:
             first = self.instance.species_by_number(e.items[0].target_id)
 
         return first
@@ -800,15 +808,14 @@ class Species:
         if "ditto" in self.egg_groups:
             return False
 
-        if self.transformable_form or (self.base_species and not self.is_regional and not self.is_gmax):
+        if self.transformable_form or (
+            self.base_species and not self.is_regional and not self.is_gmax
+        ):
             return False
 
         first_evo = self == self.first_evolution
         evo_line_not_undiscovered = any(
-            (
-                "no-eggs" not in evo.egg_groups
-                for evo in self.evolution_line
-            )
+            ("no-eggs" not in evo.egg_groups for evo in self.evolution_line)
         )
 
         return first_evo and evo_line_not_undiscovered
@@ -901,13 +908,11 @@ class Species:
             extra.append("christmas grimmsnarl")
 
         names = extra + [deaccent(x.lower()) for _, x in self.names] + [self.slug]
-        return list(
-            dict.fromkeys(
-                names + [
-                    re.sub(r'[^\w\s-]', '', name) for name in names  # Allow punctuationless guesses
-                ]
-            )
-        )
+        punctuationless_names = [
+            re.sub(r"[^\w\s-]", "", name)
+            for name in names  # Allow punctuationless guesses
+        ]
+        return [k for k in dict.fromkeys(names + punctuationless_names) if k]
 
     @cached_property
     def trade_evolutions(self):
