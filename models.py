@@ -582,9 +582,9 @@ class Evolution:
 
         if getattr(self.target, f"evolution_{self.dir}") is not None:
             pevo = getattr(self.target, f"evolution_{self.dir}")
-            return f"{action} {self.dir} {self.target} {self.trigger.text}, which {pevo.text}"
+            return f"{action} {self.dir} **{self.target}** {self.trigger.text}, which {pevo.text}"
 
-        return f"{action} {self.dir} {self.target} {self.trigger.text}"
+        return f"{action} {self.dir} **{self.target}** {self.trigger.text}"
 
 
 @dataclass
@@ -974,7 +974,7 @@ class Species:
 
             species = self.instance.pokemon[self.dex_number]
             item = self.instance.items[form_item]
-            text += f" transforms from {species} when given a {item.name}"
+            text += f" transforms from **{species}** when given a {item.name}"
         elif self.evolution_from is not None:
             text += f" {self.evolution_from.text}"
 
@@ -985,7 +985,7 @@ class Species:
             text += f" {self.evolution_to.text}"
 
         if text:
-            return f"{self.name}{text}."
+            return f"**{self.name}**{text}."
         else:
             return None
 
