@@ -10,6 +10,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 from functools import cached_property
 from typing import List, Literal, Optional, Set, Union
+import copy
 
 from data.utils import comma_formatted, unwind
 
@@ -1363,7 +1364,7 @@ class DataManagerBase:
 
     def move_by_number(self, number: int, *, selected = None) -> Move:
         try:
-            move = self.moves[number]
+            move = copy.deepcopy(self.moves[number])
             if selected:
                 move.hook(selected)
 
