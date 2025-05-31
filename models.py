@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from datetime import datetime
 import random
 import re
 import typing
@@ -10,9 +11,20 @@ from dataclasses import dataclass
 from functools import cached_property
 from typing import List, Literal, Optional, Set, Union
 
-from data.utils import comma_formatted
+from data.utils import comma_formatted, unwind
 
 from . import constants
+
+
+# Month to season
+SEASONS = unwind(
+    {
+        (6, 7, 8): "summer",
+        (9, 10, 11): "autumn",
+        (12, 1, 2): "winter",
+        (3, 4, 5): "spring",
+    }
+)
 
 
 def deaccent(text):
@@ -133,7 +145,7 @@ class Move:
 
     instance: typing.Any = UnregisteredDataManager()
 
-    @cached_property
+    @property
     def type(self):
         return constants.TYPES[self.type_id]
 
@@ -156,7 +168,23 @@ class Move:
     def __str__(self):
         return self.name
 
+    def hook(self, pokemon):
+        """
+        Pre-execution hook to apply move stuff that should happen before the move is executed.
+        This is called multiple times.
+        """
+
+        # Arceus's Judgment type changing
+        if pokemon.species.dex_number == 493 and self.id == 449:
+            self.type_id = constants.TYPES.index(pokemon.species.types[0])
+
+        # Silvally's Multi-attack type changing
+        if pokemon.species.dex_number == 773 and self.id == 718:
+            self.type_id = constants.TYPES.index(pokemon.species.types[0])
+
     def calculate_turn(self, pokemon, opponent):
+        self.hook(pokemon)
+
         if self.damage_class_id == 1 or self.power is None:
             success = True
             damage = 0
@@ -627,6 +655,8 @@ class Species:
     weight: int
     dex_number: int
     catchable: bool
+    spawn_time: str | None
+    spawn_season: str | None
     types: typing.List[str]
     abundance: int
     gender_rate: int
@@ -1323,9 +1353,13 @@ class DataManagerBase:
     def item_by_name(self, name: str) -> Item:
         return self.item_by_name_index.get(deaccent(name.lower().replace("′", "'")))
 
-    def move_by_number(self, number: int) -> Move:
+    def move_by_number(self, number: int, *, selected = None) -> Move:
         try:
-            return self.moves[number]
+            move = self.moves[number]
+            if selected:
+                move.hook(selected)
+
+            return move
         except KeyError:
             return None
 
@@ -1337,7 +1371,8 @@ class DataManagerBase:
         # Replace to ’ (RIGHT SINGLE QUOTATION MARK) because move names use that instead of ' (APOSTROPHE)
         return self.move_by_name_index.get(deaccent(name.lower().replace("′", "’")))
 
-    def random_spawn(self, rarity="normal"):
+    def random_spawn(self, time: str = None, rarity: str = "normal"):
+        # Rarity
         if rarity == "mythical":
             pool = [x for x in self.all_pokemon() if x.catchable and x.mythical]
         elif rarity == "legendary":
@@ -1346,6 +1381,14 @@ class DataManagerBase:
             pool = [x for x in self.all_pokemon() if x.catchable and x.ultra_beast]
         else:
             pool = [x for x in self.all_pokemon() if x.catchable]
+
+        # Time
+        if time:
+            pool = [x for x in pool if (not x.spawn_time) or x.spawn_time == time]
+
+        # Season
+        current_season = SEASONS[datetime.utcnow().month]
+        pool = [x for x in pool if (not x.spawn_season) or x.spawn_season == current_season]
 
         x = random.choices(pool, weights=[x.abundance for x in pool], k=1)[0]
 

@@ -186,6 +186,8 @@ def get_pokemon(instance):
             mega_x_id=row["evo.mega_x"] if "evo.mega_x" in row else None,
             mega_y_id=row["evo.mega_y"] if "evo.mega_y" in row else None,
             catchable="catchable" in row,
+            spawn_time=row["spawn_time"] if "spawn_time" in row else None,
+            spawn_season=row["spawn_season"] if "spawn_season" in row else None,
             dex_number=row["dex_number"],
             abundance=row["abundance"] if "abundance" in row else 0,
             gender_rate=row["gender_rate"] if "gender_rate" in row else -1,
