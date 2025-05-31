@@ -1198,7 +1198,15 @@ class DataManagerBase:
             851: 10211,
             858: 10212,
             861: 10213,
+            # Alcremies. TODO: Add the rest.
             869: 10214,
+            10398: 10214,
+            10407: 10214,
+            10416: 10214,
+            10425: 10214,
+            10434: 10214,
+            10443: 10214,
+    
             879: 10215,
             884: 10216,
             890: 10217,
@@ -1212,7 +1220,7 @@ class DataManagerBase:
 
     @cached_property
     def list_gmax(self):
-        return [s.id for s in self.gmax_mapping.values()]
+        return list(set([s.id for s in self.gmax_mapping.values()]))
 
     @cached_property
     def species_id_by_type_index(self):
