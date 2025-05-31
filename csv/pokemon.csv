@@ -1540,7 +1540,7 @@ id,dex_number,region,slug,description,credit,enabled,catchable,abundance,gender_
 50052,155,johto,cyndaquil-winter,,285861483412193280,1,,,1,0,,,,Spikey Cyndaquil,Winter Cyndaquil,,,Fire,,,,,1,5,79,,,39,52,43,60,50,65,,,,,,,,
 50053,77,galar,ponyta-galar-winter,,285861483412193280,1,,,4,0,,,,Elsa Galarian Ponyta,Winter Galarian Ponyta,,,Psychic,,,,,1,8,240,,,50,85,55,65,65,90,,,,,,,,
 50054,25,kanto,pikachu-winter,,285861483412193280,1,,,4,0,,,,Snowman Pikachu,Winter Pikachu,,,Electric,,,,,1,4,60,,,35,55,40,50,50,90,,,,,,,,
-50055,586,unova,sawsbuck-event-winter,"It’s said that Sawsbuck are calm and easy to tame during the season when they take on this form, so it’s the perfect time to make one your partner.",,1,,,4,0,,,,Winter Event Sawsbuck,,,,Normal,Grass,,,,1,19,925,,,80,100,70,60,70,95,,,,,,,,
+50055,586,unova,sawsbuck-event-winter,"It’s said that Sawsbuck are calm and easy to tame during the season when they take on this form, so it’s the perfect time to make one your partner.",285861483412193280,1,,,4,0,,,,Winter Event Sawsbuck,,,,Normal,Grass,,,,1,19,925,,,80,100,70,60,70,95,,,,,,,,
 50056,79,kanto,slowpoke-winter,,611659645760831506,1,,,4,0,,,,Snowy Slowpoke,Winter Slowpoke,,,Water,Psychic,,,,1,12,360,,,90,65,65,40,40,15,,,,,,,,
 50057,896,galar,glastrier-winter,,285861483412193280,1,,,-1,0,,,,Primal Glastrier,Winter Glastrier,,,Ice,,,1,,1,22,8000,,,100,145,130,65,110,30,,,,,,,,
 50058,29,kanto,nidoran-valentine,,285861483412193280,1,,,-1,0,,,,Valentine's Nidoran,,,,Poison,,,,,1,4,70,,,55,47,52,40,40,41,,,,,,,,
