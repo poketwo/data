@@ -1207,7 +1207,7 @@ class DataManagerBase:
             10425: 10214,
             10434: 10214,
             10443: 10214,
-    
+
             879: 10215,
             884: 10216,
             890: 10217,
@@ -1364,7 +1364,7 @@ class DataManagerBase:
 
     def move_by_number(self, number: int, *, selected = None) -> Move:
         try:
-            move = copy.deepcopy(self.moves[number])
+            move = copy.copy(self.moves[number])
             if selected:
                 move.hook(selected)
 
