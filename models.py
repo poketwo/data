@@ -1389,17 +1389,19 @@ class DataManagerBase:
         else:
             pool = [x for x in self.all_pokemon() if x.catchable]
 
-            # Time
-            if time:
-                pool = [x for x in pool if not x.spawn_time]  # base that gets added to
-                if time == "dusk":
-                    # during dusk both day and dusk pokemon can spawn
-                    pool.extend([x for x in self.all_pokemon() if x.spawn_time in ["day", "dusk"]])
-                elif time == "dawn":
-                    # during dawn both night and dawn pokemon can spawn
-                    pool.extend([x for x in self.all_pokemon() if x.spawn_time in ["night", "dawn"]])
-                else:
-                    pool.extend([x for x in self.all_pokemon() if x.spawn_time == time])
+        # Time
+        if time:
+            time_pool = [x for x in pool if not x.spawn_time]  # base that gets added to
+            if time == "dusk":
+                # during dusk both day and dusk pokemon can spawn
+                time_pool.extend([x for x in pool if x.spawn_time in ["day", "dusk"]])
+            elif time == "dawn":
+                # during dawn both night and dawn pokemon can spawn
+                time_pool.extend([x for x in pool if x.spawn_time in ["night", "dawn"]])
+            else:
+                time_pool.extend([x for x in pool if x.spawn_time == time])
+
+            pool = time_pool
 
         # Season
         current_season = SEASONS[datetime.utcnow().month]
