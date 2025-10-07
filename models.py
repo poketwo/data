@@ -938,6 +938,14 @@ class Species:
         if self.id == 50207:
             extra.append("christmas grimmsnarl")
 
+        # Autumn Swoobat
+        if self.id == 50244:
+            extra.append("autumn swoobat")
+
+        # Autumn Foongus
+        if self.id == 50245:
+            extra.append("autumn foongus")
+
         names = extra + [deaccent(x.lower()) for _, x in self.names] + [self.slug]
         punctuationless_names = [
             re.sub(r"[^\w\s-]", "", name)
