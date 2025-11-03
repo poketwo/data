@@ -946,6 +946,10 @@ class Species:
         if self.id == 50245:
             extra.append("autumn foongus")
 
+        # Halloween Bewear
+        if self.id == 50254:
+            extra.append("halloween bewear")
+
         # Halloween Solrock
         if self.id == 50249:
             extra.extend(self.instance.pokemon[337].correct_guesses)
