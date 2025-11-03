@@ -946,6 +946,10 @@ class Species:
         if self.id == 50245:
             extra.append("autumn foongus")
 
+        # Halloween Solrock
+        if self.id == 50249:
+            extra.extend(self.instance.pokemon[337].correct_guesses)
+
         names = extra + [deaccent(x.lower()) for _, x in self.names] + [self.slug]
         punctuationless_names = [
             re.sub(r"[^\w\s-]", "", name)
